@@ -1,8 +1,13 @@
 # Dark Mode for Outlook [Chrome Extension]
+![](https://img.shields.io/badge/type-Chrome%20Extension-yellow.svg)
+![](https://img.shields.io/github/repo-size/jerboa88/outlook-dark-mode.svg)
+![](https://img.shields.io/github/license/jerboa88/outlook-dark-mode.svg)
+
+
 A chrome extension that applies a better dark mode to Outlook and removes ads. Not affiliated with Microsoft.
 
 
-## Getting Started
+## Installation
 Download or clone the repository and load the file into Chrome as an unpacked extension. Hopefully I will add this to the Chrome Store in the future.
 
 
