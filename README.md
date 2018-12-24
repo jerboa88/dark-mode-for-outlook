@@ -4,11 +4,11 @@
 ![](https://img.shields.io/github/license/jerboa88/outlook-dark-mode.svg)
 
 
-A chrome extension that applies a better dark mode to Outlook and removes ads. Not affiliated with Microsoft.
+A chrome extension that applies a better dark mode to Outlook and removes the ad sidebar. Not affiliated with Microsoft.
 
 
 ## Installation
-Download or clone the repository and load the file into Chrome as an unpacked extension. Hopefully I will add this to the Chrome Store in the future.
+Hopefully I will add this to the Chrome Store in the future. Until then, `build.sh` is used to copy all files to build/, compile css, and zip the extension. You can do this any other way you wish. SASS is used for css compilation. After running `build.sh`, the build directory can be loaded into Chrome as an unpacked extension.
 
 
 ## Screenshots
@@ -19,10 +19,6 @@ Download or clone the repository and load the file into Chrome as an unpacked ex
 3 | 4
 :-:|:-:
 ![Screenshot 3](screenshots/ss3.png) | ![Screenshot 4](screenshots/ss4.png)
-
-
-## Building
-'build.sh' is used to copy all files to build/, compile css, and zip the extension. You can do this any other way you wish. SASS is used for css compilation.
 
 
 ## Contributing
