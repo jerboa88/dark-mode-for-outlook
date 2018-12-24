@@ -1,10 +1,9 @@
 {
 	"name": "Outlook Dark Mode",
 	"short_name": "OL Dark Mode",
-	"description": "A better dark theme for Outlook. Not affiliated with Microsoft.",
-	"version": "1.0",
+	"description": "A better dark theme for Outlook",
+	"version": "1.1",
 	"icons": {
-		"256": "256.png",
 		"128": "128.png",
 		"48": "48.png",
 		"32": "32.png",
