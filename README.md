@@ -16,13 +16,17 @@ Download or clone the repository and load the file into Chrome as an unpacked ex
 :-:|:-:
 ![Screenshot 1](screenshots/ss1.png) | ![Screenshot 2](screenshots/ss2.png)
 
-2 | 4
+3 | 4
 :-:|:-:
 ![Screenshot 3](screenshots/ss3.png) | ![Screenshot 4](screenshots/ss4.png)
 
 
+## Building
+'build.sh' is used to copy all files to build/, compile css, and zip the extension. You can do this any other way you wish. SASS is used for css compilation.
+
+
 ## Contributing
-Contributions and forks are welcome but this is a hobby project so don't expect too much from it. [SemVer](http://semver.org/) is used for versioning and SASS is used for css compilation, using `sass style.scss style.css --style compressed`
+Contributions and forks are welcome but this is a hobby project so don't expect too much from it. [SemVer](http://semver.org/) is used for versioning.
 
 
 ## License
