@@ -1,0 +1,76 @@
+html[dir] ._12RFwqyytlNdLGTEvbkGEF,
+html[dir] ._2TH_lqaoOPBpCTlDAQbdPL,
+html[dir] ._39t1Yy85WX6tG-kM3-jR-t,
+html[dir] .Tw0VCI618qygtv1Rxe1u6 {
+	border-bottom: none !important
+}
+.tMZrY6oi1bRkarRSbJvLr .wH2q_7pdVCvtoo3ledD5d ._8AQGL0pGU_MDkLofXOAXI,
+._n_h, ._1_ag99JsBHxI6S4FP5ayPv,
+._1ZEdP0-JdMOVtjBb5ZcM6M {
+	display: none !important;
+}
+.conductorContent div:nth-last-child(1),
+.conductorContent div:nth-last-child(2) {
+	right: 0 !important;
+}
+html[dir] .n1O1yKKQnfbPMo9fvZ5QH,
+html[dir] ._3am_5-Qakpw6Y1uciOunxX {
+	margin-bottom: 0 !important;
+}
+html[dir=ltr] ._1XJLThPJyfP1uedjzaUYHS,
+html[dir=ltr] ._3Y-bYDf3RHNQuCg6reBBbz {
+	border-right: none !important;
+}
+html[dir] ._39MnDZ9Hn8ehRTe9z70yg4 {
+	border-top: none !important;
+}
+html[dir=ltr] ._12RFwqyytlNdLGTEvbkGEF {
+	padding: 0 !important;
+}
+._2Xnh7dr1gaysisAo6fqcXh ._1zxENq4RxEC9ydsMnwBcAu {
+	background: var(--themeLight) !important;
+}
+
+$lightest: #fff !important;
+$lighter: #{rgba(#fff, .8)} !important;
+$light: #{rgba(#fff, .5)} !important;
+$white: #fff !important;
+$dark: #222 !important;
+$darker: #111 !important;
+$darkest: #030303 !important;
+$gold: #f4b400 !important;
+
+:root {
+	--themeDark: #{$lightest};
+	--themeDarker: #{$lightest};
+	--themePrimary: #{$lightest};
+	--headerBackgroundSearch: #{$lightest};
+	--headerButtonsBackgroundSearch: #{$lightest};
+	--headerSearchButtonIcon: #{$lightest};
+	--headerSearchFilters: #{$lightest};
+
+	--neutralLight: #{$dark};
+	--themeLight: #{$dark};
+	--headerSearchButtonBackground: #{$dark};
+
+	--headerButtonsBackground: #{$darker};
+	--headerButtonsBackgroundHover: #{$darker};
+	--headerBackground: #{$darker};
+	--fallback-themePrimary: #{$darker};	// Compose send button/CC BCC text
+	--fallback-themeDark: #{$darker};	// Compose from/to text
+	--neutralLighter: #{$darker};
+	--neutralLighterAlt: #{$darker};
+	--themeTertiary: #{$darker};
+
+	--white: #{$darkest};
+
+	--headerButtonsBackgroundSearchHover: #{$lighter};
+	--headerSearchBoxIcon: #{$lighter};
+	--headerSearchFiltersHover:#{$lighter};
+	--neutralPrimary: #{$lighter};
+	--neutralDark: #{$lighter};
+	--neutralSecondary: #{$light};
+	--headerSearchButtonBackgroundHover: #{$light};
+
+	--themeDarkAlt: #{$gold}; // Sidebar star icon
+}

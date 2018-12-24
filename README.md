@@ -22,7 +22,7 @@ Download or clone the repository and load the file into Chrome as an unpacked ex
 
 
 ## Contributing
-Contributions and forks are welcome but this is a hobby project so don't expect too much from it. [SemVer](http://semver.org/) is used.
+Contributions and forks are welcome but this is a hobby project so don't expect too much from it. [SemVer](http://semver.org/) is used for versioning and SASS is used for css compilation, using `sass style.scss style.css --style compressed`
 
 
 ## License
