@@ -1,40 +1,7 @@
-html[dir] ._12RFwqyytlNdLGTEvbkGEF,
-html[dir] ._2TH_lqaoOPBpCTlDAQbdPL,
-html[dir] ._39t1Yy85WX6tG-kM3-jR-t,
-html[dir] .Tw0VCI618qygtv1Rxe1u6 {
-	border-bottom: none !important
-}
-.tMZrY6oi1bRkarRSbJvLr .wH2q_7pdVCvtoo3ledD5d ._8AQGL0pGU_MDkLofXOAXI,
-._n_h, ._1_ag99JsBHxI6S4FP5ayPv,
-._1ZEdP0-JdMOVtjBb5ZcM6M {
-	display: none !important;
-}
-.conductorContent div:nth-last-child(1),
-.conductorContent div:nth-last-child(2) {
-	right: 0 !important;
-}
-html[dir] .n1O1yKKQnfbPMo9fvZ5QH,
-html[dir] ._3am_5-Qakpw6Y1uciOunxX {
-	margin-bottom: 0 !important;
-}
-html[dir=ltr] ._1XJLThPJyfP1uedjzaUYHS,
-html[dir=ltr] ._3Y-bYDf3RHNQuCg6reBBbz {
-	border-right: none !important;
-}
-html[dir] ._39MnDZ9Hn8ehRTe9z70yg4 {
-	border-top: none !important;
-}
-html[dir=ltr] ._12RFwqyytlNdLGTEvbkGEF {
-	padding: 0 !important;
-}
-._2Xnh7dr1gaysisAo6fqcXh ._1zxENq4RxEC9ydsMnwBcAu {
-	background: var(--themeLight) !important;
-}
-
+// VARIABLES
 $lightest: #fff !important;
 $lighter: #{rgba(#fff, .8)} !important;
 $light: #{rgba(#fff, .5)} !important;
-$white: #fff !important;
 $dark: #222 !important;
 $darker: #111 !important;
 $darkest: #030303 !important;
@@ -73,4 +40,148 @@ $gold: #f4b400 !important;
 	--headerSearchButtonBackgroundHover: #{$light};
 
 	--themeDarkAlt: #{$gold}; // Sidebar star icon
+}
+
+
+// DESKTOP SITE
+html[dir] ._12RFwqyytlNdLGTEvbkGEF,
+html[dir] ._2TH_lqaoOPBpCTlDAQbdPL,
+html[dir] ._39t1Yy85WX6tG-kM3-jR-t,
+html[dir] .Tw0VCI618qygtv1Rxe1u6 {
+	border-bottom: none !important;
+}
+.tMZrY6oi1bRkarRSbJvLr .wH2q_7pdVCvtoo3ledD5d ._8AQGL0pGU_MDkLofXOAXI,
+._n_h, ._1_ag99JsBHxI6S4FP5ayPv,
+._1ZEdP0-JdMOVtjBb5ZcM6M {
+	display: none !important;
+}
+.conductorContent div:nth-last-child(1),
+.conductorContent div:nth-last-child(2) {
+	right: 0 !important;
+}
+html[dir] .n1O1yKKQnfbPMo9fvZ5QH,
+html[dir] ._3am_5-Qakpw6Y1uciOunxX {
+	margin-bottom: 0 !important;
+}
+html[dir=ltr] ._1XJLThPJyfP1uedjzaUYHS,
+html[dir=ltr] ._3Y-bYDf3RHNQuCg6reBBbz {
+	border-right: none !important;
+}
+html[dir] ._39MnDZ9Hn8ehRTe9z70yg4 {
+	border-top: none !important;
+}
+html[dir=ltr] ._12RFwqyytlNdLGTEvbkGEF {
+	padding: 0 !important;
+}
+._2Xnh7dr1gaysisAo6fqcXh ._1zxENq4RxEC9ydsMnwBcAu {
+	background: var(--themeLight) !important;
+}
+
+
+// MOBILE SITE
+// Ad tile
+._3MdpcPqcGApCRCt0Wh_uWP {
+	display: none !important;
+}
+
+// Header
+._2KxzPQv7L875Av0qyeZ5uf, ._2CMcGI-ZZ4XPUOnUgy7pHB {
+	background: var(--neutralLighter) !important;
+}
+
+// Create message header
+html[dir] ._31Mv52tbMKyzJQgXIo-fTh {
+	background: var(--neutralLighter) !important;
+}
+
+// Sidebar message unread count
+html[dir] ._3jB_LUp02KWSA7lorsSCPd ._1SkFUDBjCYpRgoOieLtfOC {
+	background: none !important;
+	color: var(--themeDark) !important;
+}
+
+// Sidebar Outlook logo
+.bQjbCjR71_6Ck63WXDY8M {
+	color: var(--themeDark) !important;
+}
+
+// Current/unread message highlight
+html[dir] ._3nb5Dwo_CA7TWNZA6rSpE3 ._2wT_pe9ccL5Z9daKbIFvIs:before {
+	background-color: var(--themeDark) !important;
+}
+
+// Filter button
+._1UUT3BP0fJWYK0keUbh9Qj ._1IxaL77yEy7Y65lMHHk3vV,
+._1UUT3BP0fJWYK0keUbh9Qj ._1IxaL77yEy7Y65lMHHk3vV {
+	color: var(--themeDark) !important;
+}
+
+// Message title
+.Rcnxv3V357mZssCrwfFQL {
+	color: var(--themeDark) !important;
+}
+
+// Footer button icons
+._2Apqf9rYzkB2FDMv87Mkuv {
+	color: var(--themeDark) !important;
+}
+
+// Header email address
+._3yoSOI_qjqE2i00lnAY9kz {
+	color: var(--themeDark) !important;
+}
+
+// Filter bar
+html[dir] ._35poD7UzthWpvLbeMhpwGz {
+	background: var(--neutralLighter) !important;
+	border-bottom: none !important;
+}
+
+// Filter icon
+._1UUT3BP0fJWYK0keUbh9Qj {
+	color: var(--themeDark) !important;
+}
+
+// Message subject
+._2Tt6Xe0aQ1u45pS6dZDvVX {
+	color: var(--neutralPrimary) !important;
+}
+
+// Current/unread message subject
+._3nb5Dwo_CA7TWNZA6rSpE3 ._2axPYRV5O5wkmXEwegK4-S,
+._3nb5Dwo_CA7TWNZA6rSpE3 ._2Tt6Xe0aQ1u45pS6dZDvVX,
+._30HXVqbjj-i5OASGQRCIHt {
+	color: var(--neutralPrimary) !important; // var(--themeDark)
+}
+
+// Message background
+._35poD7UzthWpvLbeMhpwGz, html[dir] ._3stv9XVAqlbbQqdGzrforh {
+	background: var(--white) !important;
+}
+
+// Footer
+html[dir] .Oqogs1odxeOVmBE8Xl5gi {
+	background: var(--neutralLighter) !important;
+	border-top: none !important;
+}
+
+// Message separator
+html[dir] ._3j2fC5kC18B3JkxKRiB-RD {
+	border-bottom: none !important;
+}
+
+// Sidebar separator
+html[dir] ._1valGcjwp67Os9OCe8td85, html[dir] ._1QsXx9QYzPNu_NsqU3VFQI {
+	border-bottom: none !important;
+}
+
+// Sidebar Outlook Beta switch
+html[dir] ._1iAsMkgaZmMKlI3YPy_WYh._3_0hGK7bhB1pKbeU2W91LQ {
+	background: var(--white) !important;
+	border-color: var(--white) !important;
+}
+
+// Sidebar Outlook beta label
+.GMiG6SVlH2wXYu6KGUwuN {
+	color: var(--themeDark) !important;
 }
