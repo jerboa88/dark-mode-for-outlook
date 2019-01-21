@@ -6,7 +6,7 @@
 [![](https://img.shields.io/github/license/jerboa88/outlook-dark-mode.svg "Project license")](LICENSE.md)
 
 
-A Chrome extension/Firefox add-on that applies a better dark mode to Outlook and removes the ad sidebar. Not affiliated with Microsoft.
+A Chrome extension/Firefox add-on that applies a better dark mode to Outlook and removes the ad sidebar. Not affiliated with Microsoft. Compatible with Firefox mobile.
 
 
 ## Installation
