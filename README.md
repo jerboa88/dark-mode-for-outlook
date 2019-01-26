@@ -1,4 +1,4 @@
-# Dark Mode for Outlook [Extension]
+# Outlook Dark Mode [Extension]
 ![](https://img.shields.io/badge/type-Extension-yellow.svg "Project type")
 [![](https://img.shields.io/chrome-web-store/v/kjfbefcenipnnpbcbbklcidpjiamlcpl.svg "View on the Chrome Web Store")](https://chrome.google.com/webstore/detail/outlook-dark-mode/kjfbefcenipnnpbcbbklcidpjiamlcpl)
 [![](https://img.shields.io/amo/v/outlook-dark-mode.svg "View on the Firefox Add-ons Page")](https://addons.mozilla.org/en-US/firefox/addon/outlook-dark-mode/)
