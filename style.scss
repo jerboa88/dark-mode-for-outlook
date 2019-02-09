@@ -40,6 +40,10 @@ $gold: #f4b400 !important;
 	--headerSearchButtonBackgroundHover: #{$light};
 
 	--themeDarkAlt: #{$gold}; // Sidebar star icon
+
+	--whiteTranslucent40: #{rgba(33, 33, 33, 0.4) !important};
+	--headerSearchBoxBackground: #{rgba(33,33,33,0.7) !important};
+	--black: #{$lightest};
 }
 
 
@@ -75,6 +79,10 @@ html[dir=ltr] ._12RFwqyytlNdLGTEvbkGEF {
 }
 ._2Xnh7dr1gaysisAo6fqcXh ._1zxENq4RxEC9ydsMnwBcAu {
 	background: var(--themeLight) !important;
+}
+
+._2M9l3G4PiX85HdT9FVcTVY {
+	color: var(--black) !important;
 }
 
 
