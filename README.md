@@ -15,6 +15,10 @@ The extension can be installed from the Chrome Web Store [here](https://chrome.g
 If you wish to build yourself, `build.sh` is used to copy all files to the `build/` directory, compile css, and zip the extension. You can do this any other way you wish. [SASS](https://sass-lang.com/) is used for CSS compilation. After running `build.sh`, the build directory can be loaded into Chrome. The `.zip` file can also be loaded into Firefox after renaming the file extension to `.xpi`.
 
 
+## Usage
+Just install the extension and go. Please **switch to Outlook Beta** on both desktop and mobile sites because I have not made a theme for classic Outlook yet. The extension does not have any other settings at the moment.
+
+
 ## Screenshots
 1 | 2
 :-:|:-:
