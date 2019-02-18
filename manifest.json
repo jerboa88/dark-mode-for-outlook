@@ -1,8 +1,8 @@
 {
 	"name": "Outlook Dark Mode",
 	"short_name": "OL Dark Mode",
-	"description": "A better dark theme for Outlook",
-	"version": "1.3",
+	"description": "A better dark theme for Outlook.",
+	"version": "1.4",
 	"icons": {
 		"128": "128.png",
 		"48": "48.png",
