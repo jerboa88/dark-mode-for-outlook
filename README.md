@@ -6,7 +6,7 @@
 [![](https://img.shields.io/github/license/jerboa88/outlook-dark-mode.svg "Project license")](LICENSE.md)
 
 
-A Chrome extension/Firefox add-on that applies a better dark mode to Outlook and removes the ad sidebar. Not affiliated with Microsoft. Compatible with Firefox mobile.
+A Chrome extension/Firefox add-on that applies a better dark mode to Microsoft Outlook and removes the ad sidebar. Compatible with Firefox mobile!
 
 
 ## Installation
@@ -20,18 +20,19 @@ Just install the extension and go. Please **switch to Outlook Beta** on both des
 
 
 ## Screenshots
-1 | 2
+Desktop site | &#8291;
 :-:|:-:
-![Screenshot 1](screenshots/ss1.png) | ![Screenshot 2](screenshots/ss2.png)
+![Screenshot 1](screenshots/desktop_mail.png) | ![Screenshot 2](screenshots/desktop_sidebar.png)
+![Screenshot 3](screenshots/desktop_viewmessage.png) | ![Screenshot 4](screenshots/desktop_newmessage.png)
 
-3 | 4
-:-:|:-:
-![Screenshot 3](screenshots/ss3.png) | ![Screenshot 4](screenshots/ss4.png)
+Mobile site | &#8291; | &#8291; | &#8291;
+:-:|:-:|:-:|:-:
+![Screenshot 1](screenshots/mobile_mail.png) | ![Screenshot 2](screenshots/mobile_sidebar.png) | ![Screenshot 3](screenshots/mobile_viewmessage.png) | ![Screenshot 4](screenshots/mobile_newmessage.png)
 
 
 ## Contributing
-Contributions and forks are welcome but this is a hobby project so don't expect too much from it. [SemVer](http://semver.org/) is used for versioning.
+Contributions, issues, and forks are welcome but this is a hobby project so don't expect too much from it. [SemVer](http://semver.org/) is used for versioning.
 
 
 ## License
-This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for details.
+This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for details. Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.
