@@ -8,6 +8,7 @@ $darkest: #030303 !important;
 $gold: #f4b400 !important;
 
 :root {
+	--black: #{$lightest};
 	--themeDark: #{$lightest};
 	--themeDarker: #{$lightest};
 	--themePrimary: #{$lightest};
@@ -43,7 +44,6 @@ $gold: #f4b400 !important;
 
 	--whiteTranslucent40: #{rgba(33, 33, 33, 0.4) !important};
 	--headerSearchBoxBackground: #{rgba(33,33,33,0.7) !important};
-	--black: #{$lightest};
 }
 
 
@@ -103,6 +103,23 @@ html[dir=ltr] ._12RFwqyytlNdLGTEvbkGEF {
 ._2cXU4NRwaysHkyJPwe9DZP > a:hover > div {
 	background: var(--black) !important;
 	color: var(--themeLight) !important;
+}
+
+// Message tab icon/text
+._1RHn61VtVQ1ERw51W1GE2I .QC8HktsAo3W15G5QvXAII._18MkjPukE-G5E0QCe50tDe {
+	color: var(--black) !important;
+}
+
+// From/to message labels
+.RecipientWellLabelWithContactPicker-label,
+._3w6jaR_uUZ1tCkeths7s_E,
+.label-156 {
+	background: #fff !important;
+	border: 1px solid !important;
+}
+
+._3e8q-mSU-QOe4Twi7eVI3U {
+	background-color: var(--themeLight) !important;
 }
 
 
@@ -239,7 +256,9 @@ html[dir=ltr] ._12RFwqyytlNdLGTEvbkGEF {
 
 	// Sidebar separators
 	._1valGcjwp67Os9OCe8td85, ._1QsXx9QYzPNu_NsqU3VFQI, .kIV2JizNc6k-X7Kjg-ETX {
-		border: none !important;
+		border: none !important;._1RHn61VtVQ1ERw51W1GE2I .QC8HktsAo3W15G5QvXAII._18MkjPukE-G5E0QCe50tDe {
+		color: var(--themeSecondary);
+}
 	}
 
 	// Sidebar Outlook Beta switch
