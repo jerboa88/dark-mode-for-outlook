@@ -1,16 +1,16 @@
 # Dark Mode for Outlook™ [Extension]
 ![](https://img.shields.io/badge/type-Extension-yellow.svg "Project type")
-[![](https://img.shields.io/chrome-web-store/v/kjfbefcenipnnpbcbbklcidpjiamlcpl.svg "View on the Chrome Web Store")](https://chrome.google.com/webstore/detail/outlook-dark-mode/kjfbefcenipnnpbcbbklcidpjiamlcpl)
-[![](https://img.shields.io/amo/v/outlook-dark-mode.svg "View on the Firefox Add-ons Page")](https://addons.mozilla.org/en-US/firefox/addon/outlook-dark-mode/)
-![](https://img.shields.io/github/repo-size/jerboa88/outlook-dark-mode.svg "Repository size")
-[![](https://img.shields.io/github/license/jerboa88/outlook-dark-mode.svg "Project license")](LICENSE.md)
+[![](https://img.shields.io/chrome-web-store/v/kjfbefcenipnnpbcbbklcidpjiamlcpl.svg "View on the Chrome Web Store")](https://chrome.google.com/webstore/detail/dark-mode-for-outlook/kjfbefcenipnnpbcbbklcidpjiamlcpl)
+[![](https://img.shields.io/amo/v/dark-mode-for-outlook.svg "View on the Firefox Add-ons Page")](https://addons.mozilla.org/en-US/firefox/addon/dark-mode-for-outlook/)
+![](https://img.shields.io/github/repo-size/jerboa88/dark-mode-for-outlook.svg "Repository size")
+[![](https://img.shields.io/github/license/jerboa88/dark-mode-for-outlook.svg "Project license")](LICENSE.md)
 
 
 A Chrome extension/Firefox add-on that applies a better (unofficial) dark mode to Microsoft Outlook and removes the ad sidebar. Compatible with Firefox mobile!
 
 
 ## Installation
-The extension can be installed from the Chrome Web Store [here](https://chrome.google.com/webstore/detail/outlook-dark-mode/kjfbefcenipnnpbcbbklcidpjiamlcpl) or from the Firefox Add-on page [here](https://addons.mozilla.org/en-US/firefox/addon/outlook-dark-mode/).
+The extension can be installed from the Chrome Web Store [here](https://chrome.google.com/webstore/detail/dark-mode-for-outlook/kjfbefcenipnnpbcbbklcidpjiamlcpl) or from the Firefox Add-on page [here](https://addons.mozilla.org/en-US/firefox/addon/dark-mode-for-outlook/).
 
 If you wish to build yourself, `build.sh` is used to copy all files to the `build/` directory, compile css, and zip the extension. You can do this any other way you wish. [SASS](https://sass-lang.com/) is used for CSS compilation. After running `build.sh`, the build directory can be loaded into Chrome. The `.zip` file can also be loaded into Firefox after renaming the file extension to `.xpi`.
 
