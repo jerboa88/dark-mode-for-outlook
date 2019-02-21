@@ -1,4 +1,4 @@
-# Outlook Dark Mode [Extension]
+# Dark Mode for Outlook™ [Extension]
 ![](https://img.shields.io/badge/type-Extension-yellow.svg "Project type")
 [![](https://img.shields.io/chrome-web-store/v/kjfbefcenipnnpbcbbklcidpjiamlcpl.svg "View on the Chrome Web Store")](https://chrome.google.com/webstore/detail/outlook-dark-mode/kjfbefcenipnnpbcbbklcidpjiamlcpl)
 [![](https://img.shields.io/amo/v/outlook-dark-mode.svg "View on the Firefox Add-ons Page")](https://addons.mozilla.org/en-US/firefox/addon/outlook-dark-mode/)
@@ -6,7 +6,7 @@
 [![](https://img.shields.io/github/license/jerboa88/outlook-dark-mode.svg "Project license")](LICENSE.md)
 
 
-A Chrome extension/Firefox add-on that applies a better dark mode to Microsoft Outlook and removes the ad sidebar. Compatible with Firefox mobile!
+A Chrome extension/Firefox add-on that applies a better (unofficial) dark mode to Microsoft Outlook and removes the ad sidebar. Compatible with Firefox mobile!
 
 
 ## Installation
