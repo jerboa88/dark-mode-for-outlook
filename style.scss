@@ -48,78 +48,69 @@ $gold: #f4b400 !important;
 
 
 // DESKTOP SITE
-._12RFwqyytlNdLGTEvbkGEF,
-._2TH_lqaoOPBpCTlDAQbdPL,
-._39t1Yy85WX6tG-kM3-jR-t,
-.Tw0VCI618qygtv1Rxe1u6 {
-	border-bottom: none !important;
-}
-
-.tMZrY6oi1bRkarRSbJvLr .wH2q_7pdVCvtoo3ledD5d ._8AQGL0pGU_MDkLofXOAXI,
-._n_h, ._1_ag99JsBHxI6S4FP5ayPv,
-._1ZEdP0-JdMOVtjBb5ZcM6M {
-	display: none !important;
-}
-
-.conductorContent div:nth-last-child(1),
-.conductorContent div:nth-last-child(2) {
-	right: 0 !important;
-}
-
-.n1O1yKKQnfbPMo9fvZ5QH,
-._3am_5-Qakpw6Y1uciOunxX {
-	margin-bottom: 0 !important;
-}
-
-html[dir=ltr] ._1XJLThPJyfP1uedjzaUYHS,
-html[dir=ltr] ._3Y-bYDf3RHNQuCg6reBBbz {
-	border-right: none !important;
-}
-
-._39MnDZ9Hn8ehRTe9z70yg4 {
-	border-top: none !important;
-}
-
-html[dir=ltr] ._12RFwqyytlNdLGTEvbkGEF {
-	padding: 0 !important;
-}
-
-._2Xnh7dr1gaysisAo6fqcXh ._1zxENq4RxEC9ydsMnwBcAu {
-	background: var(--themeLight) !important;
-}
-
-._2M9l3G4PiX85HdT9FVcTVY {
-	color: var(--black) !important;
-}
-
-// Side panel buttons
-._2cXU4NRwaysHkyJPwe9DZP > a,
-._2cXU4NRwaysHkyJPwe9DZP > a > div {
-	color: var(--black) !important;
-}
-
-// Side panel buttons hover
-._2cXU4NRwaysHkyJPwe9DZP > a:hover,
-._2cXU4NRwaysHkyJPwe9DZP > a:hover > div {
-	background: var(--black) !important;
-	color: var(--themeLight) !important;
-}
-
-// Message tab icon/text
-._1RHn61VtVQ1ERw51W1GE2I .QC8HktsAo3W15G5QvXAII._18MkjPukE-G5E0QCe50tDe {
-	color: var(--black) !important;
-}
-
-// From/to message labels
-.RecipientWellLabelWithContactPicker-label,
-._3w6jaR_uUZ1tCkeths7s_E,
-.label-156 {
+// New message compose: From/to message label background color and border
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:first-child > div > div > div > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child,
+.RecipientWellLabelWithContactPicker-label {
 	background: #fff !important;
 	border: 1px solid !important;
 }
 
-._3e8q-mSU-QOe4Twi7eVI3U {
-	background-color: var(--themeLight) !important;
+/* Reduce min width */
+body {
+	min-width: 700px !important;
+}
+
+/* Hide right ad sidebar */
+#app > .ms-Fabric > div:last-child > div:first-child > div:first-child > div:last-child {
+	display: none !important;
+}
+
+/* Hide bottom ad */
+#app > .ms-Fabric > div:last-child > div:first-child > div:last-child {
+	display: none !important;
+}
+
+/* Hide ad in left sidebar */
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:last-child > div > div:nth-child(2){
+	display: none !important;
+}
+
+/* Remove bottom border: messages in list, time headers (in message list) */
+div[data-convid],
+.full {
+	margin-bottom: 0 !important;
+}
+
+/* Remove bottom border: header, left sidebar (top), folder header (in message list) */
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:first-child,
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:first-child > div,
+.SLVConversationViewSenderImageOnDensity {
+	border-bottom: none !important;
+}
+
+/* Remove top border: left sidebar (bottom) */
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:last-child > div > div:last-child {
+	border-top: none !important;
+}
+
+/* Reduce left sidebar scrollbar width and remove right border */
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(2) {
+	width: initial !important;
+}
+
+/* Left app panel: Make all tile icons white, make hover color white*/
+.ms-Panel-content > div > a {
+	color: var(--black) !important;
+}
+
+/* Left app panel: Make tile hover color white */
+.ms-Panel-content > div > a:hover {
+	background: var(--black) !important;
+}
+
+/* Bottom tabs text color */
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:last-child > div > div {
+	color: var(--black) !important;
 }
 
 
