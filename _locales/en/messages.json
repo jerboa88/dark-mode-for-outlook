@@ -1,0 +1,21 @@
+{
+	"extensionName": {
+		"message": "Dark Mode for Outlook™",
+		"description": "Name of the extension."
+	},
+
+	"extensionShortName": {
+		"message": "Dark Mode",
+		"description": "Short name of the extension."
+	},
+
+	"extensionDescription": {
+		"message": "A better (unofficial) dark theme for Microsoft Outlook™.",
+		"description": "Description of the extension."
+	},
+
+	"extensionLongDescription": {
+		"message": "A Firefox add-on that applies a better dark mode to Microsoft Outlook and removes the ad sidebar. Please switch to Outlook Beta on both desktop and mobile sites to use. Compatible with Firefox mobile!\nAlso released on the Chrome Web Store here.\nOutlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.",
+		"description": "A longer description of the extension for store pages."
+	}
+}

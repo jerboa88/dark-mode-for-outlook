@@ -1,8 +1,9 @@
 {
-	"name": "Dark Mode for Outlook™",
-	"short_name": "Dark Mode",
-	"description": "A better (unofficial) dark theme for Microsoft Outlook™.",
-	"version": "2.5",
+	"name": "__MSG_extensionName__",
+	"short_name": "__MSG_extensionShortName__",
+	"description": "__MSG_extensionDescription__",
+	"version": "2.7",
+	"default_locale": "en",
 	"icons": {
 		"128": "128.png",
 		"48": "48.png",
