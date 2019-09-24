@@ -60,6 +60,17 @@ body {
 	min-width: 700px !important;
 }
 
+/* Change header color (main bar, left app button, skype button, settings button, help button, whats new button, profile picture button) */
+#app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child,
+#app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child > div:first-child > div:first-child > button:first-child,
+#skype,
+#owaSettingsButton,
+#O365_MainLink_Help,
+#whatsnew,
+#O365_MainLink_Me {
+	background-color: #111 !important;
+}
+
 /* Hide right ad sidebar */
 #app > .ms-Fabric > div:last-child > div:first-child > div:first-child > div:last-child {
 	display: none !important;
@@ -81,10 +92,11 @@ div[data-convid],
 	margin-bottom: 0 !important;
 }
 
-/* Remove bottom border: header, left sidebar (top), folder header (in message list) */
+/* Remove bottom border: header, left sidebar (top), folder header (in message list), inbox header */
 #app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:first-child,
 #app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:first-child > div,
-.SLVConversationViewSenderImageOnDensity {
+.SLVConversationViewSenderImageOnDensity,
+div[aria-label="Message list"] > div:first-child {
 	border-bottom: none !important;
 }
 
