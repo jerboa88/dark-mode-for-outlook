@@ -60,7 +60,9 @@ body {
 	min-width: 700px !important;
 }
 
-/* Change header color (main bar, left app button, skype button, settings button, help button, whats new button, profile picture button) */
+/* Change header color (logo, spacer, main bar, left app button, skype button, settings button, help button, whats new button, profile picture button) */
+#O365_AppName,
+.o365cs-base .o365sx-appName,
 #app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child,
 #app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child > div:first-child > div:first-child > button:first-child,
 #skype,
@@ -110,14 +112,19 @@ div[aria-label="Message list"] > div:first-child {
 	width: initial !important;
 }
 
-/* Left app panel: Make all tile icons white, make hover color white*/
-.ms-Panel-content > div > a {
-	color: var(--black) !important;
+/* App launcher background color */
+div[aria-label="App launcher opened"],
+#appLauncher {
+	background-color: #111 !important;
 }
 
-/* Left app panel: Make tile hover color white */
-.ms-Panel-content > div > a:hover {
-	background: var(--black) !important;
+/* App launcher text/icon color */
+#appLauncher > button,
+#appLauncherMainView > a,
+#appsModule > h2,
+#appsModule > button,
+#appsModule > div > div > a > div:last-child {
+	color: #fff !important;
 }
 
 /* Bottom tabs text color */
