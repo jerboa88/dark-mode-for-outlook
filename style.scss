@@ -52,7 +52,13 @@ $gold: #f4b400 !important;
 #app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:first-child > div > div > div > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child,
 .RecipientWellLabelWithContactPicker-label {
 	background: #fff !important;
+	color: #{$darkest};
 	border: 1px solid !important;
+}
+
+/* New message compose: Message body background*/
+div[aria-label="Message body"] > div {
+	background-color: transparent !important;
 }
 
 /* Reduce min width */
@@ -66,11 +72,36 @@ body {
 #app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child,
 #app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child > div:first-child > div:first-child > button:first-child,
 #skype > div > button,
+#Time,
 #owaSettingsButton,
 #O365_MainLink_Help,
 #whatsnew,
 #O365_MainLink_Me {
 	background-color: #111 !important;
+}
+
+/* Skype message panel: background */
+.swc.swc-recents.dark {
+	background-color: #111 !important;
+}
+
+/* Skype message panel: icon colors  */
+.swc.swc-recents.dark .swcRecentsHeader__searchInput .swcIcon_search,
+.swcRecentsHeader__newChatButton {
+	color: #fff !important;
+}
+
+/* Calendar panel: background */
+#FlexPane_OwaTimePanel,
+#FlexPane_OwaTimePanel > div:first-child > div:first-child > div:first-child,
+#CustomFlexPane_OwaTimePanel > div:first-child > div:first-child > div:first-child,
+.ms-Button[aria-label="New event"] {
+	background-color: #111 !important;
+}
+
+/* Calendar panel: border */
+#O365fpcontainerid {
+	border-left: none !important;
 }
 
 /* Hide right ad sidebar */
@@ -116,6 +147,22 @@ div[aria-label="Message list"] > div:first-child {
 div[aria-label="App launcher opened"],
 #appLauncher {
 	background-color: #111 !important;
+}
+
+/* Right sidebar background color */
+#flexPaneScrollRegion,
+.o365sx-neutral-foreground-background {
+	background-color: #111 !important;
+}
+
+/* Right sidebar link padding */
+#meControlLinks {
+	padding-top: 1em;
+}
+
+/* Right sidebar link color */
+.o365sx-neutral-accent-link {
+	color: #fff !important;
 }
 
 /* App launcher text/icon color */
