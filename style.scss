@@ -104,8 +104,17 @@ body {
 	border-left: none !important;
 }
 
+/* Hide top ad message */
+#app > .ms-Fabric > div:last-child > div:first-child > div:first-child {
+	display: none !important;
+}
+
 /* Hide right ad sidebar */
 #app > .ms-Fabric > div:last-child > div:first-child > div:first-child > div:last-child {
+	display: none !important;
+}
+
+#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:last-child {
 	display: none !important;
 }
 
@@ -115,7 +124,12 @@ body {
 }
 
 /* Hide ad in left sidebar */
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:last-child > div > div:nth-child(2){
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:last-child > div > div:nth-child(2) {
+	display: none !important;
+}
+
+/* Hide ad in left sidebar */
+#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:last-child > div:first-child > div:nth-child(2) {
 	display: none !important;
 }
 
@@ -134,13 +148,19 @@ div[aria-label="Message list"] > div:first-child {
 }
 
 /* Remove top border: left sidebar (bottom) */
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:last-child > div > div:last-child {
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:last-child > div > div:last-child,
+div[role=menubar] {
 	border-top: none !important;
 }
 
 /* Reduce left sidebar scrollbar width and remove right border */
 #app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(2) {
 	width: initial !important;
+}
+
+// Remove left sidebar right border
+#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:nth-child(2) {
+	width: 0 !important;
 }
 
 /* App launcher background color */
@@ -177,6 +197,13 @@ div[aria-label="App launcher opened"],
 /* Bottom tabs text color */
 #app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:last-child > div > div {
 	color: var(--black) !important;
+}
+
+/* Remove horizontal borders for header (from left to right) */
+#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:first-child > div:first-child,
+#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:first-child > div:nth-child(2),
+#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:nth-child(3) > div:first-child {
+	border-bottom: none !important;
 }
 
 
@@ -313,9 +340,11 @@ div[aria-label="App launcher opened"],
 
 	// Sidebar separators
 	._1valGcjwp67Os9OCe8td85, ._1QsXx9QYzPNu_NsqU3VFQI, .kIV2JizNc6k-X7Kjg-ETX {
-		border: none !important;._1RHn61VtVQ1ERw51W1GE2I .QC8HktsAo3W15G5QvXAII._18MkjPukE-G5E0QCe50tDe {
-		color: var(--themeSecondary);
-}
+		border: none !important;
+	}
+
+	._1RHn61VtVQ1ERw51W1GE2I .QC8HktsAo3W15G5QvXAII._18MkjPukE-G5E0QCe50tDe {
+		color: var(--themeSecondary) !important;
 	}
 
 	// Sidebar Outlook Beta switch
