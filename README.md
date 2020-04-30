@@ -1,7 +1,8 @@
 # Dark Mode for Outlook™ [Extension]
 ![](https://img.shields.io/badge/type-Extension-yellow.svg "Project type")
-[![](https://img.shields.io/chrome-web-store/v/kjfbefcenipnnpbcbbklcidpjiamlcpl.svg "View on the Chrome Web Store")](https://chrome.google.com/webstore/detail/dark-mode-for-outlook/kjfbefcenipnnpbcbbklcidpjiamlcpl)
-[![](https://img.shields.io/amo/v/dark-mode-for-outlook.svg "View on the Firefox Add-ons Page")](https://addons.mozilla.org/en-US/firefox/addon/dark-mode-for-outlook/)
+[![](https://img.shields.io/chrome-web-store/v/kjfbefcenipnnpbcbbklcidpjiamlcpl.svg "View on the Chrome Web Store")][1]
+[![](https://img.shields.io/amo/v/dark-mode-for-outlook.svg "View on the Firefox Add-ons Page")][2]
+[![](https://img.shields.io/static/v1?label=edge%20add-on&message=v2.11&color=blue "View on the Edge Add-ons Page")][3]
 ![](https://img.shields.io/github/repo-size/jerboa88/dark-mode-for-outlook.svg "Repository size")
 [![](https://img.shields.io/github/license/jerboa88/dark-mode-for-outlook.svg "Project license")](LICENSE.md)
 
@@ -10,7 +11,11 @@ A Chrome extension/Firefox add-on that applies a better (unofficial) dark mode t
 
 
 ## Installation
-The extension can be installed from the Chrome Web Store [here](https://chrome.google.com/webstore/detail/dark-mode-for-outlook/kjfbefcenipnnpbcbbklcidpjiamlcpl) or from the Firefox Add-on page [here](https://addons.mozilla.org/en-US/firefox/addon/dark-mode-for-outlook/).
+The extension can be installed for your browser here:
+| [![Chrome logo][4]][1] | **[Chrome][1]** |
+| - | - |
+| [![Firefox logo][5]][2] | **[Firefox][2]** |
+| [![Edge logo][6]][3] | **[Edge][3]** |
 
 If you wish to build yourself, `build.sh` is used to copy all files to the `build/` directory, compile css, and zip the extension. You can do this any other way you wish. [SASS](https://sass-lang.com/) is used for CSS compilation. After running `build.sh`, the build directory can be loaded into Chrome. The `.zip` file can also be loaded into Firefox after renaming the file extension to `.xpi`.
 
@@ -36,3 +41,12 @@ Contributions, issues, and forks are welcome but this is a hobby project so don'
 
 ## License
 This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for details. Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.
+
+
+[1]: https://chrome.google.com/webstore/detail/dark-mode-for-outlook/kjfbefcenipnnpbcbbklcidpjiamlcpl
+[2]: https://addons.mozilla.org/en-US/firefox/addon/dark-mode-for-outlook/
+[3]: https://microsoftedge.microsoft.com/addons/detail/ncmfoiokkfipenppipihehpoikhacpep
+
+[4]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/62.2.25/chrome/chrome_32x32.png
+[5]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/62.2.25/archive/firefox_57-70/firefox_57-70_32x32.png
+[6]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/62.2.25/edge/edge_32x32.png
