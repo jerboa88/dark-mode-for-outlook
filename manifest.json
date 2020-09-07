@@ -11,7 +11,7 @@
 		"16": "16.png"
 	},
 	"content_scripts": [{
-		"matches": ["*://outlook.live.com/*"],
+		"matches": ["*://outlook.live.com/*", "*://outlook.office.com/*", "*://outlook.office365.com/*"],
 		"css": ["style.css"]
 	}],
 	"manifest_version": 2
