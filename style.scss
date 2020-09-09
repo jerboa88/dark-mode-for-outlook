@@ -48,6 +48,50 @@ $gold: #f4b400 !important;
 
 
 // DESKTOP SITE
+/*#region GENERAL STYLES */
+/* Reduce min width */
+body {
+	min-width: 700px !important;
+}
+
+/* Bottom tabs text color */
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:last-child > div > div {
+	color: var(--black) !important;
+}
+/*#endregion*/
+
+
+/*#region STYLES FOR LOADING/SPLASH SCREEN */
+#loadingScreen {
+	background-color: #111 !important;
+}
+
+#loadingScreen > #loadingLogo {
+	display: none !important;
+}
+
+#loadingScreen > #MSLogo {
+	display: none !important;
+}
+
+#loadingScreen > #loadingSpinner {
+	opacity: 1 !important;
+	position: fixed !important;
+	top: calc(50% - 40px) !important;
+	left: calc(50% - 40px) !important;
+}
+
+#loadingScreen > #loadingSpinner > g > g > circle {
+	stroke: #fff !important;
+}
+
+#spinnerCircle {
+	stroke: transparent !important;
+}
+/*#endregion*/
+
+
+/*#region STYLES FOR COMPOSE MESSAGE */
 /* New message compose: From/to message label background color and border */
 #app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:first-child > div > div > div > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div[tabindex='0']:first-child,
 .RecipientWellLabelWithContactPicker-label {
@@ -60,12 +104,10 @@ $gold: #f4b400 !important;
 div[aria-label="Message body"] > div {
 	background-color: transparent !important;
 }
+/*#endregion*/
 
-/* Reduce min width */
-body {
-	min-width: 700px !important;
-}
 
+/*#region STYLES FOR HEADER BAR */
 /* Change header color (logo, spacer, main bar, left app button, skype button, activity feed button, settings button, help button, whats new button, profile picture button) */
 #O365_AppName,
 .o365cs-base .o365sx-appName,
@@ -105,6 +147,16 @@ body {
 	border-left: none !important;
 }
 
+/* Remove horizontal borders for header (from left to right) */
+#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:first-child > div:first-child,
+#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:first-child > div:nth-child(2),
+#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:nth-child(3) > div:first-child {
+	border-bottom: none !important;
+}
+/*#endregion*/
+
+
+/*#region STYLES FOR ADS */
 /* Hide right ad sidebar. nth-child is important here to avoid applying style on Office 365 */
 #app > .ms-Fabric > div:last-child > div:first-child > div:first-child > div:nth-child(4) {
 	display: none !important;
@@ -133,7 +185,10 @@ body {
 #app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:last-child > div:first-child > div:nth-child(2) {
 	display: none !important;
 }
+/*#endregion*/
 
+
+/*#region STYLES FOR BORDERS */
 /* Remove bottom border: messages in list, time headers (in message list) */
 div[data-convid],
 .full {
@@ -163,7 +218,10 @@ div[role=menubar] {
 #app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:nth-child(2) {
 	width: 0 !important;
 }
+/*#endregion*/
 
+
+/*#region STYLES FOR LEFT SIDEBAR */
 /* Left sidebar text color */
 .o365cs-base .o365sx-neutral-accent-font,
 .o365cs-base .o365sx-neutral-accent-hover-font:hover {
@@ -176,13 +234,10 @@ div[role=menubar] {
     background-color: #fff !important;
     color: #000 !important;
 }
+/*#endregion*/
 
-/* App launcher background color */
-div[aria-label="App launcher opened"],
-#appLauncher {
-	background-color: #111 !important;
-}
 
+/*#region STYLES FOR RIGHT SIDEBAR */
 /* Right sidebar background color */
 #flexPaneScrollRegion,
 .o365sx-neutral-foreground-background {
@@ -198,6 +253,15 @@ div[aria-label="App launcher opened"],
 .o365sx-neutral-accent-link {
 	color: #fff !important;
 }
+/*#endregion*/
+
+
+/*#region STYLES FOR APP LAUNCHER */
+/* App launcher background color */
+div[aria-label="App launcher opened"],
+#appLauncher {
+	background-color: #111 !important;
+}
 
 /* App launcher text/icon color */
 #appLauncher > button,
@@ -207,18 +271,9 @@ div[aria-label="App launcher opened"],
 #appsModule > div > div > a > div:last-child {
 	color: #fff !important;
 }
+/*#endregion*/
 
-/* Bottom tabs text color */
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:last-child > div > div {
-	color: var(--black) !important;
-}
 
-/* Remove horizontal borders for header (from left to right) */
-#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:first-child > div:first-child,
-#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:first-child > div:nth-child(2),
-#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:nth-child(3) > div:first-child {
-	border-bottom: none !important;
-}
 
 
 
