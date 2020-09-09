@@ -48,8 +48,8 @@ $gold: #f4b400 !important;
 
 
 // DESKTOP SITE
-// New message compose: From/to message label background color and border
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:first-child > div > div > div > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child,
+/* New message compose: From/to message label background color and border */
+#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:first-child > div > div > div > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div[tabindex='0']:first-child,
 .RecipientWellLabelWithContactPicker-label {
 	background: #fff !important;
 	color: #{$darkest};
@@ -66,13 +66,14 @@ body {
 	min-width: 700px !important;
 }
 
-/* Change header color (logo, spacer, main bar, left app button, skype button, settings button, help button, whats new button, profile picture button) */
+/* Change header color (logo, spacer, main bar, left app button, skype button, activity feed button, settings button, help button, whats new button, profile picture button) */
 #O365_AppName,
 .o365cs-base .o365sx-appName,
 #app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child,
 #app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child > div:first-child > div:first-child > button:first-child,
 #skype > div > button,
 #Time,
+#owaActivityFeedButton,
 #owaSettingsButton,
 #O365_MainLink_Help,
 #whatsnew,
@@ -104,8 +105,8 @@ body {
 	border-left: none !important;
 }
 
-/* Hide right ad sidebar */
-#app > .ms-Fabric > div:last-child > div:first-child > div:first-child > div:last-child {
+/* Hide right ad sidebar. nth-child is important here to avoid applying style on Office 365 */
+#app > .ms-Fabric > div:last-child > div:first-child > div:first-child > div:nth-child(4) {
 	display: none !important;
 }
 
@@ -113,8 +114,13 @@ body {
 	display: none !important;
 }
 
-/* Hide bottom ad */
-#app > .ms-Fabric > div:last-child > div:first-child > div:last-child {
+/* Hide top ad for Edge. When this ad isn't displayed, styles are broken, so leave disabled for now */
+// #app > .ms-Fabric > div:last-child > div:first-child > div:first-child > div:first-child {
+// 	display: none !important;
+// }
+
+/* Hide bottom ad. nth-child is important here to avoid applying style on Office 365 */
+#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) {
 	display: none !important;
 }
 
@@ -153,9 +159,22 @@ div[role=menubar] {
 	width: initial !important;
 }
 
-// Remove left sidebar right border
+/* Remove left sidebar right border */
 #app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:nth-child(2) {
 	width: 0 !important;
+}
+
+/* Left sidebar text color */
+.o365cs-base .o365sx-neutral-accent-font,
+.o365cs-base .o365sx-neutral-accent-hover-font:hover {
+	color: #fff !important;
+}
+
+/* Left sidebar button hover color */
+.o365cs-base .o365sx-neutral-accent-background,
+.o365cs-base .o365sx-neutral-accent-hover-background:hover {
+    background-color: #fff !important;
+    color: #000 !important;
 }
 
 /* App launcher background color */
