@@ -10,12 +10,12 @@
 	},
 
 	"extensionDescription": {
-		"message": "Un mejor tema oscuro para Outlook™.",
+		"message": "Un mejor tema oscuro (extraoficial) para Microsoft Outlook™.",
 		"description": "Description of the extension."
 	},
 
 	"extensionLongDescription": {
-		"message": "Una extensión de Firefox que aplica un mejor modo oscuro a Microsoft Outlook y elimina la barra lateral de anuncios. Cambie a Outlook Beta en los sitios de escritorio y móviles para usar. ¡Compatible con Firefox móvil!\nTambién se lanza en Chrome Web Store aquí.\nOutlook es una marca comercial de Microsoft y este proyecto no está afiliado ni respaldado por Microsoft de ninguna manera.",
+		"message": "Una extensión de Firefox que aplica un mejor modo oscuro a Microsoft Outlook y elimina la barra lateral de anuncios. Habilite el modo oscuro integrado de Outlook para obtener la mejor experiencia. Compatible con Firefox móvil.\n¡También disponible para Chrome, Firefox, Edge y Opera!\nOutlook es una marca comercial de Microsoft y este proyecto no está afiliado ni respaldado por Microsoft de ninguna manera.",
 		"description": "A longer description of the extension for store pages."
 	}
 }
