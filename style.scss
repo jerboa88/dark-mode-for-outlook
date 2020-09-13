@@ -108,7 +108,7 @@ div[aria-label="Message body"] > div {
 
 
 /*#region STYLES FOR HEADER BAR */
-/* Change header color (logo, spacer, main bar, left app button, skype button, activity feed button, settings button, help button, whats new button, profile picture button) */
+/* Change header color (logo, spacer, main bar, left app button, skype button, activity feed button, settings button, help button, whats new button, profile picture button, OneNote feed button, general buttons) */
 #O365_AppName,
 .o365cs-base .o365sx-appName,
 #app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child,
@@ -119,7 +119,9 @@ div[aria-label="Message body"] > div {
 #owaSettingsButton,
 #O365_MainLink_Help,
 #whatsnew,
-#O365_MainLink_Me {
+#O365_MainLink_Me,
+#owaNoteFeedButton,
+.o365cs-base .o365sx-button {
 	background-color: #111 !important;
 }
 
