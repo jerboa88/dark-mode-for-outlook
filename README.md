@@ -12,6 +12,7 @@ A browser extension/add-on that applies a better (unofficial) dark mode to Micro
 
 
 ## Installation
+### Simple
 The extension can be installed for your browser here:
 | [![Chrome logo][chrome_logo]][chrome_link] | **[Chrome][chrome_link]** |
 | - | - |
@@ -19,7 +20,16 @@ The extension can be installed for your browser here:
 | [![Edge logo][edge_logo]][edge_link] | **[Edge][edge_link]** |
 | [![Opera logo][opera_logo]][opera_link] | **[Opera][opera_link]** |
 
-If you wish to build yourself, `build.sh` is used to copy all files to the `build/` directory, compile css, and zip the extension. You can do this any other way you wish. [SASS](https://sass-lang.com/) is used for CSS compilation. After running `build.sh`, the build directory can be loaded into Chrome. The `.zip` file can also be loaded into Firefox after renaming the file extension to `.xpi`.
+**Note:** It can also be installed on [Brave](https://support.brave.com/hc/en-us/articles/360017909112-How-can-I-add-extensions-to-Brave-), [Vivaldi](https://help.vivaldi.com/article/extensions/#install), and other Chromium-based browsers from the Chrome Web Store (or by sideloading).
+
+### Detailed
+If you wish to build yourself, `build.sh` is used to copy all files to the `build/` directory, compile SCSS to CSS, and zip the extension, but you can do these steps any other way you wish. Next, the build directory or zip file can be loaded into your browser of choice:
+- [Instructions for Chrome](https://developer.chrome.com/extensions/getstarted#manifest)
+- [Instructions for Firefox](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
+- [Instructions for Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/part1-simple-extension#run-your-extension-locally-in-your-browser-while-developing-it-side-loading)
+- [Instructions for Opera](https://dev.opera.com/extensions/testing/)
+
+**Note:** A command line version of [SASS](https://sass-lang.com/) is required for compiling stylesheets.
 
 
 ## Usage
