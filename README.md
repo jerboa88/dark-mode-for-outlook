@@ -2,8 +2,8 @@
 ![](https://img.shields.io/badge/type-Extension-yellow.svg "Project type")
 [![](https://img.shields.io/chrome-web-store/v/kjfbefcenipnnpbcbbklcidpjiamlcpl.svg "View on the Chrome Web Store")][chrome_link]
 [![](https://img.shields.io/amo/v/dark-mode-for-outlook.svg "View on the Firefox Add-ons Page")][firefox_link]
-[![](https://img.shields.io/static/v1?label=edge%20add-on&message=latest&color=blue "View on the Edge Add-ons Page")][edge_link]
-[![](https://img.shields.io/static/v1?label=opera%20add-on&message=latest&color=blue "View on the Opera Add-ons Page")][opera_link]
+[![](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fncmfoiokkfipenppipihehpoikhacpep "View on the Edge Add-ons Page")][edge_link]
+[![](https://img.shields.io/static/v1?label=opera%20add-on&message=version%20unknown&color=blue "View on the Opera Add-ons Page")][opera_link]
 ![](https://img.shields.io/github/repo-size/jerboa88/dark-mode-for-outlook.svg "Repository size")
 [![](https://img.shields.io/github/license/jerboa88/dark-mode-for-outlook.svg "Project license")](LICENSE.md)
 
