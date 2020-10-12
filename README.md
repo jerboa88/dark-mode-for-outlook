@@ -22,6 +22,9 @@ The extension can be installed for your browser here:
 
 **Note:** It can also be installed on [Brave](https://support.brave.com/hc/en-us/articles/360017909112-How-can-I-add-extensions-to-Brave-), [Vivaldi](https://help.vivaldi.com/article/extensions/#install), and other Chromium-based browsers from the Chrome Web Store (or by sideloading).
 
+**Note:** Installing add-ons for Firefox mobile is complicated at the moment, since Android's [new Geckoview-based browser](https://blog.mozilla.org/addons/2020/09/02/update-on-extension-support-in-the-new-firefox-for-android/) does not officially support all add-ons yet. If you still want to use this add-on on Firefox mobile, refer to [this page](https://support.mozilla.org/en-US/kb/find-and-install-add-ons-firefox-android#w_expanded-extension-support-in-firefox-for-android-nightly) for more information.
+
+
 ### Detailed
 If you wish to build yourself, `build.sh` is used to copy all files to the `build/` directory, compile SCSS to CSS, and zip the extension, but you can do these steps any other way you wish. Next, the build directory or zip file can be loaded into your browser of choice:
 - [Instructions for Chrome](https://developer.chrome.com/extensions/getstarted#manifest)
@@ -33,9 +36,11 @@ If you wish to build yourself, `build.sh` is used to copy all files to the `buil
 
 
 ## Usage
-Just install the extension, **enable the built-in Outlook dark mode**, and you should be good to go! The extension does not have any other settings at the moment.
+Just install the extension and you should be good to go! The extension does not have any other settings at the moment.
 
-**Note:** If the built-in dark mode is not enabled, some of the styles will not be applied correctly. This is something I hope to fix in a future version, but for now please be sure to enable this setting to avoid problems.
+If you encounter any problems while using the extension, please create an issue [here](/issues), send me an email at extensions@johng.io, or create a pull request yourself to fix the issue.
+
+I try to fix the extension as soon as possible when Outlook makes breaking changes, but keep in mind it may take some time for me to fit the work into my schedule and make all the changes that need to be made. Thanks for your patience :).
 
 
 ## Screenshots
@@ -50,7 +55,9 @@ Mobile site | &#8291; | &#8291; | &#8291;
 
 
 ## Contributing
-Contributions, issues, and forks are welcome but this is a hobby project so don't expect too much from it. [SemVer](http://semver.org/) is used for versioning.
+Contributions, issues, and forks are welcome. Please note that any code you contribute will be licensed under the same license as this project. By making any contributions, you agree to this.
+
+[SemVer](http://semver.org/) is used for versioning.
 
 
 ## License
