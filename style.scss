@@ -1,69 +1,545 @@
-// VARIABLES
-$lightest: #fff !important;
-$lighter: #{rgba(#fff, .8)} !important;
-$light: #{rgba(#fff, .5)} !important;
-$dark: #222 !important;
-$darker: #111 !important;
-$darkest: #030303 !important;
-$gold: #f4b400 !important;
-
+/*#region PALETTE */
 :root {
-	--black: #{$lightest};
-	--themeDark: #{$lightest};
-	--themeDarker: #{$lightest};
-	--themePrimary: #{$lightest};
-	--headerBackgroundSearch: #{$lightest};
-	--headerButtonsBackgroundSearch: #{$lightest};
-	--headerSearchButtonIcon: #{$lightest};
-	--headerSearchFilters: #{$lightest};
+	--dmfo-lightest: #fff;
+	--dmfo-lighter: rgba(#fff, .8);
+	--dmfo-light: rgba(#fff, .5);
+	--dmfo-dark: #212121;
+	--dmfo-darker: #111;
+	--dmfo-darkest: #030303;
+	--dmfo-gold: #f4b400;
+}
+/*#endregion*/
 
-	--neutralLight: #{$dark};
-	--themeLight: #{$dark};
-	--headerSearchButtonBackground: #{$dark};
 
-	--headerButtonsBackground: #{$darker};
-	--headerButtonsBackgroundHover: #{$darker};
-	--headerBackground: #{$darker};
-	--fallback-themePrimary: #{$darker};	// Compose send button/CC BCC text
-	--fallback-themeDark: #{$darker};	// Compose from/to text
-	--neutralLighter: #{$darker};
-	--neutralLighterAlt: #{$darker};
-	--themeTertiary: #{$darker};
+/*#region THEME COLORS */
+html {
+	--black: var(--dmfo-lightest) !important;	// Custom
+	--blackTranslucent40: rgba(255, 255, 255, 0.4) !important;
+	--blackTranslucent10: rgba(255, 255, 255, 0.1) !important;
+	--white: var(--dmfo-darkest) !important;	// Custom
+	--whiteTranslucent40: rgba(33, 33, 33, 0.4) !important;
+	--whiteTranslucent90: rgba(33, 33, 33, 0.9) !important;
+	--neutralDark: #fff !important;
+	--neutralPrimary: #fff !important;
+	--neutralPrimaryAlt: #f8f8f8 !important;
+	--neutralSecondary: #f4f4f4 !important;
+	--neutralTertiary: #eaeaea !important;
+	--neutralTertiaryAlt: #c8c8c8 !important;
+	--neutralQuaternary: #2e2e2e !important;
+	--neutralQuaternaryAlt: #2e2e2e !important;
+	--neutralLight: #000 !important;
+	--neutralLighter: var(--dmfo-darker) !important;	// Custom
+	--neutralLighterAlt: var(--dmfo-darker) !important;	// Custom
+	--redDark: #e81123 !important;
+	--green20: #6bb700 !important;
+	--purple: #9c89e9 !important;
+	--flaggedMessage: #242100 !important;
+	--richUserContentBackground: #eaeaea !important;
+	--composeNeutralBackground: #212121 !important;
+	--composeNeutralLighterBackground: #fff !important;
+	--readingPaneCardBorder: #000 !important;
+	--readingPaneCardFocusBorder: #d0d0d0 !important;
+	--themeDarker: #d2d2d2 !important;
+	--themeDark: #d2d2d2 !important;
+	--themeDarkAlt: #d2d2d2 !important;
+	--themePrimary: var(--dmfo-lightest) !important;	// Custom
+	--themeSecondary: #848484 !important;
+	--themeTertiary: #767676 !important;
+	--themeLight: var(--dmfo-dark) !important;	// Custom
+	--themeLighter: var(--dmfo-dark) !important;	// Custom
+	--themeLighterAlt: var(--dmfo-darker) !important;	// Custom
+	--headerBackground: #767676 !important;
+	--headerBackgroundSearch: #6c6c6c !important;
+	--headerBrandText: #fff !important;
+	--headerTextIcons: #fff !important;
+	--headerSearchBoxBackground: var(--dmfo-dark) !important;	// Custom
+	--headerSearchBoxIcon: #f5f5f5 !important;
+	--headerSearchPlaceholderText: #f5f5f5 !important;
+	--headerSearchButtonBackground: #a8a8a8 !important;
+	--headerSearchButtonBackgroundHover: #d2d2d2 !important;
+	--headerSearchButtonIcon: #000 !important;
+	--headerSearchFilters: #a8a8a8 !important;
+	--headerSearchFiltersHover: #f5f5f5 !important;
+	--headerButtonsBackground: #767676 !important;
+	--headerButtonsBackgroundHover: #6c6c6c !important;
+	--headerButtonsBackgroundSearch: #6c6c6c !important;
+	--headerButtonsBackgroundSearchHover: #585858 !important;
+	--headerBadgeBackground: #f5f5f5 !important;
+	--headerBadgeText: #fff !important;
+	--headerSearchIcon: #fff !important;
+	--searchBoxBackground: rgba(33, 32, 33, .7) !important;
+	--fallback-black: #000000 !important;
+	--fallback-blackTranslucent40: rgba(0,0,0,.4) !important;
+	--fallback-blackTranslucent10: rgba(0,0,0,.1) !important;
+	--fallback-white: #fff !important;
+	--fallback-whiteTranslucent40: rgba(255,255,255,.4) !important;
+	--fallback-whiteTranslucent90: rgba(255,255,255,.9) !important;
+	--fallback-neutralDark: #201f1e !important;
+	--fallback-neutralPrimary: #323130 !important;
+	--fallback-neutralPrimaryAlt: #3b3a39 !important;
+	--fallback-neutralSecondary: #605e5c !important;
+	--fallback-neutralTertiary: #a19f9d !important;
+	--fallback-neutralTertiaryAlt: #c8c6c4 !important;
+	--fallback-neutralQuaternary: #d2d0ce !important;
+	--fallback-neutralQuaternaryAlt: #e1dfdd !important;
+	--fallback-neutralLight: #edebe9 !important;
+	--fallback-neutralLighter: #f3f2f1 !important;
+	--fallback-neutralLighterAlt: #faf9f8 !important;
+	--fallback-redDark: #a4262c !important;
+	--fallback-green20: #0b6a0b !important;
+	--fallback-purple: #5c2d91 !important;
+	--fallback-flaggedMessage: #fffdd9 !important;
+	--fallback-richUserContentBackground: #fff !important;
+	--fallback-composeNeutralBackground: #fff !important;
+	--fallback-composeNeutralLighterBackground: #f4f4f4 !important;
+	--fallback-readingPaneCardBorder: #edebe9 !important;
+	--fallback-readingPaneCardFocusBorder: #d0d0d0 !important;
+	--fallback-themeDarker: #0C0C0C !important;
+	--fallback-themeDark: #1F1F1F !important;
+	--fallback-themeDarkAlt: #1F1F1F !important;
+	--fallback-themePrimary: #333 !important;
+	--fallback-themeSecondary: #555 !important;
+	--fallback-themeTertiary: #999 !important;
+	--fallback-themeLight: #BBB !important;
+	--fallback-themeLighter: #E4E4E4 !important;
+	--fallback-themeLighterAlt: #F3F3F3 !important;
+	--fallback-headerBackground: #333 !important;
+	--fallback-headerBackgroundSearch: #1F1F1F !important;
+	--fallback-headerBrandText: #FFF !important;
+	--fallback-headerTextIcons: #FFF !important;
+	--fallback-headerSearchBoxBackground: rgba(255,255,255,.7) !important;
+	--fallback-headerSearchBoxIcon: #0C0C0C !important;
+	--fallback-headerSearchPlaceholderText: #0C0C0C !important;
+	--fallback-headerSearchButtonBackground: #BBB !important;
+	--fallback-headerSearchButtonBackgroundHover: #0C0C0C !important;
+	--fallback-headerSearchButtonIcon: #0C0C0C !important;
+	--fallback-headerSearchFilters: #0C0C0C !important;
+	--fallback-headerSearchFiltersHover: #333 !important;
+	--fallback-headerButtonsBackground: #333 !important;
+	--fallback-headerButtonsBackgroundHover: #1F1F1F !important;
+	--fallback-headerButtonsBackgroundSearch: #1F1F1F !important;
+	--fallback-headerButtonsBackgroundSearchHover: #0C0C0C !important;
+	--fallback-headerBadgeBackground: #BBB !important;
+	--fallback-headerBadgeText: #0C0C0C !important;
+	--fallback-headerSearchIcon: #0C0C0C !important;
+	--fallback-searchBoxBackground: rgba(255,255,255,.7) !important;
+}
+/*#endregion*/
 
-	--white: #{$darkest};
 
-	--headerButtonsBackgroundSearchHover: #{$lighter};
-	--headerSearchBoxIcon: #{$lighter};
-	--headerSearchFiltersHover:#{$lighter};
-	--neutralPrimary: #{$lighter};
-	--neutralDark: #{$lighter};
-	--neutralSecondary: #{$light};
-	--headerSearchButtonBackgroundHover: #{$light};
-
-	--themeDarkAlt: #{$gold}; // Sidebar star icon
-
-	--whiteTranslucent40: #{rgba(33, 33, 33, 0.4) !important};
-	--headerSearchBoxBackground: #{rgba(33,33,33,0.7) !important};
+/*#region MANUAL OVERRIDES FOR HARDCODED STYLES AND FOR WHEN BUILT-IN DARK MODE IS DISABLED */
+// Settings panel header text color (dm override)
+.o365cs-base .o365sx-neutral-dark-font, .o365cs-base .o365sx-neutral-dark-hover-font:hover {
+	color: var(--dmfo-lightest) !important;
 }
 
+// Settings panel header close button icon color (dm override)
+.o365cs-base .o365sx-neutral-secondary-font, .o365cs-base .o365sx-neutral-secondary-hover-font:hover {
+	color: var(--dmfo-lightest) !important;
+}
 
-// DESKTOP SITE
+// Navbar settings icon (dm override)
+.o365cs-base .o365sx-activeButton,
+.o365cs-base .o365sx-activeButton:hover,
+.o365cs-base .o365sx-activeButton:focus {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Popup profile panel background
+.o365cs-base .o365sx-neutral-foreground-background,
+.o365cs-base .o365sx-neutral-foreground-hover-background:hover {
+	background-color: var(--dmfo-darker) !important;
+}
+
+// Navbar color
+.o365sx-navbar {
+	background-color: var(--dmfo-darker) !important;
+}
+
+// Navbar buttons
+.o365cs-base .o365sx-button,
+.o365cs-base .o365sx-waffle,
+.o365cs-base .o365sx-appName,
+.o365cs-base .o365sx-appName:visited,
+#headerButtonsRegionId > div button {
+	background-color: var(--dmfo-darker) !important;
+}
+
+// Popup panel background color
+.o365cs-base .o365sx-neutral-lighterAlt-background,
+.o365cs-base .o365sx-neutral-lighterAlt-hover-background:hover {
+	background-color: var(--dmfo-darker) !important;
+}
+
+// Text/link colors
+.o365cs-base .o365sx-neutral-accent-font,
+.o365cs-base .o365sx-neutral-accent-hover-font:hover,
+.o365cs-base .o365sx-neutral-accent-link, .o365cs-base .o365sx-neutral-accent-link:hover,
+.o365cs-base .o365sx-neutral-accent-link:visited, .o365cs-base .o365sx-neutral-accent-hover-link:hover {
+	color: var(--dmfo-lightest) !important;
+}
+/*#endregion*/
+
+
+/*#region MANUAL OVERRIDES FOR MESSAGE COMPOSITION HARDCODED STYLES */
+div[aria-label='Content pane'] > div:first-child > div:first-child {
+	--headerBackground: inherit !important;
+	--headerBackgroundSearch: inherit !important;
+	--headerSearchBoxBackground: inherit !important;
+	--headerSearchButtonBackground: inherit !important;
+	--headerSearchButtonBackgroundHover: inherit !important;
+	--headerButtonsBackground: inherit !important;
+	--headerButtonsBackgroundHover: inherit !important;
+	--headerButtonsBackgroundSearch: inherit !important;
+	--headerButtonsBackgroundSearchHover: inherit !important;
+	--headerBadgeBackground: inherit !important;
+	--searchBoxBackground: inherit !important;
+	--richUserContentBackground: inherit !important;
+	background: inherit !important;
+
+	--themeDarker: inherit !important;
+	--themeDark: inherit !important;
+	--themeDarkAlt: inherit !important;
+	--themePrimary: inherit !important;
+	--themeSecondary: inherit !important;
+	--themeTertiary: inherit !important;
+	--themeLight: inherit !important;
+	--themeLighter: inherit !important;
+	--themeLighterAlt: inherit !important;
+	--headerBrandText: inherit !important;
+	--headerTextIcons: inherit !important;
+	--headerSearchBoxIcon: inherit !important;
+	--headerSearchPlaceholderText: inherit !important;
+	--headerSearchButtonIcon: inherit !important;
+	--headerSearchFilters: inherit !important;
+	--headerSearchFiltersHover: inherit !important;
+	--headerBadgeText: inherit !important;
+	--headerSearchIcon: inherit !important;
+	--black: inherit !important;
+	--blackTranslucent40: inherit !important;
+	--white: inherit !important;
+	--whiteTranslucent40: inherit !important;
+	--whiteTranslucent90: inherit !important;
+	--neutralDark: inherit !important;
+	--neutralPrimary: inherit !important;
+	--neutralPrimaryAlt: inherit !important;
+	--neutralSecondary: inherit !important;
+	--neutralTertiary: inherit !important;
+	--neutralTertiaryAlt: inherit !important;
+	--neutralQuaternary: inherit !important;
+	--neutralQuaternaryAlt: inherit !important;
+	--neutralLight: inherit !important;
+	--neutralLighter: inherit !important;
+	--neutralLighterAlt: inherit !important;
+	--redDark: inherit !important;
+	--purple: inherit !important;
+	--flaggedMessage: inherit !important;
+	color: inherit !important;
+}
+
+// Subject field background color
+.ms-TextField-field[aria-label='Add a subject'] {
+	background-color: var(--dmfo-darker) !important;
+}
+
+// Message body background color
+div[aria-label='Message body'] {
+	--headerBackground: initial !important;
+	--headerBackgroundSearch: initial !important;
+	--headerSearchBoxBackground: initial !important;
+	--headerSearchButtonBackground: initial !important;
+	--headerSearchButtonBackgroundHover: initial !important;
+	--headerButtonsBackground: initial !important;
+	--headerButtonsBackgroundHover: initial !important;
+	--headerButtonsBackgroundSearch: initial !important;
+	--headerButtonsBackgroundSearchHover: initial !important;
+	--headerBadgeBackground: initial !important;
+	--searchBoxBackground: initial !important;
+	--richUserContentBackground: initial !important;
+	background-color: var(--dmfo-darkest) !important;
+}
+
+// Text background for compose message body
+// div[aria-label='Message body'] > div[data-ogsc='#000000'] {
+// 	background: transparent !important;
+// }
+
+div[aria-label='Message body'] > div[style] {
+	background: var(--dmfo-darkest) !important;
+	color: var(--dmfo-lightest) !important;
+}
+
+.wide-content-host > div:first-child > .allowTextSelection > div > div > div > div,
+.wide-content-host > div:first-child > .allowTextSelection > div > div > div > div > span[style*='color: rgb(0, 0, 0);'] {
+	background-color: transparent !important;
+	color: var(--dmfo-lightest) !important;
+}
+/*#endregion*/
+
+
 /*#region GENERAL STYLES */
-/* Reduce min width */
+// Reduce min width
 body {
 	min-width: 700px !important;
 }
 
-/* Bottom tabs text color */
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:last-child > div > div {
-	color: var(--black) !important;
+// Main search box border radius
+div[role=search] {
+	background-color: var(--dmfo-dark) !important;
+	border: 0 !important;
+	border-radius: 4px !important;
+}
+
+// Button hover background color
+.o365cs-base .o365sx-neutral-light-hover-background:hover {
+	background: var(--dmfo-dark) !important;
+}
+
+// Hide bottom border between headings in the message list
+div[role=heading] {
+	margin-bottom: 0 !important;
+}
+
+// Hide bottom border between emails in the message list
+div[data-convid] {
+	margin-bottom: 0 !important;
+}
+
+// Message list action icon button hover color
+button.ms-Button.ms-Button--icon:hover {
+	color: var(--dmfo-gold) !important;
+}
+
+// Hide top border for tab bar
+div[aria-label='Message list'] > div:nth-child(3),
+div[aria-label='Reading Pane'] > div:nth-child(2) {
+	border-width: 0 !important;
+}
+
+// Hide borders for tabs and increase border radius
+div[aria-label='Message list'] > div:nth-child(3) > div,
+div[aria-label='Reading Pane'] > div:nth-child(2) > div {
+	border-style: none !important;
+	border-radius: 4px 4px 0 0 !important;
+}
+/*#endregion*/
+
+
+/*#region STYLES FOR LEFT SIDEBAR */
+// Remove left sidebar right border
+#app > div:first-child > div:nth-child(3) > div:first-child > div:first-child > div:nth-child(2) {
+	width: 0 !important;
+}
+
+// Hide bottom border under the new button on the left sidebar
+div[aria-label='Navigation pane'] > div:first-child > div {
+	border-bottom: 0 !important;
+}
+
+// Hide top border of navigation bar at bottom of left sidebar
+div[role=menubar] {
+	border-top: 0 !important;
+}
+/*#endregion*/
+
+
+/*#region STYLES FOR COMPOSING/VIEWING MESSAGES */
+// Hide borders for content pane
+div[aria-label='Content pane'] > div > div:first-child > div:nth-child(2),
+div[aria-label='Content pane'] > div > div:first-child > div:nth-child(3) {
+	border: 0 !important;
+}
+
+// Remove element below content PANE
+div[aria-label='Content pane'] > div:first-child > div:first-child > div:nth-child(3) > div:nth-child(3) {
+	display: none !important;
+}
+
+// Hide command toolbar bottom border
+div[aria-label='Command toolbar'] {
+	border-bottom: 0 !important;
+}
+
+// Content pane background
+div[aria-label='Content pane'] {
+	background: var(--dmfo-darkest) !important;
+}
+
+// Hide email message pane border
+.wide-content-host > div {
+	border: 0 !important;
+}
+/*#endregion*/
+
+
+/*#region STYLES FOR NAVBAR/PANES */
+// Hide popup panel left border
+#O365fpcontainerid {
+	border-left: 0 !important;
+}
+
+
+/*#region STYLES FOR CALENDAR PANE */
+// Calendar pane background (main panel, header body background, New Event button, New Event button)
+#FlexPane_OwaTimePanel,
+#FlexPane_OwaTimePanel > div:first-child > div:first-child > div:first-child,
+#CustomFlexPane_OwaTimePanel > div > div > div,
+#CustomFlexPane_OwaTimePanel > div > div > div > div:first-child > div:nth-child(3),
+#CustomFlexPane_OwaTimePanel > div > div > div > div:first-child > div:nth-child(3) > button {
+	background: var(--dmfo-darker) !important;
+}
+
+// Calendar pane horizontal borders
+#CustomFlexPane_OwaTimePanel > div > div > div > div:first-child > div,
+#CustomFlexPane_OwaTimePanel > div > div > div > div:first-child > div:nth-child(3) > button {
+	border: 0 !important;
+}
+/*#endregion*/
+
+
+/*#region STYLES FOR SKYPE PANE */
+// Skype pane background
+.ms-Callout-main {
+	background-color: var(--dmfo-darker) !important;
+}
+
+// Skype pane bottom borders between messages
+.swcRecentItem {
+	border-bottom: 0 !important;
+}
+
+// Skype pane message hover background
+.swcRecentItem:hover {
+	background-color: var(--dmfo-dark) !important;
+}
+
+// Skype pane message title
+.swcRecentItem__title {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Skype pane message preview text
+.swcMessagePreview__message {
+	color: #eee !important; // TODO: Change this color later
+}
+
+// Skype pane message timestamp text color
+.swcRecentItem__timestamp {
+	color: #eee !important; // TODO: Change this color later
+}
+
+// Skype pane recent button text color
+.swc.swc-recents .swcRecentsHeader__recentMenuButtonTitle {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Skype pane (new chat button and search placeholder text color)
+.swc.swc-recents.minimal .swcRecentsHeader__newChatButton,
+.swc.swc-recents.minimal .swcRecentsHeader__searchInput {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Skype pane button hover colors (more button, new chat/recents button, close button)
+.swc-recents .swcRecentsHeader__moreButton:hover,
+.swcRecentsHeader__secondRow button:hover {
+	background: var(--dmfo-dark) !important;
+}
+
+// Skype pane new chat/recents button hover background color
+.swcRecentsHeader__secondRow button:hover {
+	background: var(--dmfo-dark) !important;
+}
+
+// Skype pane search box background
+.swcSearchInput {
+	background-color: var(--dmfo-dark) !important;	// TODO: Change this color later to match main search box color
+}
+
+// Skype pane search box icon size
+.swcIcon_size_medium {
+	font-size: 14px !important;
+	padding: .65em !important;
+}
+
+// Skype pane search box input text size
+.swcSearchInput__input {
+	font-size: 14px !important;
+}
+
+// Skype pane search box more button icon size and color
+.swcRecentsHeader__moreButton {
+	color: var(--dmfo-lightest) !important;
+	height: initial !important;
+}
+
+// Skype pane search box background color (behind actual search box element)
+.swcRecentsHeader__searchInput {
+	background-color: initial;
+}
+
+// Skype pane background color
+.swc.swc-recents.dark {
+	background-color: var(--dmfo-darker) !important;
+}
+
+// Skype pane icon color
+.swc.swc-recents.dark .swcRecentsHeader__searchInput .swcIcon_cancel, .swc.swc-recents.dark .swcRecentsHeader__searchInput .swcIcon_search {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Skype pane new chat button color
+.swc.swc-recents.dark .recentsContainer .swcRecentsHeader__newChatButton {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Skype pane background
+.swc.swc-recents.dark .swcRecentsHeader__searchInput {
+	background-color: initial !important;
+}
+/*#endregion*/
+/*#endregion*/
+
+
+/*#region STYLES FOR MESSAGE DELETTION TOOLTIP */
+// Message deletion tooltip background color
+._3xqEuTlsJbTQdiBbqhDlEy > div:first-child > div:first-child {
+	background-color: var(--dmfo-darker) !important;
+	border-radius: 4px !important;
+}
+
+// Message deletion tooltip undo/close button background color
+._3xqEuTlsJbTQdiBbqhDlEy > div:first-child > div:first-child > div:nth-child(2) > button {
+	background-color: var(--dmfo-darker) !important;
+}
+
+// Message deletion tooltip undo/close button background color
+._3xqEuTlsJbTQdiBbqhDlEy > div:first-child > div:first-child > div:nth-child(2) > button:hover {
+	background-color: var(--dmfo-dark) !important;
+}
+/*#endregion*/
+
+
+/*#region AD HIDING FOR OUTLOOK PERSONAL */
+// Hide left ad in sidebar
+#app > div:first-child > div:last-child > div:first-child > div:first-child > div:first-child div:last-child > div:first-child > div:nth-child(2):not([role]) {
+	display: none !important;
+}
+
+// Hide right ad sidebar (when screen is wide)
+#app > div:first-child > div:last-child > div:first-child > div:first-child > div:nth-child(4):not([data-max-width]) {
+	display: none !important;
+}
+
+// Hide bottom ad (when screen is narrow)
+#app > div:first-child > div:last-child > div:first-child > div:nth-child(2) {
+	display: none !important;
 }
 /*#endregion*/
 
 
 /*#region STYLES FOR LOADING/SPLASH SCREEN */
 #loadingScreen {
-	background-color: #111 !important;
+	background-color: var(--dmfo-darker) !important;
 }
 
 #loadingScreen > #loadingLogo {
@@ -82,7 +558,7 @@ body {
 }
 
 #loadingScreen > #loadingSpinner > g > g > circle {
-	stroke: #fff !important;
+	stroke: var(--dmfo-lightest) !important;
 }
 
 #spinnerCircle {
@@ -91,187 +567,20 @@ body {
 /*#endregion*/
 
 
-/*#region STYLES FOR COMPOSE MESSAGE */
-/* New message compose: From/to message label background color and border */
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:last-child > div > div:nth-child(2) > div:first-child > div > div > div > div:first-child > div:first-child > div:first-child > div:first-child > div:first-child > div[tabindex='0']:first-child,
-.RecipientWellLabelWithContactPicker-label {
-	background: #fff !important;
-	color: #{$darkest};
-	border: 1px solid !important;
+/*#region STYLES FOR HELP PANEL IFRAME */
+// Header background
+#ocClientSearch.iwapp.black, #ocClientSearch.olwac.black {
+	background-color: var(--dmfo-darker) !important;
 }
 
-/* New message compose: Message body background*/
-div[aria-label="Message body"] > div {
-	background-color: transparent !important;
-}
-/*#endregion*/
-
-
-/*#region STYLES FOR HEADER BAR */
-/* Change header color (logo, spacer, main bar, left app button, skype button, activity feed button, settings button, help button, whats new button, profile picture button, OneNote feed button, general buttons) */
-#O365_AppName,
-.o365cs-base .o365sx-appName,
-#app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child,
-#app > .ms-Fabric > div:nth-child(2) > div:first-child > div:first-child > div:first-child > div:first-child > button:first-child,
-#skype > div > button,
-#Time,
-#owaActivityFeedButton,
-#owaSettingsButton,
-#O365_MainLink_Help,
-#whatsnew,
-#O365_MainLink_Me,
-#owaNoteFeedButton,
-.o365cs-base .o365sx-button {
-	background-color: #111 !important;
+// Body background
+body.black.olwac {
+	background: var(--dmfo-darker) !important;
 }
 
-/* Skype message panel: background */
-.swc.swc-recents.dark {
-	background-color: #111 !important;
-}
-
-/* Skype message panel: icon colors  */
-.swc.swc-recents.dark .swcRecentsHeader__searchInput .swcIcon_search,
-.swcRecentsHeader__newChatButton {
-	color: #fff !important;
-}
-
-/* Calendar panel: background */
-#FlexPane_OwaTimePanel,
-#FlexPane_OwaTimePanel > div:first-child > div:first-child > div:first-child,
-#CustomFlexPane_OwaTimePanel > div:first-child > div:first-child > div:first-child,
-.ms-Button[aria-label="New event"] {
-	background-color: #111 !important;
-}
-
-/* Calendar panel: border */
-#O365fpcontainerid {
-	border-left: none !important;
-}
-
-/* Remove horizontal borders for header (from left to right) */
-#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:first-child > div:first-child,
-#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:first-child > div:nth-child(2),
-#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:nth-child(3) > div:first-child {
-	border-bottom: none !important;
-}
-/*#endregion*/
-
-
-/*#region STYLES FOR ADS */
-/* Hide right ad sidebar. nth-child is important here to avoid applying style on Office 365 */
-#app > .ms-Fabric > div:last-child > div:first-child > div:first-child > div:nth-child(4) {
-	display: none !important;
-}
-
-#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:last-child {
-	display: none !important;
-}
-
-/* Hide top ad for Edge. When this ad isn't displayed, styles are broken, so leave disabled for now */
-// #app > .ms-Fabric > div:last-child > div:first-child > div:first-child > div:first-child {
-// 	display: none !important;
-// }
-
-/* Hide bottom ad. nth-child is important here to avoid applying style on Office 365 */
-#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) {
-	display: none !important;
-}
-
-/* Hide ad in left sidebar */
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:last-child > div > div:nth-child(2) {
-	display: none !important;
-}
-
-/* Hide ad in left sidebar */
-#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:first-child > div:last-child > div:first-child > div:nth-child(2) {
-	display: none !important;
-}
-/*#endregion*/
-
-
-/*#region STYLES FOR BORDERS */
-/* Remove bottom border: messages in list, time headers (in message list) */
-div[data-convid],
-.full {
-	margin-bottom: 0 !important;
-}
-
-/* Remove bottom border: header, left sidebar (top), folder header (in message list), inbox header */
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(3) > div:first-child,
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:first-child > div,
-.SLVConversationViewSenderImageOnDensity,
-div[aria-label="Message list"] > div:first-child {
-	border-bottom: none !important;
-}
-
-/* Remove top border: left sidebar (bottom) */
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:first-child > div:last-child > div > div:last-child,
-div[role=menubar] {
-	border-top: none !important;
-}
-
-/* Reduce left sidebar scrollbar width and remove right border */
-#app > .ms-Fabric > div:last-child > div > div:first-child > div:nth-child(2) {
-	width: initial !important;
-}
-
-/* Remove left sidebar right border */
-#app > .ms-Fabric > div:last-child > div:first-child > div:nth-child(2) > div:nth-child(2) {
-	width: 0 !important;
-}
-/*#endregion*/
-
-
-/*#region STYLES FOR LEFT SIDEBAR */
-/* Left sidebar text color */
-.o365cs-base .o365sx-neutral-accent-font,
-.o365cs-base .o365sx-neutral-accent-hover-font:hover {
-	color: #fff !important;
-}
-
-/* Left sidebar button hover color */
-.o365cs-base .o365sx-neutral-accent-background,
-.o365cs-base .o365sx-neutral-accent-hover-background:hover {
-    background-color: #fff !important;
-    color: #000 !important;
-}
-/*#endregion*/
-
-
-/*#region STYLES FOR RIGHT SIDEBAR */
-/* Right sidebar background color */
-#flexPaneScrollRegion,
-.o365sx-neutral-foreground-background {
-	background-color: #111 !important;
-}
-
-/* Right sidebar link padding */
-#meControlLinks {
-	padding-top: 1em;
-}
-
-/* Right sidebar link color */
-.o365sx-neutral-accent-link {
-	color: #fff !important;
-}
-/*#endregion*/
-
-
-/*#region STYLES FOR APP LAUNCHER */
-/* App launcher background color */
-div[aria-label="App launcher opened"],
-#appLauncher {
-	background-color: #111 !important;
-}
-
-/* App launcher text/icon color */
-#appLauncher > button,
-#appLauncherMainView > a,
-#appsModule > h2,
-#appsModule > button,
-#appsModule > div > div > a > div:last-child {
-	color: #fff !important;
+// Card background
+.black #f1Body .card.olwac {
+	background-color: var(--dmfo-darker) !important;
 }
 /*#endregion*/
 
@@ -279,7 +588,8 @@ div[aria-label="App launcher opened"],
 
 
 
-// MOBILE SITE
+// MOBILE SITE (THEMES FOR FIREFOX MOBILE)
+// TODO: These styles need to be updated
 // Ad tile
 ._3MdpcPqcGApCRCt0Wh_uWP {
 	display: none !important;
