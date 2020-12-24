@@ -26,6 +26,18 @@
 		},
 		{
 			"matches": [
+				"*://outlook.live.com/*",
+				"*://outlook.office.com/*",
+				"*://outlook.office365.com/*",
+				"*://support.office.live.com/*"
+			],
+			"js": [
+				"script.js"
+			],
+			"run_at": "document_end"
+		},
+		{
+			"matches": [
 				"*://support.office.live.com/*"
 			],
 			"css": [

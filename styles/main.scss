@@ -481,37 +481,69 @@ div[aria-label='Content pane'] {
 
 
 /*#region STYLES FOR MESSAGE DELETION TOOLTIP */
-// Message deletion tooltip background color and border radius
-._3xqEuTlsJbTQdiBbqhDlEy > div:first-child > div:first-child {
-	background-color: var(--dmfo-darker) !important;
-	border-radius: var(--dmfo-border-radius) var(--dmfo-border-radius) 0 0  !important;
+div[aria-label='Message list'] + div >, div[aria-label='Reading list'] + div > {
+	// Message deletion tooltip background color and border radius
+	div:first-child > div:first-child {
+		background-color: var(--dmfo-darker) !important;
+		border-radius: var(--dmfo-border-radius) var(--dmfo-border-radius) 0 0  !important;
+	}
+
+	// Message deletion tooltip undo/close button background color
+	div:first-child > div:first-child > div:nth-child(2) > button {
+		background-color: var(--dmfo-darker) !important;
+	}
+
+	// Message deletion tooltip undo/close button background color
+	div:first-child > div:first-child > div:nth-child(2) > button:hover {
+		background-color: var(--dmfo-dark) !important;
+	}
 }
 
-// Message deletion tooltip undo/close button background color
-._3xqEuTlsJbTQdiBbqhDlEy > div:first-child > div:first-child > div:nth-child(2) > button {
-	background-color: var(--dmfo-darker) !important;
-}
 
-// Message deletion tooltip undo/close button background color
-._3xqEuTlsJbTQdiBbqhDlEy > div:first-child > div:first-child > div:nth-child(2) > button:hover {
-	background-color: var(--dmfo-dark) !important;
-}
+// V2
+// div[aria-label='Message list'] + div >, div[aria-label='Reading list'] + div {
+// 	// Message deletion tooltip background color and border radius
+// 	> div:first-child > div:first-child {
+// 		background-color: var(--dmfo-darker) !important;
+// 		border-radius: var(--dmfo-border-radius) var(--dmfo-border-radius) 0 0  !important;
+
+// 		// Message deletion tooltip undo/close button background color
+// 		> div:nth-child(2) > button {
+// 			background-color: var(--dmfo-darker) !important;
+
+// 			// Message deletion tooltip undo/close button background color
+// 			&:hover {
+// 				background-color: var(--dmfo-dark) !important;
+// 			}
+// 		}
+// 	}
+// }
 /*#endregion*/
 
 
 /*#region AD HIDING FOR OUTLOOK PERSONAL */
-// Hide left ad in sidebar
-#app > div:first-child > div:last-child > div:first-child > div:first-child > div:first-child div:last-child > div:first-child > div:nth-child(2):not([role]) {
+// Outlook content body
+#app > div:first-child > div:last-child > div:first-child > div:only-child, // O365
+#app > div:first-child > div:last-child > div:first-child > div:nth-child(2):nth-last-child(2), // When top ad banner exists
+#app > div:first-child > div:last-child > div:first-child > div:first-child:nth-last-child(2) {
+	// Hide right ad sidebar (when screen is wide)
+	> div:nth-child(4):not([data-max-width]) {
+		display: none !important;
+	}
+
+	// Hide left ad in sidebar
+	> div:first-child div:last-child > div:first-child > div:nth-child(2):not([role]) {
+		display: none !important;
+	}
+}
+
+// Hide top banner ad. It may not exist, so account for this
+#app > div:first-child > div:last-child > div:first-child > div:first-child:not(:last-child):not(:nth-last-child(2)) {
 	display: none !important;
 }
 
-// Hide right ad sidebar (when screen is wide)
-#app > div:first-child > div:last-child > div:first-child > div:first-child > div:nth-child(4):not([data-max-width]) {
-	display: none !important;
-}
-
-// Hide bottom ad (when screen is narrow)
-#app > div:first-child > div:last-child > div:first-child > div:nth-child(2) {
+// Hide bottom ad (shown when screen is narrow). It may not exist on O365, so account for this
+#app > div:first-child > div:last-child > div:first-child > div:last-child:not(:first-child) {
 	display: none !important;
 }
 /*#endregion*/

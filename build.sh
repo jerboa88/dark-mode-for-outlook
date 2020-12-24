@@ -5,6 +5,7 @@ mkdir -p build && \
 cp -r README.md LICENSE.md manifest.json 128.png 64.png 48.png 32.png 16.png _locales build/ && \
 sass styles/main.scss build/main.css --style=compressed --no-source-map && \
 sass styles/help.scss build/help.css --style=compressed --no-source-map && \
+./node_modules/.bin/browserify scripts/modified.js -p tinyify -o build/script.js && \
 cd build/ && \
 zip -r dark-mode-for-outlook.zip * && \
 time="`date +%T`"; echo "✓ BUILD COMPLETE ("$time")"

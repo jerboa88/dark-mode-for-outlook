@@ -1,0 +1,34 @@
+{
+  "name": "dark-mode-for-outlook",
+  "version": "3.2.0",
+  "description": "A browser extension/add-on that applies a better (unofficial) dark mode to Microsoft Outlook and removes the ad sidebar",
+  "main": "manifest.json",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "d3-color": "^2.0.0",
+    "imagemin-cli": "^6.0.0",
+    "node-sass": "^4.14.1",
+    "tinyify": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build && mkdir -p build && (echo \"✓ CLEANED\" && exit 0) || (echo \"✗ ERROR WHILE CLEANING\" && exit 1)",
+    "build:css": "SASSPATH=$(npm bin): $SASSPATH node-sass styles/main.scss build/main.css --style=compressed --no-source-map && SASSPATH=$(npm bin): $SASSPATH node-sass styles/help.scss build/help.css --style=compressed --no-source-map && (echo \"✓ CSS PACKED\" && exit 0) || (echo \"✗ ERROR WHILE PACKING CSS\" && exit 1)",
+    "build:js": "browserify scripts/modified.js -p tinyify -o build/script.js && (echo \"✓ JS PACKED\" && exit 0) || (echo \"✗ ERROR WHILE PACKING JS\" && exit 1)",
+    "compress": "imagemin *.png --plugin=optipng --out-dir=build && (echo \"✓ IMAGES COMPRESSED\" && exit 0) || (echo \"✗ ERROR WHILE COMPRESSING IMAGES\" && exit 1)",
+    "copy": "cp -r README.md LICENSE.md manifest.json _locales build/ && npm run --silent build:css && npm run --silent build:js && npm run --silent compress && (echo \"✓ FILES COPIED\" && exit 0) || (echo \"✗ ERROR WHILE COPYING FILES\" && exit 1)",
+    "zip": "cd build/ && zip -r dark-mode-for-outlook.zip * && (echo \"✓ FILES ZIPPED\" && exit 0) || (echo \"✗ ERROR WHILE ZIPPING FILES\" && exit 1)",
+    "build": "npm run --silent clean && npm run --silent copy && npm run --silent zip && time=\"`date +%T`\" && (echo \"✓ BUILD COMPLETE (\"$time\")\" && exit 0) || (echo \"✗ ERROR WHILE BUILDING\" && exit 1)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerboa88/dark-mode-for-outlook.git"
+  },
+  "author": "John Goodliff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jerboa88/dark-mode-for-outlook/issues"
+  },
+  "homepage": "https://github.com/jerboa88/dark-mode-for-outlook#readme"
+}
