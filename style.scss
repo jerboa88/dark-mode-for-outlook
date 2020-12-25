@@ -1,8 +1,8 @@
 /*#region PALETTE */
 :root {
 	--dmfo-lightest: #fff;
-	--dmfo-lighter: rgba(#fff, .8);
-	--dmfo-light: rgba(#fff, .5);
+	--dmfo-lighter: rgba(255, 255, 255, .8);
+	--dmfo-light: rgba(255, 255, 255, .5);
 	--dmfo-dark: #212121;
 	--dmfo-darker: #111;
 	--dmfo-darkest: #030303;
@@ -588,181 +588,138 @@ body.black.olwac {
 
 
 
-// MOBILE SITE (THEMES FOR FIREFOX MOBILE)
-// TODO: These styles need to be updated
-// Ad tile
-._3MdpcPqcGApCRCt0Wh_uWP {
+/*#region STYLES FOR MOBILE SITE (FOR FIREFOX MOBILE) */
+/*#region GENERAL STYLES */
+// Remove top ad
+main > div:first-child > div:first-child > div:first-child {
 	display: none !important;
 }
 
-// Header
-._2KxzPQv7L875Av0qyeZ5uf, ._2CMcGI-ZZ4XPUOnUgy7pHB {
-	background: var(--neutralLighter) !important;
+// Header background color (email, calendar)
+#app > div:first-child > div:first-child > header,
+#app > div:first-child > header {
+	background: var(--dmfo-darker) !important;
 }
 
-// Search header
-._34U_ZJjJNaZPGirIEM7OSm {
-	background: var(--neutralLighter) !important;
-	border-bottom: none !important;
+// Change action bar background color and remove top border (email, calendar)
+#app > div:first-child > div:first-child > nav,
+#app > div:first-child > nav,
+#app > nav {
+	background: var(--dmfo-darker) !important;
+	border-top: 0 !important;
 }
 
-// Search input
-._2NiiS0iay_UYyRo2JbejBV {
-	background: var(--themeLight) !important;
+// Change action bar selected icon color (email, people)
+#app > div:first-child > div:first-child > nav > span[aria-label*=Selected],
+#app > nav > span[aria-label*=Selected] {
+	color: var(--dmfo-lightest) !important;
 }
 
-// Search folder button/icon
-._259D2UqjzwsuQCrUKybxjZ,
-._3XnNWJ-rExWauud1xk1yV {
-	color: var(--themeDark) !important;
+// Change action bar selected icon color (calendar)
+#app > div:first-child > nav > span[aria-label*=Selected] > div > svg > g > * {
+	fill: var(--dmfo-lightest) !important;
+}
+/*#endregion*/
+
+
+/*#region STYLES FOR EMAIL LIST */
+// Move messages up to fill the space of the hidden ad
+main > div:first-child > div:first-child > div {
+	margin-top: -93px !important;
 }
 
-// Search folder popup
-._3Cf1XYlgur0bnN7a2tAn9i {
-	color: var(--white) !important;
+// Message background color
+div[role=group] > article {
+	background: var(--dmfo-darkest) !important;
 }
 
-// Create message header
-._31Mv52tbMKyzJQgXIo-fTh {
-	background: var(--neutralLighter) !important;
+// Message unread indicator background color
+div[role=group] > article::before {
+	background: var(--dmfo-lightest) !important;
 }
 
-// Filter button
-._1UUT3BP0fJWYK0keUbh9Qj ._1IxaL77yEy7Y65lMHHk3vV,
-._1UUT3BP0fJWYK0keUbh9Qj ._1IxaL77yEy7Y65lMHHk3vV {
-	color: var(--themeDark) !important;
+// Message title text color
+div[role=group] > article > div:last-child > div:first-child > div:first-child > div:first-child {
+	color: var(--dmfo-lightest) !important;
 }
 
-// Footer button icons
-._2Apqf9rYzkB2FDMv87Mkuv {
-	color: var(--themeDark) !important;
+// Message subject text color
+div[role=group] > article > div:last-child > div:first-child > div:nth-child(2) > h2:first-child {
+	color: var(--dmfo-lighter) !important;
 }
 
-// Header email address
-._3yoSOI_qjqE2i00lnAY9kz {
-	color: var(--themeDark) !important;
+// Message preview text color
+div[role=group] > article > div:last-child > div:first-child > div:nth-child(3) > div:first-child {
+	color: var(--dmfo-light) !important;
+}
+/*#endregion*/
+
+
+/*#region STYLES FOR CALENDAR */
+// Calendar month labels background color
+#app > div:first-child > div:nth-child(2) > div:first-child {
+	background: var(--dmfo-darker) !important;
 }
 
-// Filter bar
-._35poD7UzthWpvLbeMhpwGz {
-	background: var(--neutralLighter) !important;
-	border-bottom: none !important;
+// Change calendar days labels background color and remove bottom border
+#app > div:first-child > div:nth-child(2) > div:nth-child(2) {
+	background: var(--dmfo-darkest) !important;
+	border-bottom: 0 !important;
 }
 
-// Filter icon
-._1UUT3BP0fJWYK0keUbh9Qj {
-	color: var(--themeDark) !important;
+// Calendar selected day background
+.ms-CalendarDay-hoverStyle {
+	background-color: transparent !important;
+	color: var(--dmfo-lightest) !important;
+}
+div[class*="daySelected"] {
+	background: var(--dmfo-darker) !important;
 }
 
-// Footer
-	// Main footer
-	.Oqogs1odxeOVmBE8Xl5gi {
-		background: var(--neutralLighter) !important;
-		border-top: none !important;
-	}
+// Calendar agenda background
+.agenda-view {
+	background: var(--dmfo-darkest) !important;
+}
 
-	// Message reply/forward bar
-	.nTXoB4PfCKm2ppyqY2KyJ {
-		background: var(--neutralLighter) !important;
-		border-top: none !important;
-	}
+// Calendar item title text color
+div[data-agendaitem] > div:first-child > div:first-child {
+	color: var(--dmfo-lightest) !important;
+}
 
-	// Message reply/forward icons
-	.nTXoB4PfCKm2ppyqY2KyJ > i {
-		color: var(--themeDark) !important;
-	}
+// Calendar item description text color
+div[data-agendaitem] > div:first-child > div:first-child > div:last-child {
+	color: var(--dmfo-lighter) !important;
+}
+/*#endregion*/
 
 
-// Message list
-	// Message subject
-	._2Tt6Xe0aQ1u45pS6dZDvVX {
-		color: var(--neutralPrimary) !important;
-	}
+/*#region STYLES FOR PEOPLE LIST */
+// Body background
+// TODO: This applies to desktop site as well. Move to different section
+body {
+	background-color: var(--dmfo-darkest) !important;
+}
 
-	// Current/unread message subject
-	._3nb5Dwo_CA7TWNZA6rSpE3 ._2axPYRV5O5wkmXEwegK4-S,
-	._3nb5Dwo_CA7TWNZA6rSpE3 ._2Tt6Xe0aQ1u45pS6dZDvVX,
-	._30HXVqbjj-i5OASGQRCIHt {
-		color: var(--neutralPrimary) !important; // var(--themeDark)
-	}
+// Heading text color
+#app > div > div > div[role=heading] {
+	color: var(--dmfo-lightest) !important;
+}
 
-	// Current/unread message highlight
-	._3nb5Dwo_CA7TWNZA6rSpE3 ._2wT_pe9ccL5Z9daKbIFvIs:before {
-		background-color: var(--themeDark) !important;
-	}
+// Name text color
+.ms-Persona-primaryText {
+	color: var(--dmfo-lightest) !important;
+}
 
-	// Message title
-	.Rcnxv3V357mZssCrwfFQL {
-		color: var(--themeDark) !important;
-	}
-
-	// Message background
-	._35poD7UzthWpvLbeMhpwGz, ._3stv9XVAqlbbQqdGzrforh {
-		background: var(--white) !important;
-	}
-
-	// Message separator
-	._3j2fC5kC18B3JkxKRiB-RD {
-		border-bottom: none !important;
-	}
+// Email text color
+.ms-Persona-secondaryText {
+	color: var(--dmfo-lighter) !important;
+}
+/*#endregion*/
 
 
-// Sidebar
-	// Sidebar Outlook logo
-	.bQjbCjR71_6Ck63WXDY8M,
-	._1EfC2Rf0oPNHo421JDm-TW {
-		color: var(--themeDark) !important;
-	}
+/*#region STYLES FOR SIDE PANE */
+#PeopleSidePane {
 
-	// Sidebar header text
-	div[role=heading] {
-		color: var(--themeDark) !important;
-	}
-
-	// Sidebar separators
-	._1valGcjwp67Os9OCe8td85, ._1QsXx9QYzPNu_NsqU3VFQI, .kIV2JizNc6k-X7Kjg-ETX {
-		border: none !important;
-	}
-
-	._1RHn61VtVQ1ERw51W1GE2I .QC8HktsAo3W15G5QvXAII._18MkjPukE-G5E0QCe50tDe {
-		color: var(--themeSecondary) !important;
-	}
-
-	// Sidebar Outlook Beta switch
-	._1iAsMkgaZmMKlI3YPy_WYh._3_0hGK7bhB1pKbeU2W91LQ {
-		background: var(--white) !important;
-		border-color: var(--white) !important;
-	}
-
-	// Sidebar Outlook beta label
-	.GMiG6SVlH2wXYu6KGUwuN, .IJk79S3bLSkgS6HsA9zvI {
-		color: var(--themeDark) !important;
-	}
-
-	// Sidebar message unread count
-	._3jB_LUp02KWSA7lorsSCPd ._1SkFUDBjCYpRgoOieLtfOC {
-		background: none !important;
-		color: var(--themeDark) !important;
-	}
-
-	// Sidebar feedback/sign out buttons
-	.kIV2JizNc6k-X7Kjg-ETX {
-		color: var(--themeDark) !important;
-	}
-
-	// Sidebar footer
-	._2KxzPQv7L875Av0qyeZ5uf {
-		padding-bottom: 8px !important;
-	}
-
-	// White bar at bottom of sidebar
-	.puLckW1HKpgvFeOe2Hh7n {
-		display: none !important;
-	}
-
-
-// View message
-	// Header
-	._2KxzPQv7L875Av0qyeZ5uf, ._2CMcGI-ZZ4XPUOnUgy7pHB {
-		background: var(--neutralLighter) !important;
-	}
+}	// TODO: WIP
+/*#endregion*/
+/*#endregion*/
