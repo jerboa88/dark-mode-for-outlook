@@ -2,7 +2,7 @@
 	"name": "__MSG_extensionName__",
 	"short_name": "__MSG_extensionShortName__",
 	"description": "__MSG_extensionDescription__",
-	"version": "3.0",
+	"version": "3.2",
 	"default_locale": "en",
 	"icons": {
 		"128": "128.png",
@@ -11,16 +11,29 @@
 		"32": "32.png",
 		"16": "16.png"
 	},
-	"content_scripts": [{
-		"matches": [
-			"*://outlook.live.com/*",
-			"*://outlook.office.com/*",
-			"*://outlook.office365.com/*",
-			"*://support.office.live.com/*"
-		],
-		"css": [
-			"style.css"
-		]
-	}],
+	"content_scripts": [
+		{
+			"matches": [
+				"*://outlook.live.com/*",
+				"*://outlook.office.com/*",
+				"*://outlook.office365.com/*",
+				"*://support.office.live.com/*"
+			],
+			"css": [
+				"main.css"
+			],
+			"run_at": "document_start"
+		},
+		{
+			"matches": [
+				"*://support.office.live.com/*"
+			],
+			"css": [
+				"help.css"
+			],
+			"run_at": "document_start",
+			"all_frames": true
+		}
+	],
 	"manifest_version": 2
 }

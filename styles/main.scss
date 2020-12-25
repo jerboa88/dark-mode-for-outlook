@@ -1,130 +1,4 @@
-/*#region PALETTE */
-:root {
-	--dmfo-lightest: #fff;
-	--dmfo-lighter: rgba(255, 255, 255, .8);
-	--dmfo-light: rgba(255, 255, 255, .5);
-	--dmfo-dark: #212121;
-	--dmfo-darker: #111;
-	--dmfo-darkest: #030303;
-	--dmfo-gold: #f4b400;
-}
-/*#endregion*/
-
-
-/*#region THEME COLORS */
-html {
-	--black: var(--dmfo-lightest) !important;	// Custom
-	--blackTranslucent40: rgba(255, 255, 255, 0.4) !important;
-	--blackTranslucent10: rgba(255, 255, 255, 0.1) !important;
-	--white: var(--dmfo-darkest) !important;	// Custom
-	--whiteTranslucent40: rgba(33, 33, 33, 0.4) !important;
-	--whiteTranslucent90: rgba(33, 33, 33, 0.9) !important;
-	--neutralDark: #fff !important;
-	--neutralPrimary: #fff !important;
-	--neutralPrimaryAlt: #f8f8f8 !important;
-	--neutralSecondary: #f4f4f4 !important;
-	--neutralTertiary: #eaeaea !important;
-	--neutralTertiaryAlt: #c8c8c8 !important;
-	--neutralQuaternary: #2e2e2e !important;
-	--neutralQuaternaryAlt: #2e2e2e !important;
-	--neutralLight: #000 !important;
-	--neutralLighter: var(--dmfo-darker) !important;	// Custom
-	--neutralLighterAlt: var(--dmfo-darker) !important;	// Custom
-	--redDark: #e81123 !important;
-	--green20: #6bb700 !important;
-	--purple: #9c89e9 !important;
-	--flaggedMessage: #242100 !important;
-	--richUserContentBackground: #eaeaea !important;
-	--composeNeutralBackground: #212121 !important;
-	--composeNeutralLighterBackground: #fff !important;
-	--readingPaneCardBorder: #000 !important;
-	--readingPaneCardFocusBorder: #d0d0d0 !important;
-	--themeDarker: #d2d2d2 !important;
-	--themeDark: #d2d2d2 !important;
-	--themeDarkAlt: #d2d2d2 !important;
-	--themePrimary: var(--dmfo-lightest) !important;	// Custom
-	--themeSecondary: #848484 !important;
-	--themeTertiary: #767676 !important;
-	--themeLight: var(--dmfo-dark) !important;	// Custom
-	--themeLighter: var(--dmfo-dark) !important;	// Custom
-	--themeLighterAlt: var(--dmfo-darker) !important;	// Custom
-	--headerBackground: #767676 !important;
-	--headerBackgroundSearch: #6c6c6c !important;
-	--headerBrandText: #fff !important;
-	--headerTextIcons: #fff !important;
-	--headerSearchBoxBackground: var(--dmfo-dark) !important;	// Custom
-	--headerSearchBoxIcon: #f5f5f5 !important;
-	--headerSearchPlaceholderText: #f5f5f5 !important;
-	--headerSearchButtonBackground: #a8a8a8 !important;
-	--headerSearchButtonBackgroundHover: #d2d2d2 !important;
-	--headerSearchButtonIcon: #000 !important;
-	--headerSearchFilters: #a8a8a8 !important;
-	--headerSearchFiltersHover: #f5f5f5 !important;
-	--headerButtonsBackground: #767676 !important;
-	--headerButtonsBackgroundHover: #6c6c6c !important;
-	--headerButtonsBackgroundSearch: #6c6c6c !important;
-	--headerButtonsBackgroundSearchHover: #585858 !important;
-	--headerBadgeBackground: #f5f5f5 !important;
-	--headerBadgeText: #fff !important;
-	--headerSearchIcon: #fff !important;
-	--searchBoxBackground: rgba(33, 32, 33, .7) !important;
-	--fallback-black: #000000 !important;
-	--fallback-blackTranslucent40: rgba(0,0,0,.4) !important;
-	--fallback-blackTranslucent10: rgba(0,0,0,.1) !important;
-	--fallback-white: #fff !important;
-	--fallback-whiteTranslucent40: rgba(255,255,255,.4) !important;
-	--fallback-whiteTranslucent90: rgba(255,255,255,.9) !important;
-	--fallback-neutralDark: #201f1e !important;
-	--fallback-neutralPrimary: #323130 !important;
-	--fallback-neutralPrimaryAlt: #3b3a39 !important;
-	--fallback-neutralSecondary: #605e5c !important;
-	--fallback-neutralTertiary: #a19f9d !important;
-	--fallback-neutralTertiaryAlt: #c8c6c4 !important;
-	--fallback-neutralQuaternary: #d2d0ce !important;
-	--fallback-neutralQuaternaryAlt: #e1dfdd !important;
-	--fallback-neutralLight: #edebe9 !important;
-	--fallback-neutralLighter: #f3f2f1 !important;
-	--fallback-neutralLighterAlt: #faf9f8 !important;
-	--fallback-redDark: #a4262c !important;
-	--fallback-green20: #0b6a0b !important;
-	--fallback-purple: #5c2d91 !important;
-	--fallback-flaggedMessage: #fffdd9 !important;
-	--fallback-richUserContentBackground: #fff !important;
-	--fallback-composeNeutralBackground: #fff !important;
-	--fallback-composeNeutralLighterBackground: #f4f4f4 !important;
-	--fallback-readingPaneCardBorder: #edebe9 !important;
-	--fallback-readingPaneCardFocusBorder: #d0d0d0 !important;
-	--fallback-themeDarker: #0C0C0C !important;
-	--fallback-themeDark: #1F1F1F !important;
-	--fallback-themeDarkAlt: #1F1F1F !important;
-	--fallback-themePrimary: #333 !important;
-	--fallback-themeSecondary: #555 !important;
-	--fallback-themeTertiary: #999 !important;
-	--fallback-themeLight: #BBB !important;
-	--fallback-themeLighter: #E4E4E4 !important;
-	--fallback-themeLighterAlt: #F3F3F3 !important;
-	--fallback-headerBackground: #333 !important;
-	--fallback-headerBackgroundSearch: #1F1F1F !important;
-	--fallback-headerBrandText: #FFF !important;
-	--fallback-headerTextIcons: #FFF !important;
-	--fallback-headerSearchBoxBackground: rgba(255,255,255,.7) !important;
-	--fallback-headerSearchBoxIcon: #0C0C0C !important;
-	--fallback-headerSearchPlaceholderText: #0C0C0C !important;
-	--fallback-headerSearchButtonBackground: #BBB !important;
-	--fallback-headerSearchButtonBackgroundHover: #0C0C0C !important;
-	--fallback-headerSearchButtonIcon: #0C0C0C !important;
-	--fallback-headerSearchFilters: #0C0C0C !important;
-	--fallback-headerSearchFiltersHover: #333 !important;
-	--fallback-headerButtonsBackground: #333 !important;
-	--fallback-headerButtonsBackgroundHover: #1F1F1F !important;
-	--fallback-headerButtonsBackgroundSearch: #1F1F1F !important;
-	--fallback-headerButtonsBackgroundSearchHover: #0C0C0C !important;
-	--fallback-headerBadgeBackground: #BBB !important;
-	--fallback-headerBadgeText: #0C0C0C !important;
-	--fallback-headerSearchIcon: #0C0C0C !important;
-	--fallback-searchBoxBackground: rgba(255,255,255,.7) !important;
-}
-/*#endregion*/
+@use 'vars.scss';
 
 
 /*#region MANUAL OVERRIDES FOR HARDCODED STYLES AND FOR WHEN BUILT-IN DARK MODE IS DISABLED */
@@ -264,15 +138,63 @@ div[aria-label='Message body'] {
 // 	background: transparent !important;
 // }
 
+
 div[aria-label='Message body'] > div[style] {
 	background: var(--dmfo-darkest) !important;
 	color: var(--dmfo-lightest) !important;
 }
 
-.wide-content-host > div:first-child > .allowTextSelection > div > div > div > div,
-.wide-content-host > div:first-child > .allowTextSelection > div > div > div > div > span[style*='color: rgb(0, 0, 0);'] {
-	background-color: transparent !important;
-	color: var(--dmfo-lightest) !important;
+// .wide-content-host > div:first-child > .allowTextSelection > div > div > div > div,
+// .wide-content-host > div:first-child > .allowTextSelection > div > div > div > div > span[style*='color: rgb(0, 0, 0)'],
+// .wide-content-host > div:first-child > .allowTextSelection > div div font[color='black']/* ,
+// font[color='black'] */ {
+// 	background-color: transparent !important;
+// 	color: var(--dmfo-lightest) !important;
+// }
+
+// Remove box shadow from message body container
+.wide-content-host > div:first-child > div[class]:first-child {
+	// border: 0 !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+// Various text elements with black text
+@mixin blackSpanAndFontCombinations {
+	span[style*='color: rgb(0, 0, 0)'],
+	span[style*='color:rgb(0,0,0)'],
+	span[style*='color: rgb(0,0,0)'],
+	span[style*='color:rgb(0, 0, 0)'],
+	span[style*='color:#000000'],
+	span[style*='color: #000000'],
+	span[style*='color:#000'],
+	span[style*='color: #000'],
+	span[style*='color:black'],
+	span[style*='color: black'],
+	span[style*='color:windowtext'],
+	span[style*='color:  windowtext'],
+	font[color='rgb(0,0,0)'],
+	font[color='rgb(0, 0, 0)'],
+	font[color='#000000'],
+	font[color='#000'],
+	font[color='black'],
+	font[color='windowtext'] {
+		background-color: transparent !important;
+		color: var(--dmfo-lightest) !important;
+	}
+}
+
+.wide-content-host div .allowTextSelection div {
+	@include blackSpanAndFontCombinations;
+	p {
+		@include blackSpanAndFontCombinations;
+		b {
+			@include blackSpanAndFontCombinations;
+		}
+		i {
+			@include blackSpanAndFontCombinations;
+		}
+	}
 }
 /*#endregion*/
 
@@ -287,7 +209,12 @@ body {
 div[role=search] {
 	background-color: var(--dmfo-dark) !important;
 	border: 0 !important;
-	border-radius: 4px !important;
+	border-radius: var(--dmfo-border-radius) !important;
+}
+
+// Border radius for various buttons
+button.ms-Button[type='button'] {
+	border-radius: var(--dmfo-border-radius) !important;
 }
 
 // Button hover background color
@@ -320,7 +247,7 @@ div[aria-label='Reading Pane'] > div:nth-child(2) {
 div[aria-label='Message list'] > div:nth-child(3) > div,
 div[aria-label='Reading Pane'] > div:nth-child(2) > div {
 	border-style: none !important;
-	border-radius: 4px 4px 0 0 !important;
+	border-radius: var(--dmfo-border-radius) var(--dmfo-border-radius) 0 0 !important;
 }
 /*#endregion*/
 
@@ -345,12 +272,12 @@ div[role=menubar] {
 
 /*#region STYLES FOR COMPOSING/VIEWING MESSAGES */
 // Hide borders for content pane
-div[aria-label='Content pane'] > div > div:first-child > div:nth-child(2),
-div[aria-label='Content pane'] > div > div:first-child > div:nth-child(3) {
-	border: 0 !important;
-}
+// div[aria-label='Content pane'] > div > div:first-child > div:nth-child(2),
+// div[aria-label='Content pane'] > div > div:first-child > div:nth-child(3) {
+// 	border: 0 !important;
+// }
 
-// Remove element below content PANE
+// Remove element below content pane
 div[aria-label='Content pane'] > div:first-child > div:first-child > div:nth-child(3) > div:nth-child(3) {
 	display: none !important;
 }
@@ -366,9 +293,9 @@ div[aria-label='Content pane'] {
 }
 
 // Hide email message pane border
-.wide-content-host > div {
-	border: 0 !important;
-}
+// .wide-content-host > div {
+// 	border: 0 !important;
+// }
 /*#endregion*/
 
 
@@ -398,9 +325,10 @@ div[aria-label='Content pane'] {
 
 
 /*#region STYLES FOR SKYPE PANE */
-// Skype pane background
+// Skype pane background color and text color
 .ms-Callout-main {
 	background-color: var(--dmfo-darker) !important;
+	color: var(--dmfo-lightest) !important;
 }
 
 // Skype pane bottom borders between messages
@@ -452,7 +380,7 @@ div[aria-label='Content pane'] {
 
 // Skype pane search box background
 .swcSearchInput {
-	background-color: var(--dmfo-dark) !important;	// TODO: Change this color later to match main search box color
+	background-color: var(--dmfo-dark) !important;
 }
 
 // Skype pane search box icon size
@@ -474,7 +402,7 @@ div[aria-label='Content pane'] {
 
 // Skype pane search box background color (behind actual search box element)
 .swcRecentsHeader__searchInput {
-	background-color: initial;
+	background-color: transparent !important;
 }
 
 // Skype pane background color
@@ -496,15 +424,67 @@ div[aria-label='Content pane'] {
 .swc.swc-recents.dark .swcRecentsHeader__searchInput {
 	background-color: initial !important;
 }
+
+// Skype more options pane background color
+.swc-bubble.list .swc-content {
+	background-color: var(--dmfo-dark) !important;
+}
+
+// Remove Skype more options menu bottom border
+.swc-bubble.list .swc-content ul {
+  border-bottom: none !important;
+}
+
+// Skype more options pane menu item background color and text color
+.swc-bubble.list .swc-content ul li {
+	background-color: var(--dmfo-dark) !important;
+	color: var(--dmfo-lightest) !important;
+}
+
+// Skype more options pane menu item focus background color and text color
+.swc-bubble.list .swc-content ul li:focus {
+  background-color: var(--dmfo-darker) !important;
+}
+
+// Skype more options pane list item hover background color and text color
+.swcMenuList__item:hover {
+	background-color: var(--dmfo-darker) !important;
+}
+
+// Skype more options pane title color
+.swc .swcPageHeader__title {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Skype more options pane text color
+.swcMenuList__item {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Skype more options pane hover background color
+.swcMenuList__item:hover {
+	background-color: var(--dmfo-dark) !important;
+}
+
+// Skype more options pane back button color and border radius
+.swc .swcPageHeader__backButton {
+	color: var(--dmfo-lightest) !important;
+	border-radius: var(--dmfo-border-radius) !important;
+}
+
+// Skype more options pane back button hover background color
+.swc .swcPageHeader__backButton:hover {
+	background-color: var(--dmfo-dark) !important;
+}
 /*#endregion*/
 /*#endregion*/
 
 
-/*#region STYLES FOR MESSAGE DELETTION TOOLTIP */
-// Message deletion tooltip background color
+/*#region STYLES FOR MESSAGE DELETION TOOLTIP */
+// Message deletion tooltip background color and border radius
 ._3xqEuTlsJbTQdiBbqhDlEy > div:first-child > div:first-child {
 	background-color: var(--dmfo-darker) !important;
-	border-radius: 4px !important;
+	border-radius: var(--dmfo-border-radius) var(--dmfo-border-radius) 0 0  !important;
 }
 
 // Message deletion tooltip undo/close button background color
@@ -563,24 +543,6 @@ div[aria-label='Content pane'] {
 
 #spinnerCircle {
 	stroke: transparent !important;
-}
-/*#endregion*/
-
-
-/*#region STYLES FOR HELP PANEL IFRAME */
-// Header background
-#ocClientSearch.iwapp.black, #ocClientSearch.olwac.black {
-	background-color: var(--dmfo-darker) !important;
-}
-
-// Body background
-body.black.olwac {
-	background: var(--dmfo-darker) !important;
-}
-
-// Card background
-.black #f1Body .card.olwac {
-	background-color: var(--dmfo-darker) !important;
 }
 /*#endregion*/
 

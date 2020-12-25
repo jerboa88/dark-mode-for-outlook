@@ -1,0 +1,72 @@
+@use 'vars.scss';
+
+
+/*#region STYLES FOR HELP PANEL IFRAME */
+// Body background color and text color
+#ocClientSearch.iwapp,
+#ocClientSearch.olwac,
+.colorful.iwapp,
+.white.iwapp,
+.fluent.iwapp,
+.colorful.olwac,
+.white.olwac,
+.fluent.olwac {
+	background-color: var(--dmfo-darkest) !important;
+	color: var(--dmfo-lightest) !important;
+}
+
+// Card max width
+.card {
+	max-width: none !important;
+}
+
+// Card background color
+.card.olwac {
+	background-color: var(--dmfo-darker) !important;
+}
+
+// Card title text color
+.cardHeader {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Card text color
+.colorful #f1Body .card p,
+.white #f1Body .card p,
+.fluent #f1Body .card p {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Card link color
+#f1Body.white a,
+#f1Body.fluent a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+	color: var(--dmfo-lightest) !important;
+}
+
+// Back button color
+[class$="Btn"] {
+  color: var(--dmfo-lightest) !important;
+}
+
+// Search bar max width
+.ocSearchForm,
+#f1SearchBar {
+	max-width: none !important;
+}
+
+// Search bar background color and border radius
+#f1SearchBar {
+	background-color: #111 !important;
+  border-radius: 4px !important;
+}
+
+#f1SearchBar > input {
+	background-color: transparent !important;
+}
+
+
+/*#endregion*/
