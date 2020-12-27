@@ -20,19 +20,15 @@ The extension can be installed for your browser here:
 | [![Edge logo][edge_logo]][edge_link] | **[Edge][edge_link]** |
 | [![Opera logo][opera_logo]][opera_link] | **[Opera][opera_link]** |
 
-**Note:** It can also be installed on [Brave](https://support.brave.com/hc/en-us/articles/360017909112-How-can-I-add-extensions-to-Brave-), [Vivaldi](https://help.vivaldi.com/article/extensions/#install), and other Chromium-based browsers from the Chrome Web Store (or by sideloading).
+**Notes:**
+- It can also be installed on [Brave](https://support.brave.com/hc/en-us/articles/360017909112-How-can-I-add-extensions-to-Brave-), [Vivaldi](https://help.vivaldi.com/article/extensions/#install), and other Chromium-based browsers from the Chrome Web Store (or by sideloading).
+- Installing add-ons for Firefox mobile is complicated at the moment, since Android's [new Geckoview-based browser](https://blog.mozilla.org/addons/2020/09/02/update-on-extension-support-in-the-new-firefox-for-android/) does not officially support all add-ons yet. If you still want to use this add-on on Firefox mobile, refer to [this page](https://support.mozilla.org/en-US/kb/find-and-install-add-ons-firefox-android#w_expanded-extension-support-in-firefox-for-android-nightly) for more information.
 
-**Note:** Installing add-ons for Firefox mobile is complicated at the moment, since Android's [new Geckoview-based browser](https://blog.mozilla.org/addons/2020/09/02/update-on-extension-support-in-the-new-firefox-for-android/) does not officially support all add-ons yet. If you still want to use this add-on on Firefox mobile, refer to [this page](https://support.mozilla.org/en-US/kb/find-and-install-add-ons-firefox-android#w_expanded-extension-support-in-firefox-for-android-nightly) for more information.
 
+### Advanced
+If you wish to build yourself, you can download the repository, run `npm install` to install dependencies, and build the project with `npm start`. Make sure you have npm and Node.js v10.0.0 or greater installed ([how?](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)). At the moment, Linux is required to run the build script, although you can perform all the steps in that script manually if you want to build on another OS.
 
-### Detailed
-If you wish to build yourself, `build.sh` is used to copy all files to the `build/` directory, compile SCSS to CSS, and zip the extension, but you can do these steps any other way you wish. Next, the build directory or zip file can be loaded into your browser of choice:
-- [Instructions for Chrome](https://developer.chrome.com/extensions/getstarted#manifest)
-- [Instructions for Firefox](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
-- [Instructions for Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/part1-simple-extension#run-your-extension-locally-in-your-browser-while-developing-it-side-loading)
-- [Instructions for Opera](https://dev.opera.com/extensions/testing/)
-
-**Note:** A command line version of [SASS](https://sass-lang.com/) is required for compiling stylesheets.
+Next, the build directory or zip file can be loaded into your browser of choice: [Chrome](https://developer.chrome.com/extensions/getstarted#manifest) / [Firefox](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) / [Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/part1-simple-extension#run-your-extension-locally-in-your-browser-while-developing-it-side-loading) / [Opera](https://dev.opera.com/extensions/testing/)
 
 
 ## Usage

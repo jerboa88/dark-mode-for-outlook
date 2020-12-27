@@ -5,3 +5,4 @@ build/
 *.scss.map
 *.css
 *.zip
+node_modules/
