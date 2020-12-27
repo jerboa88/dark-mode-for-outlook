@@ -483,12 +483,21 @@ div[aria-label='Content pane'] {
 }
 /*#endregion*/
 
-// TODO: TEST ONENOTE SEARCH BOX STYLES
+
 /*#region STYLES FOR ONENOTE PANE */
 .n-searchBar-inputBox {
-	// background-color: var(--dmfo-dark) !important;
 	border: 0 !important;
 	border-radius: var(--dmfo-border-radius) !important;
+}
+
+// Onenote pane background
+html[dir] .n-side-pane {
+	background-color: var(--dmfo-darker) !important; // var(--dmfo-dark)
+}
+
+// Onenote pane search box focus icon
+.n-searchBar-inputBox-searching > .n-searchBarSearchIcon {
+	color: var(--dmfo-lightest) !important;
 }
 /*#endregion*/
 /*#endregion*/
