@@ -211,7 +211,7 @@ body {
 }
 
 // Main search box border radius
-div[role=search] {
+div[role=search], .ms-SearchBox {
 	background-color: var(--dmfo-dark) !important;
 	border: 0 !important;
 	border-radius: var(--dmfo-border-radius) !important;
@@ -482,6 +482,15 @@ div[aria-label='Content pane'] {
 	background-color: var(--dmfo-dark) !important;
 }
 /*#endregion*/
+
+// TODO: TEST ONENOTE SEARCH BOX STYLES
+/*#region STYLES FOR ONENOTE PANE */
+.n-searchBar-inputBox {
+	// background-color: var(--dmfo-dark) !important;
+	border: 0 !important;
+	border-radius: var(--dmfo-border-radius) !important;
+}
+/*#endregion*/
 /*#endregion*/
 
 
@@ -528,8 +537,19 @@ div[aria-label='Reading Pane'] + div > {
 
 
 /*#region AD HIDING FOR OUTLOOK PERSONAL */
+// When top banner is shown
+// Top banner message:	#app/div/div[2]/div[1]/div[1]
+// Left sidebar ad: 		#app/div/div[2]/div[1]/div[2]/div/div/div[1]/div[2]/div/div[2]
+// Right ad: 						#app/div/div[2]/div[1]/div[2]/div/div/div[4]
+// When top banner ad is not shown
+// Top ad:							#app/div/div[2]/div[1]/div[1]/div/div/div[5]
+// Left sidebar ad: 		#app/div/div[2]/div[1]/div[1]/div/div/div[1]/div[2]/div/div[2]
+// Right ad: 						#app/div/div[2]/div[1]/div[1]/div[1]/div[1]/div[4]/
+
 // Outlook content body
-#app > div:first-child > div:last-child > div:first-child > div:first-child > div:first-child > div:first-child {
+#app > div:first-child > div:last-child > div:first-child > div:only-child,	// When top banner doesn't exist
+#app > div:first-child > div:last-child > div:first-child > div:nth-child(2):last-child {	// When top ad banner exists
+	> div:first-child > div:first-child {
 		// Hide right ad sidebar (when screen is wide)
 		> div:nth-child(4):not([data-max-width]) {
 			display: none !important;
@@ -544,12 +564,13 @@ div[aria-label='Reading Pane'] + div > {
 		> div:first-child > div:nth-child(2):not([role]) > div:first-child > div:nth-child(2) {
 			display: none !important;
 		}
+	}
 }
 
 // Hide top banner ad. It may not exist, so account for this
-// #app > div:first-child > div:last-child > div:first-child > div:first-child:not(:last-child):not(:nth-last-child(2)) {
-// 	display: none !important;
-// }
+#app > div:first-child > div:last-child > div:first-child > div:first-child:not(:last-child):not(:nth-last-child(2)) {
+	display: none !important;
+}
 
 // Hide bottom ad (shown when screen is narrow). It may not exist on O365, so account for this
 // #app > div:first-child > div:last-child > div:first-child > div:last-child:not(:first-child) {
