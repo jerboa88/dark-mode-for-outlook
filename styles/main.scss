@@ -622,6 +622,21 @@ div[aria-label='Reading Pane'] + div > {
 
 /*#region STYLES FOR MOBILE SITE (FOR FIREFOX MOBILE) */
 /*#region GENERAL STYLES */
+// Loading/splash screen logo background color
+.logoCont > svg > g > rect {
+	fill: transparent !important;
+}
+
+// Loading/splash screen progress bar background color
+.loader {
+	background-color: transparent !important;
+}
+
+// Loading/splash screen progress bar fill color
+.loader:before {
+	background-color: var(--dmfo-lightest) !important;
+}
+
 // Remove top ad
 main > div:first-child > div:first-child > div:first-child {
 	display: none !important;
@@ -650,6 +665,47 @@ main > div:first-child > div:first-child > div:first-child {
 // Change action bar selected icon color (calendar)
 #app > div:first-child > nav > span[aria-label*=Selected] > div > svg > g > * {
 	fill: var(--dmfo-lightest) !important;
+}
+
+// Sidebar background/text color
+#FolderPaneDivId > div[role=navigation] {
+	background: var(--dmfo-darker) !important;
+	color: var(--dmfo-lightest) !important;
+
+	// Sidebar header text color and border
+	> div:first-child {
+		border-bottom: none !important;
+
+		> div:first-child {
+			> i, > div {
+				color: var(--dmfo-lightest) !important;
+			}
+		}
+	}
+
+	// Remove borders from all sidebar sections
+	> div {
+		border-top: none !important;
+
+		// Background color of selected list item
+		> div[class*=_3Q] {
+			background-color: var(--themeLight) !important;
+			color: var(--dmfo-lightest) !important;
+		}
+
+		// Folder unread items badge background/text color
+		> div > label[for*=Folder] {
+			background-color: var(--dmfo-dark) !important;
+			color: var(--dmfo-lightest) !important;
+		}
+	}
+
+	// Sidebar footer text color
+	> div:last-child {
+		div[role=link], div[role=button] {
+			color: var(--dmfo-lightest) !important;
+		}
+	}
 }
 /*#endregion*/
 
@@ -683,6 +739,11 @@ div[role=group] > article > div:last-child > div:first-child > div:nth-child(2) 
 // Message preview text color
 div[role=group] > article > div:last-child > div:first-child > div:nth-child(3) > div:first-child {
 	color: var(--dmfo-light) !important;
+}
+
+// Hide Edge bottom banner ad
+div[aria-label='Microsoft Edge upsell'] {
+	display: none !important;
 }
 /*#endregion*/
 
