@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: ''
-labels: 'Status: New, Type: Enhancement'
+labels: "⏰ Status: New, \U0001F5C3 Type: Enhancement"
 assignees: ''
 
 ---

@@ -2,7 +2,7 @@
 name: Question
 about: Ask a question about the project
 title: ''
-labels: 'Status: New, Type: Question'
+labels: "⏰ Status: New, \U0001F5C3 Type: Question"
 assignees: ''
 
 ---

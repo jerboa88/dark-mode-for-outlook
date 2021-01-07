@@ -2,7 +2,7 @@
 name: Bug report
 about: Report an issue with this project
 title: ''
-labels: 'Status: New, Type: Bug'
+labels: "⏰ Status: New, \U0001F5C3 Type: Bug"
 assignees: ''
 
 ---
