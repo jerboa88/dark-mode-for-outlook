@@ -1,5 +1,17 @@
 @use 'vars.scss';
 
+@mixin searchBoxStyles {
+  background-color: var(--dmfo-dark) !important;
+	border: 0 !important;
+	border-radius: var(--dmfo-border-radius) !important;
+}
+
+@mixin darkInputFieldStyles {
+  background-color: var(--dmfo-darkest) !important;
+	border: 0 !important;
+	border-radius: var(--dmfo-border-radius) !important;
+}
+
 
 /*#region MANUAL OVERRIDES FOR HARDCODED STYLES AND FOR WHEN BUILT-IN DARK MODE IS DISABLED */
 // Navbar Meet now button background
@@ -210,11 +222,51 @@ body {
 	min-width: 700px !important;
 }
 
-// Main search box border radius
-div[role=search], .ms-SearchBox {
-	background-color: var(--dmfo-dark) !important;
-	border: 0 !important;
+// Styles for main search box border radius
+div[role=search],
+.ms-SearchBox {
+	@include searchBoxStyles;
+}
+
+// Change background of search box container to hide borders
+#searchBoxColumnContainerId > div {
+	background: var(--dmfo-darker) !important;
+}
+
+// Style search button to match main search box
+#searchBoxColumnContainerId > div > button {
+	@include darkInputFieldStyles;
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
+
+// Remove borders shown when search box is active
+.ms-SearchBox::after {
+	border: none !important
+}
+
+// Remove bottom borders of advanced search panel input fields
+.ms-Dropdown-title,
+.ms-Callout-main > div > div > div > div > div,
+.ms-TextField-wrapper,
+.ms-TextField-wrapper::after {
+	border-bottom: none !important;
+}
+
+// Change border-radius to match other input fields
+.ms-BasePicker-input,
+.ms-TextField-fieldGroup {
 	border-radius: var(--dmfo-border-radius) !important;
+}
+
+// Change background color, border-radius of date picker to match other advanced search panel input fields
+.ms-DatePicker {
+	@include darkInputFieldStyles;
+}
+
+// Add custom padding to advanced search panel input fields for consistency
+.ms-BasePicker-input {
+	padding-left: 8px !important;
 }
 
 // Border radius for various buttons
@@ -385,7 +437,7 @@ div[aria-label='Content pane'] {
 
 // Skype pane search box background
 .swcSearchInput {
-	background-color: var(--dmfo-dark) !important;
+	@include searchBoxStyles
 }
 
 // Skype pane search box icon size
@@ -416,7 +468,8 @@ div[aria-label='Content pane'] {
 }
 
 // Skype pane icon color
-.swc.swc-recents.dark .swcRecentsHeader__searchInput .swcIcon_cancel, .swc.swc-recents.dark .swcRecentsHeader__searchInput .swcIcon_search {
+.swc.swc-recents.dark .swcRecentsHeader__searchInput .swcIcon_cancel,
+.swc.swc-recents.dark .swcRecentsHeader__searchInput .swcIcon_search {
 	color: var(--dmfo-lightest) !important;
 }
 
@@ -486,8 +539,7 @@ div[aria-label='Content pane'] {
 
 /*#region STYLES FOR ONENOTE PANE */
 .n-searchBar-inputBox {
-	border: 0 !important;
-	border-radius: var(--dmfo-border-radius) !important;
+	@include searchBoxStyles
 }
 
 // Onenote pane background
