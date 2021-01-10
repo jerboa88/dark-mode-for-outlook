@@ -53,7 +53,13 @@ Mobile site | &#8291; | &#8291; | &#8291;
 ## Contributing
 Contributions, issues, and forks are welcome. Please note that any code you contribute will be licensed under the same license as this project. By making any contributions, you agree to this.
 
-[SemVer](http://semver.org/) is used for versioning.
+**Guidelines:**
+- SCSS is used to make writing styles easier and more maintainable. Please take advantage of its features
+- Variables are defined in [_vars.scss](styles/_vars.scss) and should be used whenever possible instead of hardcoding values
+- Any styles written should be specific enough to not affect unintended areas of the application, but not overly specific such that styles are broken every time Outlook releases an update (do not use Outlook's randomly generated class names)
+- Styles should be as short as possible, and written in relation to other elements with hardcoded attributes. See [main.scss](styles/main.scss) for examples
+
+[SemVer](http://semver.org/) is used for versioning this project, although the patch number is left out.
 
 
 ## License
