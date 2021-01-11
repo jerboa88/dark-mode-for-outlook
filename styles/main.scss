@@ -274,6 +274,21 @@ div[role=search],
 	padding-left: 8px !important;
 }
 
+// Change background color of 'Move to a different folder' menu items
+.ms-FocusZone > div[role='menuitem'] {
+	background: var(--dmfo-darker) !important;
+}
+
+// Change background color on hover for 'Move to a different folder' menu items
+.ms-FocusZone > div[role='menuitem']:hover {
+	background: var(--dmfo-darkest) !important;
+}
+
+// Override background color for 'Add a new folder' menu item
+div[title='Add a new folder']:hover {
+	background: inherit !important;
+}
+
 // Border radius for various buttons
 button.ms-Button[type='button'] {
 	border-radius: var(--dmfo-border-radius) !important;
