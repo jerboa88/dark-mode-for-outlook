@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title lang="en" data-locale-code="optionsHeaderText">Options</title>
+	<style>
+		body {
+			margin: 20px;
+			background: #fff;
+			color: #000;
+			overflow: hidden;
+		}
+
+		h3 {
+			margin-bottom: 0;
+		}
+
+		label > form {
+			display: flex;
+			padding: 0;
+			border: 1px solid #bbb;
+			border-radius: 4px;
+		}
+
+		span {
+			display: inline-block;
+			margin: 0;
+			padding: 4px;
+			background: #ddd;
+			border: none;
+			border-radius: 4px 0px 0px 4px;
+		}
+
+		#customDomainsList {
+			margin: 4px 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		#customDomainsList > li {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-left: 4px;
+			padding: 4px 0;
+		}
+
+		input {
+			padding: 4px;
+		}
+
+		input, #customDomainsList > li {
+			width: 100%;
+			border: none;
+			white-space: nowrap;
+		}
+
+		#customDomainsList > li > p {
+			margin: 0;
+			padding: 4px;
+		}
+
+		button {
+			padding: 4px;
+			background: #ddd;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			white-space: nowrap;
+		}
+
+		button:hover {
+			background: #aaa;
+		}
+
+		body > div {
+			display: flex;
+		}
+
+		#statusMessage {
+			margin: auto 0;
+			opacity: 0;
+			transition: .2s opacity;
+		}
+	</style>
+</head>
+<body>
+	<label>
+		<h3 lang="en" data-locale-code="optionsCustomDomainLabel">[Experimental] Custom Domains</h3>
+		<p lang="en" data-locale-code="optionsCustomDomainDescription">If your Outlook exchange server is running on a custom domain (ex. https://mail.yourcompany.com/owa), you can add it here so that the dark mode is applied for any page on this domain. This is still an experimental feature so styles may not be applied correctly</p><br>
+		<form id="customDomainForm">
+			<span>http(s):// </span>
+			<input type="url" id="customDomainInput" name="customDomainInput">
+			<button id="addCustomDomainButton" formnovalidate="formnovalidate">+ Add</button>
+		</form>
+		<ul id="customDomainsList"></ul>
+	</label>
+
+	<div id="statusMessage"><br><br></div>
+
+	<script src="options.js"></script>
+</body>
+</html>

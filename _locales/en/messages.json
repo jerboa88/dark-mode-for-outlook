@@ -1,18 +1,70 @@
 {
 	"extensionName": {
 		"message": "Dark Mode for Outlook™",
-		"description": "Name of the extension."
+		"description": "The name of the extension"
 	},
 	"extensionShortName": {
 		"message": "Dark Mode",
-		"description": "Short name of the extension."
+		"description": "The short name of the extension"
 	},
 	"extensionDescription": {
 		"message": "A better (unofficial) dark theme for Microsoft Outlook™.",
-		"description": "Description of the extension."
+		"description": "A description of the extension"
 	},
 	"extensionLongDescription": {
 		"message": "A Firefox add-on that applies a better dark mode to Microsoft Outlook and removes the ad sidebar. Compatible with Firefox mobile!\nAlso released on the Chrome Web Store here.\nOutlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.",
-		"description": "A longer description of the extension for store pages."
+		"description": "A longer description of the extension for store pages"
+	},
+	"optionsHeaderText": {
+		"message": "Options",
+		"description": "The title of the options dialog"
+	},
+	"optionsAddButtonText": {
+		"message": "Add",
+		"description": "Text for add buttons in the options dialog"
+	},
+	"optionsRemoveButtonText": {
+		"message": "Remove",
+		"description": "Text for remove buttons in the options dialog"
+	},
+	"optionsCustomDomainLabel": {
+		"message": "[Experimental] Custom Domains",
+		"description": "The name of the custom domains setting in the options dialog"
+	},
+	"optionsCustomDomainDescription": {
+		"message": "If your Outlook exchange server is running on a custom domain (ex. https://mail.yourcompany.com/owa), you can add it here so that the dark mode is applied for any page on this domain. This is still an experimental feature so styles may not be applied correctly",
+		"description": "The description of the custom domains setting in the options dialog"
+	},
+	"optionsStatusMessage_permissionGrantedSuccess": {
+		"message": "Permission granted",
+		"description": "A success message shown when browser permissions were granted by the user"
+	},
+	"optionsStatusMessage_permissionRequiredError": {
+		"message": "Permission is required to use this feature. Please try again",
+		"description": "An error message shown when browser permissions were not granted by the user"
+	},
+	"optionsStatusMessage_addCustomDomain_invalidError": {
+		"message": "The custom domain entered is not valid. Please check the formatting and try again",
+		"description": "An error message shown when an invalid custom domain is entered"
+	},
+	"optionsStatusMessage_addCustomDomain_success": {
+		"message": "The custom domain was added successfully",
+		"description": "A success message shown when a custom domain was added successfully"
+	},
+	"optionsStatusMessage_addCustomDomain_emptyError": {
+		"message": "No custom domain entered",
+		"description": "An error message shown when no custom domain is entered"
+	},
+	"optionsStatusMessage_removeCustomDomain_success": {
+		"message": "The custom domain was removed successfully",
+		"description": "A success message shown when a custom domain was removed successfully"
+	},
+	"optionsStatusMessage_addCustomDomain_alreadyExistsError": {
+		"message": "The custom domain already exists",
+		"description": "An error message shown when the custom domain a user is trying to add has been added already"
+	},
+	"optionsStatusMessage_removeCustomDomain_error": {
+		"message": "Something went wrong while removing the custom domain. Please report this as a bug",
+		"description": "An error message shown when a custom domain could not be removed"
 	}
 }
