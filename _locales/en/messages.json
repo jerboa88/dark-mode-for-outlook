@@ -20,19 +20,19 @@
 		"description": "The title of the options dialog"
 	},
 	"optionsAddButtonText": {
-		"message": "Add",
-		"description": "Text for add buttons in the options dialog"
+		"message": "+ Add",
+		"description": "The text for add buttons in the options dialog"
 	},
 	"optionsRemoveButtonText": {
-		"message": "Remove",
-		"description": "Text for remove buttons in the options dialog"
+		"message": "- Remove",
+		"description": "The text for remove buttons in the options dialog"
 	},
 	"optionsCustomDomainLabel": {
 		"message": "[Experimental] Custom Domains",
 		"description": "The name of the custom domains setting in the options dialog"
 	},
 	"optionsCustomDomainDescription": {
-		"message": "If your Outlook exchange server is running on a custom domain (ex. https://mail.yourcompany.com/owa), you can add it here so that the dark mode is applied for any page on this domain. This is still an experimental feature so styles may not be applied correctly",
+		"message": "If your Outlook exchange server is running on a custom domain (ex. https://mail.yourcompany.com/owa), you can add it here so that the dark mode is applied for any page on this domain. This is still an experimental feature so styles may not be applied correctly. If you encounter any issues, please create a bug report.",
 		"description": "The description of the custom domains setting in the options dialog"
 	},
 	"optionsStatusMessage_permissionGrantedSuccess": {
@@ -40,31 +40,35 @@
 		"description": "A success message shown when browser permissions were granted by the user"
 	},
 	"optionsStatusMessage_permissionRequiredError": {
-		"message": "Permission is required to use this feature. Please try again",
+		"message": "Oops! Permission is required to use this feature. Please try again",
 		"description": "An error message shown when browser permissions were not granted by the user"
-	},
-	"optionsStatusMessage_addCustomDomain_invalidError": {
-		"message": "The custom domain entered is not valid. Please check the formatting and try again",
-		"description": "An error message shown when an invalid custom domain is entered"
 	},
 	"optionsStatusMessage_addCustomDomain_success": {
 		"message": "The custom domain was added successfully",
 		"description": "A success message shown when a custom domain was added successfully"
 	},
 	"optionsStatusMessage_addCustomDomain_emptyError": {
-		"message": "No custom domain entered",
+		"message": "Oops! No custom domain was entered",
 		"description": "An error message shown when no custom domain is entered"
+	},
+	"optionsStatusMessage_addCustomDomain_invalidError": {
+		"message": "Oops! This custom domain is not valid. Please check the formatting and try again",
+		"description": "An error message shown when an invalid custom domain is entered"
+	},
+	"optionsStatusMessage_addCustomDomain_alreadyExistsError": {
+		"message": "Oops! This custom domain already exists",
+		"description": "An error message shown when the custom domain a user is trying to add has been added already"
+	},
+	"optionsStatusMessage_addCustomDomain_isReservedError": {
+		"message": "Oops! Styles are applied to this domain by default, so there's no need to enter this as a custom domain. Please report a bug if styles are not being applied correctly",
+		"description": "An error message shown when the user enters a domain that is built-in to the extension by default"
 	},
 	"optionsStatusMessage_removeCustomDomain_success": {
 		"message": "The custom domain was removed successfully",
 		"description": "A success message shown when a custom domain was removed successfully"
 	},
-	"optionsStatusMessage_addCustomDomain_alreadyExistsError": {
-		"message": "The custom domain already exists",
-		"description": "An error message shown when the custom domain a user is trying to add has been added already"
-	},
 	"optionsStatusMessage_removeCustomDomain_error": {
-		"message": "Something went wrong while removing the custom domain. Please report this as a bug",
+		"message": "Oops! Something went wrong while removing the custom domain. Please report this as a bug",
 		"description": "An error message shown when a custom domain could not be removed"
 	}
 }

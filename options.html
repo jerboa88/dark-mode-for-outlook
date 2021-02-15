@@ -36,6 +36,10 @@
 			list-style-type: none;
 		}
 
+		#customDomainForm {
+			margin: 4px 0;
+		}
+
 		#customDomainsList > li {
 			display: flex;
 			align-items: center;
@@ -77,7 +81,7 @@
 		}
 
 		#statusMessage {
-			margin: auto 0;
+			margin: 8px 0;
 			opacity: 0;
 			transition: .2s opacity;
 		}
@@ -85,17 +89,17 @@
 </head>
 <body>
 	<label>
-		<h3 lang="en" data-locale-code="optionsCustomDomainLabel">[Experimental] Custom Domains</h3>
-		<p lang="en" data-locale-code="optionsCustomDomainDescription">If your Outlook exchange server is running on a custom domain (ex. https://mail.yourcompany.com/owa), you can add it here so that the dark mode is applied for any page on this domain. This is still an experimental feature so styles may not be applied correctly</p><br>
+		<h3 lang="en" data-locale-code="optionsCustomDomainLabel"></h3>
+		<p lang="en" data-locale-code="optionsCustomDomainDescription"></p>
 		<form id="customDomainForm">
 			<span>http(s):// </span>
 			<input type="url" id="customDomainInput" name="customDomainInput">
-			<button id="addCustomDomainButton" formnovalidate="formnovalidate">+ Add</button>
+			<button id="addCustomDomainButton" formnovalidate="formnovalidate" data-locale-code="optionsAddButtonText"></button>
 		</form>
 		<ul id="customDomainsList"></ul>
 	</label>
 
-	<div id="statusMessage"><br><br></div>
+	<div id="statusMessage"><br></div>
 
 	<script src="options.js"></script>
 </body>

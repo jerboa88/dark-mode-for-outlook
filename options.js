@@ -1,6 +1,7 @@
 (() => {
   'use strict';
 
+  // Constants
   const customDomainForm = document.getElementById('customDomainForm');
   const customDomainInput = document.getElementById('customDomainInput');
   const customDomainsListContainer = document.getElementById('customDomainsList');
@@ -8,7 +9,13 @@
   const statusMessage = document.getElementById('statusMessage');
   const localizableElements = document.querySelectorAll('*[data-locale-code]');
   const localeCode = chrome.i18n.getMessage('@@ui_locale');
-  const removeButtonText = '- ' + chrome.i18n.getMessage('optionsRemoveButtonText') || 'Remove';
+  const removeButtonText = chrome.i18n.getMessage('optionsRemoveButtonText' || '- Remove');
+  const reservedDomains = [
+    '*://outlook.live.com/*',
+    '*://outlook.office.com/*',
+    '*://outlook.office365.com/*',
+    '*://support.office.live.com/*'
+  ];
 
   // Runtime
   const rawCustomDomainSet = new Set();
@@ -30,7 +37,7 @@
 
     setTimeout(() => {
       statusMessage.style.opacity = '0';
-    }, 2000);
+    }, 4000);
   };
 
   const removeInvalidChars = () => {
@@ -63,32 +70,61 @@
     return (savedDomain === null) ? '' : savedDomain.replace(/^\*:\/\//, '').replace(/\/\*$/, '');
   };
 
-  const addCustomDomain = (rawDomain) => {
-    chrome.permissions.request({
-      permissions: ['tabs'],
-      origins: [rawDomain]
-    }, (wasGranted) => {
-      if (wasGranted) {
-        showMessage(true, 'optionsStatusMessage_permissionGrantedSuccess');
+  const addCustomDomainListItem = (rawDomain) => {
+    const listItem = document.createElement('li');
+    const itemLabel = document.createElement('p');
+    const removeButton = document.createElement('button');
 
-        if (rawCustomDomainSet.has(rawDomain)) {
-          showMessage(false, 'optionsStatusMessage_addCustomDomain_alreadyExistsError');
-        } else {
-          addCustomDomainListItem(rawDomain);
-          rawCustomDomainSet.add(rawDomain);
-          showMessage(true, 'optionsStatusMessage_addCustomDomain_success');
-        }
-      } else {
-        showMessage(false, 'optionsStatusMessage_permissionRequiredError');
-      }
+    itemLabel.innerHTML = toReadableDomain(rawDomain);
+    removeButton.innerHTML = removeButtonText;
+
+    listItem.appendChild(itemLabel);
+    listItem.appendChild(removeButton);
+    customDomainsListContainer.appendChild(listItem);
+    removeButton.addEventListener('click', () => {
+      removeCustomDomain(listItem, rawDomain)
     });
   };
 
+  const addCustomDomain = (rawDomain) => {
+    if (reservedDomains.includes(rawDomain)) {
+      showMessage(false, 'optionsStatusMessage_addCustomDomain_isReservedError');
+    } else {
+      chrome.permissions.request({
+        permissions: ['tabs'],
+        origins: [rawDomain]
+      }, (wasGranted) => {
+        if (wasGranted) {
+          showMessage(true, 'optionsStatusMessage_permissionGrantedSuccess');
+
+          console.debug(rawDomain, reservedDomains.includes(rawDomain), reservedDomains);
+
+          if (rawCustomDomainSet.has(rawDomain)) {
+            showMessage(false, 'optionsStatusMessage_addCustomDomain_alreadyExistsError');
+          } else {
+            addCustomDomainListItem(rawDomain);
+            rawCustomDomainSet.add(rawDomain);
+            showMessage(true, 'optionsStatusMessage_addCustomDomain_success');
+          }
+        } else {
+          showMessage(false, 'optionsStatusMessage_permissionRequiredError');
+        }
+      });
+    }
+  };
+
   const removeCustomDomain = (listItem, rawDomain) => {
-    chrome.permissions.remove({origins: [rawDomain]}, (wasRemoved) => {
-      if (wasRemoved) {
+    chrome.permissions.remove({origins: [rawDomain]}, (wasOriginRemoved) => {
+      if (wasOriginRemoved) {
         listItem.remove();
         rawCustomDomainSet.delete(rawDomain);
+
+        if (rawCustomDomainSet.size === 0) {
+          chrome.permissions.remove({permissions: ['tabs']}, (wasPermRemoved) => {
+            console.debug((wasPermRemoved) ? '`tabs` permission was removed successfully' : 'Something went wrong removing the `tabs` permission. Ignoring');
+          });
+        }
+
         showMessage(true, 'optionsStatusMessage_removeCustomDomain_success');
       } else {
         showMessage(false, 'optionsStatusMessage_removeCustomDomain_error');
@@ -110,30 +146,11 @@
     }
   };
 
-  const addCustomDomainListItem = (rawDomain) => {
-    const listItem = document.createElement('li');
-    const itemLabel = document.createElement('p');
-    const removeButton = document.createElement('button');
-
-    itemLabel.innerHTML = toReadableDomain(rawDomain);
-    removeButton.innerHTML = '- Remove'; // Put this in translations
-
-    listItem.appendChild(itemLabel);
-    listItem.appendChild(removeButton);
-    customDomainsListContainer.appendChild(listItem);
-    removeButton.addEventListener('click', () => {
-      removeCustomDomain(listItem, rawDomain)
-    });
-  };
-
   const restoreCustomDomains = () => {
     chrome.permissions.getAll((permissions) => {
       if ('origins' in permissions) {
         permissions.origins.filter((origin) => {
-          return origin !== '*://outlook.live.com/*'
-              && origin !== '*://outlook.office.com/*'
-              && origin !== '*://outlook.office365.com/*'
-              && origin !== '*://support.office.live.com/*';
+          return !reservedDomains.includes(origin);
         }).forEach((rawDomain) => {
           addCustomDomainListItem(rawDomain);
           rawCustomDomainSet.add(rawDomain);
@@ -147,6 +164,7 @@
   addCustomDomainButton.addEventListener('click', validateCustomDomain);
   customDomainForm.addEventListener('submit', (event) => {
     event.preventDefault();
+
     return false;
   });
 
