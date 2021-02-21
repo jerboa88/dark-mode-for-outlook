@@ -1,18 +1,118 @@
 {
 	"extensionName": {
 		"message": "Modo oscuro para Outlook™",
-		"description": "Name of the extension."
+		"description": "The name of the extension"
 	},
 	"extensionShortName": {
-		"message": "Modo oscuro",
-		"description": "Short name of the extension."
+		"message": "MOPO",
+		"description": "The short name of the extension"
 	},
 	"extensionDescription": {
-		"message": "Un mejor tema oscuro (extraoficial) para Microsoft Outlook™.",
-		"description": "Description of the extension."
+		"message": "Un mejor tema oscuro (extraoficial) para Microsoft Outlook™",
+		"description": "A description of the extension"
 	},
-	"extensionLongDescription": {
-		"message": "Una extensión de Firefox que aplica un mejor modo oscuro a Microsoft Outlook y elimina la barra lateral de anuncios. Compatible con Firefox móvil.\n¡También disponible para Chrome, Firefox, Edge y Opera!\nOutlook es una marca comercial de Microsoft y este proyecto no está afiliado ni respaldado por Microsoft de ninguna manera.",
-		"description": "A longer description of the extension for store pages."
+	"storeDescriptionHeader": {
+		"message": "🔶 Descripción 🔶",
+		"description": "The title for the Description section shown on the store page"
+	},
+	"storeDescriptionText": {
+		"message": "Una extensión del navegador que aplica un modo oscuro mejor (no es oficial) a Microsoft Outlook y elimina la barra lateral de anuncios. Disponible para Chrome, Firefox, Edge y Opera, y compatible con Firefox móvil.\n\nLos estilos se aplican automáticamente a las URL conocidas de Outlook. Si su servidor de intercambio de Outlook se ejecuta en un dominio personalizado, agregue este dominio en las opciones de extensión.",
+		"description": "The body text for the Description section shown on the store page"
+	},
+	"storePrivacyHeader": {
+		"message": "🔶 Privicidad 🔶",
+		"description": "The title for the Privacy section shown on the store page"
+	},
+	"storePrivacyText": {
+		"message": "Esta extensión ninguna recopila ni transmite ninguna información personal. Consulte a continuación para obtener una explicación de requeridos permisos los por esta extensión.",
+		"description": "The body text for the Privacy section shown on the store page"
+	},
+	"storeRequiredPermissionsHeader": {
+		"message": "🔸 Permisos Requeridos 🔸",
+		"description": "The title for the Required Permissions section shown on the store page"
+	},
+	"storeRequiredPermissionsText": {
+		"message": "Se requiere acceso a cualquier sitio en siguientes dominios los para que podamos aplicar estilos personalizados:\n▸ http(s)://outlook.live.com/\n▸ http(s)://outlook.office.com/\n▸ http(s)://outlook.office365.com/\n- http(s)://support.office.live.com/",
+		"description": "The body text for the Required Permissions section shown on the store page"
+	},
+	"storeOptionalPermissionsHeader": {
+		"message": "🔸 Permisos Opcionales 🔸",
+		"description": "The title for the Optional Permissions section shown on the store page"
+	},
+	"storeOptionalPermissionsText": {
+		"message": "Estos permisos se solicitan solo cuando son necesarios:\n▸ tabs: Se requiere acceso a pestañas abiertas si está utilizando la función Dominios Personalizados. Esto es para que podamos verificar si alguna pestaña abierta coincide con los dominios personalizados que especificó.\n▸ http(s)://*/: Se requiere acceso a 'cualquier sitio' si está utilizando la función Personalizados Dominios. Esto es para que podamos aplicar estilos a cualquier dominio que especifique. Tenga en cuenta que la extensión no tiene acceso a todos los sitios. Solo solicitará permisos para los dominios personalizados específicos que agregue.",
+		"description": "The body text for the Optional Permissions section shown on the store page"
+	},
+	"storeReportingIssuesHeader": {
+		"message": "🔶 Reportar Problemas 🔶",
+		"description": "The title for the Reporting Issues section shown on the store page"
+	},
+	"storeReportingIssuesText": {
+		"message": "¡Se necesitan traducciones! Si conoce otro idioma y desea ayudar, cree un problema con detalles aquí: https://github.com/jerboa88/dark-mode-for-outlook/issues.\n\nSi encuentra algún problema al usar la extensión, cree un problema o cree una solicitud de extracción usted mismo para solucionar el problema.\n\nIntento corregir la extensión lo antes posible cuando Outlook crea cambios importantes, pero tenga en cuenta que puede llevar algún tiempo adaptar el trabajo a mi horario y realizar todos los cambios que se deben realizar. Gracias por tu paciencia 🙂.",
+		"description": "The body text for the Reporting Issues section shown on the store page"
+	},
+	"storeLicenseHeader": {
+		"message": "🔶 Licencia 🔶",
+		"description": "The title for the License section shown on the store page"
+	},
+	"storeLicenseText": {
+		"message": "Este proyecto tiene la licencia MIT. Consulte el archivo de licencia para obtener más detalles. Outlook es una marca comercial de Microsoft y este proyecto no está afiliado ni respaldado por Microsoft de ninguna manera.",
+		"description": "The body test for the License section shown on the store page"
+	},
+	"optionsHeaderText": {
+		"message": "Opciones",
+		"description": "The title of the options dialog"
+	},
+	"optionsAddButtonText": {
+		"message": "+ Añadir",
+		"description": "The text for add buttons in the options dialog"
+	},
+	"optionsRemoveButtonText": {
+		"message": "- Eliminar",
+		"description": "The text for remove buttons in the options dialog"
+	},
+	"optionsCustomDomainLabel": {
+		"message": "[Experimental] Personalizados Dominios",
+		"description": "The name of the custom domains setting in the options dialog"
+	},
+	"optionsCustomDomainDescription": {
+		"message": "Si su servidor de intercambio de Outlook se ejecuta en un dominio personalizado (ej. https://mail.yourcompany.es/owa), puede agregarlo aquí para que el modo oscuro se aplique a cualquier página de este dominio. Eso estar siendo una función experimental, por lo que es posible que los estilos no se apliquen correctamente. Si encuentra algún problema, cree un informe de error.",
+		"description": "The description of the custom domains setting in the options dialog"
+	},
+	"optionsStatusMessage_permissionGrantedSuccess": {
+		"message": "Dicha autorización",
+		"description": "A success message shown when browser permissions were granted by the user"
+	},
+	"optionsStatusMessage_permissionRequiredError": {
+		"message": "Oops! Se requiere permiso para utilizar esta función. Inténtalo de nuevo",
+		"description": "An error message shown when browser permissions were not granted by the user"
+	},
+	"optionsStatusMessage_addCustomDomain_success": {
+		"message": "El dominio personalizado se agregó correctamente",
+		"description": "A success message shown when a custom domain was added successfully"
+	},
+	"optionsStatusMessage_addCustomDomain_emptyError": {
+		"message": "Oops! No se ingresó ningún dominio personalizado",
+		"description": "An error message shown when no custom domain is entered"
+	},
+	"optionsStatusMessage_addCustomDomain_invalidError": {
+		"message": "Oops! Este dominio personalizado no es válido. Comprueba el formato y vuelve a intentarlo.",
+		"description": "An error message shown when an invalid custom domain is entered"
+	},
+	"optionsStatusMessage_addCustomDomain_alreadyExistsError": {
+		"message": "Oops! Este dominio personalizado ya existe",
+		"description": "An error message shown when the custom domain a user is trying to add has been added already"
+	},
+	"optionsStatusMessage_addCustomDomain_isReservedError": {
+		"message": "Oops! Los estilos se aplican a este dominio de forma predeterminada, por lo que no es necesario ingresarlo como un dominio personalizado. Informe un error si los estilos no se aplican correctamente",
+		"description": "An error message shown when the user enters a domain that is built-in to the extension by default"
+	},
+	"optionsStatusMessage_removeCustomDomain_success": {
+		"message": "El dominio personalizado se eliminó correctamente",
+		"description": "A success message shown when a custom domain was removed successfully"
+	},
+	"optionsStatusMessage_removeCustomDomain_error": {
+		"message": "Oops! Se produjo un error al eliminar el dominio personalizado. Informe esto como un error",
+		"description": "An error message shown when a custom domain could not be removed"
 	}
 }

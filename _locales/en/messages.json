@@ -11,9 +11,53 @@
 		"message": "A better (unofficial) dark theme for Microsoft Outlook™.",
 		"description": "A description of the extension"
 	},
-	"extensionLongDescription": {
-		"message": "A Firefox add-on that applies a better dark mode to Microsoft Outlook and removes the ad sidebar. Compatible with Firefox mobile!\nAlso released on the Chrome Web Store here.\nOutlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.",
-		"description": "A longer description of the extension for store pages"
+	"storeDescriptionHeader": {
+		"message": "🔶 Description 🔶",
+		"description": "The title for the Description section shown on the store page"
+	},
+	"storeDescriptionText": {
+		"message": "A browser extension/add-on that applies a better (unofficial) dark mode to Microsoft Outlook and removes the ad sidebar. Available for Chrome, Firefox, Edge, and Opera, and compatible with Firefox mobile!\n\nStyles are automatically applied to known Outlook URLs. If your Outlook exchange server is running on a custom domain, please add this domain in the extension options.",
+		"description": "The body text for the Description section shown on the store page"
+	},
+	"storePrivacyHeader": {
+		"message": "🔶 Privacy 🔶",
+		"description": "The title for the Privacy section shown on the store page"
+	},
+	"storePrivacyText": {
+		"message": "This extension does not collect or transmit any personal information. Please see below for an explanation of the permissions required by this extension.",
+		"description": "The body text for the Privacy section shown on the store page"
+	},
+	"storeRequiredPermissionsHeader": {
+		"message": "🔸 Required Permissions 🔸",
+		"description": "The title for the Required Permissions section shown on the store page"
+	},
+	"storeRequiredPermissionsText": {
+		"message": "Access to any site on the following domains is required so we can apply custom styles:\n▸ http(s)://outlook.live.com/\n▸ http(s)://outlook.office.com/\n▸ http(s)://outlook.office365.com/\n- http(s)://support.office.live.com/",
+		"description": "The body text for the Required Permissions section shown on the store page"
+	},
+	"storeOptionalPermissionsHeader": {
+		"message": "🔸 Optional Permissions 🔸",
+		"description": "The title for the Optional Permissions section shown on the store page"
+	},
+	"storeOptionalPermissionsText": {
+		"message": "These permissions are requested only when they are needed:\n▸ tabs: Access to open tabs is required if you are using the Custom Domains feature. This is so we can check if any open tabs match the custom domains you specified\n▸ http(s)://*/: Access to 'any site' is required if you are using the Custom Domains feature. This is so we can apply styles to any domain you specify. Note that the extension does not have access to all sites. It will only request permissions for the specific custom domains you add.",
+		"description": "The body text for the Optional Permissions section shown on the store page"
+	},
+	"storeReportingIssuesHeader": {
+		"message": "🔶 Reporting Issues 🔶",
+		"description": "The title for the Reporting Issues section shown on the store page"
+	},
+	"storeReportingIssuesText": {
+		"message": "Translations needed! If you know another language and want to help out, please create an issue with details here: https://github.com/jerboa88/dark-mode-for-outlook/issues.\n\nIf you encounter any problems while using the extension, please create an issue or create a pull request yourself to fix the issue.\n\nI try to fix the extension as soon as possible when Outlook makes breaking changes, but keep in mind it may take some time for me to fit the work into my schedule and make all the changes that need to be made. Thanks for your patience 🙂.",
+		"description": "The body text for the Reporting Issues section shown on the store page"
+	},
+	"storeLicenseHeader": {
+		"message": "🔶 License 🔶",
+		"description": "The title for the License section shown on the store page"
+	},
+	"storeLicenseText": {
+		"message": "This project is licensed under the MIT License. See the license file for details. Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.",
+		"description": "The body test for the License section shown on the store page"
 	},
 	"optionsHeaderText": {
 		"message": "Options",

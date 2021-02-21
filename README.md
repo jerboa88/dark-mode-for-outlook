@@ -38,8 +38,6 @@ Just install the extension and you should be good to go! Styles are automaticall
 - http(s)://outlook.office365.com/
 - http(s)://support.office.live.com/
 
-If your organization uses a custom domain for Outlook, please see the option below.
-
 ### Options
 #### Custom Domains
 If your Outlook exchange server is running on a custom domain (ex. https://mail.yourcompany.com/owa), you can add it here so that the dark mode is applied for any page on this domain. This is still an experimental feature so styles may not be applied correctly. If you encounter any issues, please create a bug report.
