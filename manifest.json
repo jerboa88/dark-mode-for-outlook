@@ -2,7 +2,7 @@
 	"name": "__MSG_extensionName__",
 	"short_name": "__MSG_extensionShortName__",
 	"description": "__MSG_extensionDescription__",
-	"version": "3.4",
+	"version": "3.5",
 	"default_locale": "en",
 	"icons": {
 		"128": "128.png",
@@ -10,6 +10,10 @@
 		"48": "48.png",
 		"32": "32.png",
 		"16": "16.png"
+	},
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": false
 	},
 	"content_scripts": [
 		{
@@ -35,5 +39,19 @@
 			"all_frames": true
 		}
 	],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"permissions": [],
+	"optional_permissions": [
+		"tabs",
+		"*://*/"
+	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{cf211314-517c-470f-a589-02a4b272f7d5}"
+		}
+	},
 	"manifest_version": 2
 }

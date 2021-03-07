@@ -1,22 +1,218 @@
-const os = require('os').platform();
-let cmd = null;
+(async () => {
+	'use strict';
 
-if (os == 'win32') {
-	// cmd = `echo Starting build on Windows`;
-} else if (os == 'linux') {
-	cmd = `(rm -rf build && mkdir -p build && (echo \"✓ CLEANED\" && exit 0) || (echo \"✗ ERROR WHILE CLEANING\" && exit 1)) &&
-(cp -r README.md LICENSE.md manifest.json _locales build/ && (SASSPATH=$(npm bin): $SASSPATH sass styles/main.scss build/main.css --style=compressed --no-source-map && SASSPATH=$(npm bin): $SASSPATH sass styles/help.scss build/help.css --style=compressed --no-source-map && (echo \"✓ CSS PACKED\" && exit 0) || (echo \"✗ ERROR WHILE PACKING CSS\" && exit 1)) &&
-(imagemin *.png --plugin=optipng --out-dir=build && (echo \"✓ IMAGES COMPRESSED\" && exit 0) || (echo \"✗ ERROR WHILE COMPRESSING IMAGES\" && exit 1)) && (echo \"✓ FILES COPIED\" && exit 0) || (echo \"✗ ERROR WHILE COPYING FILES\" && exit 1)) &&
-(cd build/ && zip -r dark-mode-for-outlook.zip * && (echo \"✓ FILES ZIPPED\" && exit 0) || (echo \"✗ ERROR WHILE ZIPPING FILES\" && exit 1)) &&
-time=\"\`date +%T\`\" && (echo \"✓ BUILD COMPLETE (\"$time\")\" && exit 0) || (echo \"✗ ERROR WHILE BUILDING\" && exit 1)`
-}
+	// Deps
+	const fs = require('fs-extra');
+	const imagemin = require('imagemin');
+	const optiPng = require('imagemin-optipng');
+	const replace = require('replace-in-file');
+	const { join } = require('path');
+	const { renderSync } = require('sass');
+	const { sync: { zip } } = require('zip-local');
 
-if (cmd) {
-	require("child_process").spawn(cmd, {
-		shell: true
-	}).stdout.on('data', data => {
-		process.stdout.write(data.toString());
-	});
-} else {
-	console.error('Sorry, there is no build script for your OS (' + os + '). Please perform the build manually\n');
-}
+	// Constants
+	const buildFolder = 'build';
+	const firefoxBuildFolder = join(buildFolder, 'firefox');
+	const otherBuildFolder = join(buildFolder, 'other');
+	const localeFolder = '_locales';
+	const filesToCopy = ['README.md', 'LICENSE.md', 'manifest.json', 'options.html', 'options.js', 'background.js', '_locales'];
+	const scssFiles = ['main.scss', 'help.scss'];
+	const packageJson = 'package.json';
+
+	// Runtime
+	let extensionName;
+	let extensionVersion;
+
+
+	// Shows a success message
+	const continueBuild = async (msg) => {
+		console.log('✓', msg);
+	};
+
+	// Stops the build and shows an error messages
+	const cancelBuild = async (msg, error) => {
+		console.error('✗', msg);
+		console.error(error);
+
+		process.exit(1);
+	};
+
+	// Get extension name and version from package.json
+	const getExtensionDetails = async () => {
+		try {
+			const packageObj = await fs.readJson(packageJson);
+
+			extensionName = packageObj.name;
+			extensionVersion = packageObj.version.replace('.0', '');
+		} catch (error) {
+			cancelBuild('Error while getting the extension details from ' + packageJson, error);
+		}
+
+		continueBuild('Starting build of ' + extensionName + ' v' + extensionVersion);
+	};
+
+	// Generate zip filenames based on the extension name, version, and variant
+	const getZipFileName = (extensionVariant) => {
+		return extensionName + '-' + extensionVersion + '-' + extensionVariant + '.zip';
+	};
+
+	// Generate zip files
+	const zipBuildFolders = async () => {
+		try {
+			zip(firefoxBuildFolder).compress().save(join(buildFolder, getZipFileName('firefox')));
+			zip(otherBuildFolder).compress().save(join(buildFolder, getZipFileName('other')));
+
+			continueBuild('Files zipped');
+		} catch (error) {
+			cancelBuild('Error while zipping files', error);
+		}
+	};
+
+	// Customize manifest for different extension variants so that warnings aren't shown on install
+	// (Chrome: Remove "browser_specific_settings" section. Firefox: Make background page persistent)
+	const customizeManifest = async () => {
+		try {
+			const otherResult = await replace({
+				files: join(otherBuildFolder, 'manifest.json'),
+				from: /\t{0,4}"browser_specific_settings": ?[\s\S]{0,128}\},\s/,
+				to: '',
+				countMatches: true
+			});
+
+			const firefoxResult = await replace({
+				files: join(firefoxBuildFolder, 'manifest.json'),
+				from: /"persistent": ?false/,
+				to: '"persistent": true',
+				countMatches: true
+			});
+
+			if (!otherResult || otherResult.length != 1 || !otherResult[0].hasChanged) {
+				throw new Error('Section "browser_specific_settings" could not be found in manifest.json');
+			} else if (!firefoxResult || firefoxResult.length != 1 || !firefoxResult[0].hasChanged) {
+				throw new Error('Option "persistent" could not be found in manifest.json');
+			}
+
+			continueBuild('Manifest modified');
+		} catch (error) {
+			cancelBuild('Error while modifying manifest', error);
+		}
+	};
+
+	// Duplicate Firefox build folder to make other build variants
+	const duplicateBuildFolder = async () => {
+		try {
+			await fs.copy(firefoxBuildFolder, otherBuildFolder);
+
+			continueBuild('Duplicated build');
+		} catch (error) {
+			cancelBuild('Error while duplicating build', error);
+		}
+	};
+
+	// Compress images
+	const compressImages = async () => {
+		try {
+			const result = await imagemin(['*.png'], {
+				destination: firefoxBuildFolder,
+				plugins: [
+					optiPng({
+						optimizationLevel: 7
+					})
+				]
+			});
+
+			if (!result || result.length == 0) {
+				throw new Error('No images were found');
+			}
+
+			continueBuild('Images compressed');
+		} catch (error) {
+			cancelBuild('Error while compressing images', error);
+		}
+	};
+
+	// Compile SCSS to CSS
+	const compileScss = async () => {
+		let scssCompilationError = false;
+
+		scssFiles.forEach(filename => {
+			const css = renderSync({
+				file: join('styles', filename),
+				outputStyle: 'compressed',
+				sourceMap: false
+			}).css;
+
+			fs.outputFile(join(firefoxBuildFolder, filename.replace('.scss', '.css')), css, error => {
+				if (error) {
+					scssCompilationError = error;
+				}
+			});
+		});
+
+		scssCompilationError ? cancelBuild('Error while compiling scss', scssCompilationError) : continueBuild('SCSS compiled');
+	};
+
+	// Copy files to build folder
+	const copyFiles = async () => {
+		const copyPromises = filesToCopy.map(filename => {
+			return fs.copy(filename, join(firefoxBuildFolder, filename));
+		});
+
+		try {
+			await Promise.all(copyPromises);
+
+			continueBuild('Files copied');
+		} catch (error) {
+			cancelBuild('Error while copying files', error);
+		}
+	};
+
+	// Create a build folder if it doesn't exist already, otherwise empty it
+	const cleanBuildFolder = async () => {
+		try {
+			await fs.emptyDir(buildFolder);
+			await fs.emptyDir(firefoxBuildFolder);
+			await fs.emptyDir(otherBuildFolder);
+
+			continueBuild('Cleaned build folder');
+		} catch (error) {
+			cancelBuild('Error while cleaning build folder', error);
+		}
+	};
+
+	// Generate complete store listing descriptions from localized messages
+	const generateStoreListings = async () => {
+		const localeCodes = (() => fs.readdirSync(localeFolder).filter(filename => fs.statSync(join(localeFolder, filename)).isDirectory()))();
+
+		if (localeCodes !== null) {
+			localeCodes.forEach(localeCode => {
+				const messages = JSON.parse(fs.readFileSync(join(localeFolder, localeCode, 'messages.json')));
+				const listingText = Object.keys(messages)
+					.filter(key => key.substring(0, 5) === 'store')
+					.map(key => messages[key].message)
+					.join('\n\n');
+
+				fs.writeFile(join(buildFolder, 'store-listing-' + localeCode + '.txt'), listingText, error => {
+					if (error) {
+						cancelBuild('Error while generating store listings for' + localeCode.toUpperCase(), error);
+					} else {
+						continueBuild('Store listing generated for ' + localeCode.toUpperCase());
+					}
+				});
+			});
+		}
+	};
+
+	await getExtensionDetails();
+	await cleanBuildFolder();
+	await copyFiles();
+	await compileScss();
+	await compressImages();
+	await duplicateBuildFolder();
+	await customizeManifest();
+	await zipBuildFolders();
+	await generateStoreListings();
+
+	console.log();
+	continueBuild('BUILD COMPLETE (' + new Date().toLocaleTimeString() + ')\n');
+})();
