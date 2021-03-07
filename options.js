@@ -75,8 +75,8 @@
     const itemLabel = document.createElement('p');
     const removeButton = document.createElement('button');
 
-    itemLabel.innerHTML = toReadableDomain(rawDomain);
-    removeButton.innerHTML = removeButtonText;
+    itemLabel.textContent = toReadableDomain(rawDomain);
+    removeButton.textContent = removeButtonText;
 
     listItem.appendChild(itemLabel);
     listItem.appendChild(removeButton);
@@ -172,7 +172,7 @@
     const elementLocaleCode = chrome.i18n.getMessage(textElement.getAttribute('data-locale-code'));
 
     if (elementLocaleCode) {
-      textElement.innerHTML = elementLocaleCode;
+      textElement.textContent = elementLocaleCode;
 
       textElement.setAttribute('lang', localeCode);
     }
