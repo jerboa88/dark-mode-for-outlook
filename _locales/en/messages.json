@@ -32,7 +32,7 @@
 		"description": "The title for the Required Permissions section shown on the store page"
 	},
 	"storeRequiredPermissionsText": {
-		"message": "Access to any site on the following domains is required so we can apply custom styles:\n▸ http(s)://outlook.live.com/\n▸ http(s)://outlook.office.com/\n▸ http(s)://outlook.office365.com/\n- http(s)://support.office.live.com/",
+		"message": "Access to any site on the following domains is required so we can apply custom styles:\n▸ http(s)://outlook.live.com/\n▸ http(s)://outlook.office.com/\n▸ http(s)://outlook.office365.com/\n▸ http(s)://support.office.live.com/",
 		"description": "The body text for the Required Permissions section shown on the store page"
 	},
 	"storeOptionalPermissionsHeader": {
