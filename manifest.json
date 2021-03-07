@@ -12,9 +12,9 @@
 		"16": "16.png"
 	},
 	"options_ui": {
-    "page": "options.html",
-    "open_in_tab": false
-  },
+		"page": "options.html",
+		"open_in_tab": false
+	},
 	"content_scripts": [
 		{
 			"matches": [
@@ -39,10 +39,10 @@
 			"all_frames": true
 		}
 	],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
 	"permissions": [],
 	"optional_permissions": [
 		"tabs",
