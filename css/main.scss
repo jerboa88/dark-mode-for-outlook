@@ -14,11 +14,6 @@
 
 
 /*#region MANUAL OVERRIDES FOR HARDCODED STYLES AND FOR WHEN BUILT-IN DARK MODE IS DISABLED */
-// Navbar Meet now button background
-#owaMeetNowButton > div > div {
-	background: inherit !important;
-}
-
 // Settings panel header text color (dm override)
 .o365cs-base .o365sx-neutral-dark-font, .o365cs-base .o365sx-neutral-dark-hover-font:hover {
 	color: var(--dmfo-lightest) !important;
@@ -54,6 +49,14 @@
 .o365cs-base .o365sx-appName:visited,
 #headerButtonsRegionId > div button {
 	background-color: var(--dmfo-darker) !important;
+}
+
+.o365cs-base .o365sx-button:hover,
+.o365cs-base .o365sx-waffle:hover,
+.o365cs-base .o365sx-appName:hover,
+.o365cs-base .o365sx-appName:visited:hover,
+#headerButtonsRegionId > div:hover button {
+	background-color: var(--dmfo-darkest) !important;
 }
 
 // Popup panel background color
