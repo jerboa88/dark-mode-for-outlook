@@ -4,11 +4,11 @@
 	"description": "A browser extension/add-on that applies a better (unofficial) dark mode to Microsoft Outlook and removes the ad sidebar",
 	"main": "build.js",
 	"devDependencies": {
-		"fs-extra": "^9.1.0",
-		"imagemin-cli": "^6.0.0",
+		"fs-extra": "^10.0.0",
+		"imagemin": "^7.0.1",
 		"imagemin-optipng": "^8.0.0",
-		"replace-in-file": "^6.2.0",
-		"sass": "^1.30.0",
+		"replace-in-file": "^6.3.2",
+		"sass": "^1.43.4",
 		"zip-local": "^0.3.4"
 	},
 	"scripts": {
