@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title lang="en" data-locale-code="optionsHeaderText">Options</title>
 	<style>
@@ -14,7 +15,7 @@
 			margin-bottom: 0;
 		}
 
-		label > form {
+		form {
 			display: flex;
 			padding: 0;
 			border: 1px solid #bbb;
@@ -30,6 +31,13 @@
 			border-radius: 4px 0px 0px 4px;
 		}
 
+		#composePaneStylingForm>label,
+		#composePaneStylingForm>input {
+			margin-top: auto;
+			margin-bottom: auto;
+			padding: 4px;
+		}
+
 		#customDomainsList {
 			margin: 4px 0;
 			padding: 0;
@@ -40,7 +48,7 @@
 			margin: 4px 0;
 		}
 
-		#customDomainsList > li {
+		#customDomainsList>li {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
@@ -52,13 +60,14 @@
 			padding: 4px;
 		}
 
-		input, #customDomainsList > li {
+		#customDomainInput,
+		#customDomainsList>li {
 			width: 100%;
 			border: none;
 			white-space: nowrap;
 		}
 
-		#customDomainsList > li > p {
+		#customDomainsList>li>p {
 			margin: 0;
 			padding: 4px;
 		}
@@ -76,7 +85,7 @@
 			background: #aaa;
 		}
 
-		body > div {
+		body>div {
 			display: flex;
 		}
 
@@ -87,20 +96,30 @@
 		}
 	</style>
 </head>
+
 <body>
-	<label>
-		<h3 lang="en" data-locale-code="optionsCustomDomainLabel"></h3>
-		<p lang="en" data-locale-code="optionsCustomDomainDescription"></p>
-		<form id="customDomainForm">
-			<span>http(s):// </span>
-			<input type="url" id="customDomainInput" name="customDomainInput">
-			<button id="addCustomDomainButton" formnovalidate="formnovalidate" data-locale-code="optionsAddButtonText"></button>
-		</form>
-		<ul id="customDomainsList"></ul>
-	</label>
+	<h3 lang="en" data-locale-code="optionsComposePaneStylingTitle"></h3>
+	<p lang="en" data-locale-code="optionsComposePaneStylingDescription"></p>
+	<form id="composePaneStylingForm">
+		<span>
+			<input type="checkbox" id="composePaneStylingCheckbox" name="composePaneStylingCheckbox" checked>
+		</span>
+		<label for="composePaneStylingCheckbox" lang="en" data-locale-code="optionsComposePaneStylingLabel"></label>
+	</form>
+
+	<h3 lang="en" data-locale-code="optionsCustomDomainTitle"></h3>
+	<p lang="en" data-locale-code="optionsCustomDomainDescription"></p>
+	<form id="customDomainForm">
+		<span>http(s):// </span>
+		<input type="url" id="customDomainInput" name="customDomainInput">
+		<button id="addCustomDomainButton" formnovalidate="formnovalidate" lang="en"
+			data-locale-code="optionsAddButtonText"></button>
+	</form>
+	<ul id="customDomainsList"></ul>
 
 	<div id="statusMessage"><br></div>
 
 	<script src="options.js"></script>
 </body>
+
 </html>

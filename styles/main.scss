@@ -128,11 +128,6 @@ div[aria-label='Content pane'] > div:first-child > div:first-child {
 	color: inherit !important;
 }
 
-// Subject field background color
-.ms-TextField-field[aria-label='Add a subject'] {
-	background-color: var(--dmfo-darker) !important;
-}
-
 // Message body background color
 div[aria-label='Message body'] {
 	--headerBackground: initial !important;
@@ -147,27 +142,17 @@ div[aria-label='Message body'] {
 	--headerBadgeBackground: initial !important;
 	--searchBoxBackground: initial !important;
 	--richUserContentBackground: initial !important;
-	background-color: var(--dmfo-darkest) !important;
 }
 
-// Text background for compose message body
-// div[aria-label='Message body'] > div[data-ogsc='#000000'] {
-// 	background: transparent !important;
-// }
-
-
-div[aria-label='Message body'] > div[style] {
-	background: var(--dmfo-darkest) !important;
-	color: var(--dmfo-lightest) !important;
+// Compose pane background color (when dark theme is applied)
+#ReadingPaneContainerId > div:first-child > div:first-child > div:first-child > div:first-child:not([class]) > div:nth-child(2) {
+	background: var(--dmfo-legacy-compose-bg) !important;
 }
 
-// .wide-content-host > div:first-child > .allowTextSelection > div > div > div > div,
-// .wide-content-host > div:first-child > .allowTextSelection > div > div > div > div > span[style*='color: rgb(0, 0, 0)'],
-// .wide-content-host > div:first-child > .allowTextSelection > div div font[color='black']/* ,
-// font[color='black'] */ {
-// 	background-color: transparent !important;
-// 	color: var(--dmfo-lightest) !important;
-// }
+// Compose pane background color (when light theme is applied)
+#ReadingPaneContainerId > div:first-child > div:first-child > div:first-child > div:first-child[class] > div:nth-child(2) {
+	background: var(--white) !important;
+}
 
 // Remove box shadow from message body container
 .wide-content-host > div:first-child > div[class]:first-child {
@@ -176,42 +161,10 @@ div[aria-label='Message body'] > div[style] {
 	box-shadow: none !important;
 }
 
-// Various text elements with black text
-@mixin blackSpanAndFontCombinations {
-	span[style*='color: rgb(0, 0, 0)'],
-	span[style*='color:rgb(0,0,0)'],
-	span[style*='color: rgb(0,0,0)'],
-	span[style*='color:rgb(0, 0, 0)'],
-	span[style*='color:#000000'],
-	span[style*='color: #000000'],
-	span[style*='color:#000'],
-	span[style*='color: #000'],
-	span[style*='color:black'],
-	span[style*='color: black'],
-	span[style*='color:windowtext'],
-	span[style*='color:  windowtext'],
-	font[color='rgb(0,0,0)'],
-	font[color='rgb(0, 0, 0)'],
-	font[color='#000000'],
-	font[color='#000'],
-	font[color='black'],
-	font[color='windowtext'] {
-		background-color: transparent !important;
-		color: var(--dmfo-lightest) !important;
-	}
-}
-
-.wide-content-host div .allowTextSelection div {
-	@include blackSpanAndFontCombinations;
-	p {
-		@include blackSpanAndFontCombinations;
-		b {
-			@include blackSpanAndFontCombinations;
-		}
-		i {
-			@include blackSpanAndFontCombinations;
-		}
-	}
+// More send options button color, compose background style toggle
+button[aria-label='More send options'] > span > i,
+button[aria-label='View with a dark background'] > span > i {
+	color: var(----dmfo-darkest) !important;
 }
 /*#endregion*/
 
@@ -348,12 +301,6 @@ div[role=menubar] {
 
 
 /*#region STYLES FOR COMPOSING/VIEWING MESSAGES */
-// Hide borders for content pane
-// div[aria-label='Content pane'] > div > div:first-child > div:nth-child(2),
-// div[aria-label='Content pane'] > div > div:first-child > div:nth-child(3) {
-// 	border: 0 !important;
-// }
-
 // Remove element below content pane
 div[aria-label='Content pane'] > div:first-child > div:first-child > div:nth-child(3) > div:nth-child(3) {
 	display: none !important;
@@ -368,11 +315,6 @@ div[aria-label='Command toolbar'] {
 div[aria-label='Content pane'] {
 	background: var(--dmfo-darkest) !important;
 }
-
-// Hide email message pane border
-// .wide-content-host > div {
-// 	border: 0 !important;
-// }
 /*#endregion*/
 
 

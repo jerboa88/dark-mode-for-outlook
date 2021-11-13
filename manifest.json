@@ -26,6 +26,9 @@
 			"css": [
 				"main.css"
 			],
+			"js": [
+				"content.js"
+			],
 			"run_at": "document_start"
 		},
 		{
@@ -40,13 +43,20 @@
 		}
 	],
 	"background": {
-		"scripts": ["background.js"],
+		"scripts": [
+			"background.js"
+		],
 		"persistent": false
 	},
-	"permissions": [],
+	"permissions": [
+		"storage"
+	],
 	"optional_permissions": [
 		"tabs",
 		"*://*/"
+	],
+	"web_accessible_resources": [
+		"compose.css"
 	],
 	"browser_specific_settings": {
 		"gecko": {

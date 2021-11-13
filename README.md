@@ -38,7 +38,14 @@ Just install the extension and you should be good to go! Styles are automaticall
 - http(s)://outlook.office365.com/
 - http(s)://support.office.live.com/
 
+Enable Outlook's built-in dark mode if you are able to do so, as this will ensure styles are applied correctly.
+
 ### Options
+#### Compose Pane Styling
+Whether to forcefully enable dark mode styling for the compose pane. Only enable this if you want the compose pane to be dark when your version of Outlook does not have a built-in dark mode. Outlook does not like us messing with these styles so this will likely be buggy. Consider leaving this unchecked and writing emails with the default white background instead.
+
+If you are able to turn on Outlook's built-in dark mode, there is no point in enabling this option. Use the 'View with a dark background' button under the compose pane to toggle the background color.
+
 #### Custom Domains
 If your Outlook exchange server is running on a custom domain (ex. https://mail.yourcompany.com/owa), you can add it here so that the dark mode is applied for any page on this domain. This is still an experimental feature so styles may not be applied correctly. If you encounter any issues, please create a bug report.
 
@@ -55,6 +62,8 @@ Access to any site on the following domains is required so we can apply custom s
 - **"http(s)://outlook.office.com/"**
 - **"http(s)://outlook.office365.com/"**
 - **"http(s)://support.office.live.com/"**
+
+Access to storage is required so we can save extension settings.
 
 #### Optional permissions
 These permissions are requested only when they are needed:

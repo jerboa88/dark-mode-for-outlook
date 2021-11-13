@@ -2,6 +2,7 @@
   'use strict';
 
   // Constants
+  const composePaneStylingCheckbox = document.getElementById('composePaneStylingCheckbox')
   const customDomainForm = document.getElementById('customDomainForm');
   const customDomainInput = document.getElementById('customDomainInput');
   const customDomainsListContainer = document.getElementById('customDomainsList');
@@ -38,6 +39,12 @@
     setTimeout(() => {
       statusMessage.style.opacity = '0';
     }, 4000);
+  };
+
+  const toggleComposePaneStyling = ({ target: { checked } }) => {
+    chrome.storage.sync.set({ composePaneStyling: checked }, () => {
+      showMessage(true, 'optionsStatusMessage_success');
+    });
   };
 
   const removeInvalidChars = () => {
@@ -114,13 +121,13 @@
   };
 
   const removeCustomDomain = (listItem, rawDomain) => {
-    chrome.permissions.remove({origins: [rawDomain]}, (wasOriginRemoved) => {
+    chrome.permissions.remove({ origins: [rawDomain] }, (wasOriginRemoved) => {
       if (wasOriginRemoved) {
         listItem.remove();
         rawCustomDomainSet.delete(rawDomain);
 
         if (rawCustomDomainSet.size === 0) {
-          chrome.permissions.remove({permissions: ['tabs']}, (wasPermRemoved) => {
+          chrome.permissions.remove({ permissions: ['tabs'] }, (wasPermRemoved) => {
             console.debug((wasPermRemoved) ? '`tabs` permission was removed successfully' : 'Something went wrong removing the `tabs` permission. Ignoring');
           });
         }
@@ -146,7 +153,11 @@
     }
   };
 
-  const restoreCustomDomains = () => {
+  const restoreSettings = () => {
+    chrome.storage.sync.get({ composePaneStyling: false }, ({ composePaneStyling }) => {
+      composePaneStylingCheckbox.checked = composePaneStyling;
+    });
+
     chrome.permissions.getAll((permissions) => {
       if ('origins' in permissions) {
         permissions.origins.filter((origin) => {
@@ -159,7 +170,8 @@
     });
   };
 
-  document.addEventListener('DOMContentLoaded', restoreCustomDomains);
+  document.addEventListener('DOMContentLoaded', restoreSettings);
+  composePaneStylingCheckbox.addEventListener('change', toggleComposePaneStyling);
   customDomainInput.addEventListener('input', removeInvalidChars);
   addCustomDomainButton.addEventListener('click', validateCustomDomain);
   customDomainForm.addEventListener('submit', (event) => {

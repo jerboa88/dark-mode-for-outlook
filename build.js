@@ -15,8 +15,8 @@
 	const firefoxBuildFolder = join(buildFolder, 'firefox');
 	const otherBuildFolder = join(buildFolder, 'other');
 	const localeFolder = '_locales';
-	const filesToCopy = ['README.md', 'LICENSE.md', 'manifest.json', 'options.html', 'options.js', 'background.js', '_locales'];
-	const scssFiles = ['main.scss', 'help.scss'];
+	const filesToCopy = ['README.md', 'LICENSE.md', 'manifest.json', 'options.html', 'options.js', 'background.js', 'content.js', '_locales'];
+	const scssFiles = ['main.scss', 'help.scss', 'compose.scss'];
 	const packageJson = 'package.json';
 
 	// Runtime
