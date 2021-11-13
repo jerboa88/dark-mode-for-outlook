@@ -5,22 +5,22 @@ div:first-child[class=''] > div:first-child > div:last-child > div:last-child > 
 
 // Message body background color
 div[aria-label='Message body'] {
-	background-color: var(--dmfo-legacy-compose-bg) !important;
+	background-color: var(--dmfo-darkest) !important;
 }
 
 div[aria-label='Message body'] > div[style] {
-	background: var(--dmfo-legacy-compose-bg) !important;
+	background: var(--dmfo-darkest) !important;
 	color: var(--dmfo-lightest) !important;
 }
 
 // Compose pane background color (when dark theme is applied). This overrides related styles in main.scss
-#ReadingPaneContainerId > div:first-child > div:first-child > div:first-child > div:first-child:not([class]) > div:nth-child(2) {
-	background: var(--dmfo-legacy-compose-bg) !important;
+#ReadingPaneContainerId > div:first-child:not([class]) > div:first-child:not([class]) > div:first-child[class] > div:first-child:not([class]) > div:nth-child(2) {
+	background: var(--dmfo-darkest) !important;
 }
 
 // Compose pane background color (when light theme is applied). This overrides related styles in main.scss
-#ReadingPaneContainerId > div:first-child > div:first-child > div:first-child > div:first-child[class] > div:nth-child(2) {
-	background: var(--dmfo-legacy-compose-bg) !important;
+#ReadingPaneContainerId > div:first-child:not([class]) > div:first-child:not([class]) > div:first-child[class] > div:first-child[class] > div:nth-child(2) {
+	background: var(--dmfo-darkest) !important;
 }
 
 

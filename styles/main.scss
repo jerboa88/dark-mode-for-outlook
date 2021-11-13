@@ -145,12 +145,12 @@ div[aria-label='Message body'] {
 }
 
 // Compose pane background color (when dark theme is applied)
-#ReadingPaneContainerId > div:first-child > div:first-child > div:first-child > div:first-child:not([class]) > div:nth-child(2) {
+#ReadingPaneContainerId > div:first-child:not([class]) > div:first-child:not([class]) > div:first-child[class] > div:first-child:not([class]) > div:nth-child(2) {
 	background: var(--dmfo-legacy-compose-bg) !important;
 }
 
 // Compose pane background color (when light theme is applied)
-#ReadingPaneContainerId > div:first-child > div:first-child > div:first-child > div:first-child[class] > div:nth-child(2) {
+#ReadingPaneContainerId > div:first-child:not([class]) > div:first-child:not([class]) > div:first-child[class] > div:first-child[class] > div:nth-child(2) {
 	background: var(--white) !important;
 }
 
