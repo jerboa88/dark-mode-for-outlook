@@ -263,9 +263,11 @@ div[data-convid] {
 }
 
 // Message list action icon button hover color
-button.ms-Button.ms-Button--icon:hover {
-	color: var(--dmfo-gold) !important;
+div[aria-label='Select a conversation']+div+div > div > button:hover > span > i {
+	// background-color: green !important;
+	color: var(--dmfo-accent)!important;
 }
+
 
 // Hide top border for tab bar
 div[aria-label='Message list'] > div:nth-child(3),

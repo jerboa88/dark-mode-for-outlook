@@ -1,4 +1,4 @@
-(async () => {
+; (async () => {
 	'use strict';
 
 	// Deps
@@ -15,8 +15,8 @@
 	const firefoxBuildFolder = join(buildFolder, 'firefox');
 	const otherBuildFolder = join(buildFolder, 'other');
 	const localeFolder = '_locales';
-	const filesToCopy = ['README.md', 'LICENSE.md', 'manifest.json', 'options.html', 'options.js', 'background.js', 'content.js', '_locales'];
-	const scssFiles = ['main.scss', 'help.scss', 'compose.scss'];
+	const filesToCopy = ['README.md', 'LICENSE.md', 'manifest.json', 'options.html', 'js/options.js', 'js/background.js', 'js/content.js', '_locales'];
+	const scssFiles = ['css/main.scss', 'css/help.scss', 'css/compose.scss'];
 	const packageJson = 'package.json';
 
 	// Runtime
@@ -112,8 +112,8 @@
 	// Compress images
 	const compressImages = async () => {
 		try {
-			const result = await imagemin(['*.png'], {
-				destination: firefoxBuildFolder,
+			const result = await imagemin(['img/*.png'], {
+				destination: join(firefoxBuildFolder, 'img'),
 				plugins: [
 					optiPng({
 						optimizationLevel: 7
@@ -137,7 +137,7 @@
 
 		scssFiles.forEach(filename => {
 			const css = renderSync({
-				file: join('styles', filename),
+				file: filename,
 				outputStyle: 'compressed',
 				sourceMap: false
 			}).css;

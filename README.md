@@ -105,9 +105,9 @@ If you know another language and want to help out, please follow these steps:
 ### Code
 **Guidelines:**
 - SCSS is used to make writing styles easier and more maintainable. Please take advantage of its features
-- Variables are defined in [_vars.scss](styles/_vars.scss) and should be used whenever possible instead of hardcoding values
+- Variables are defined in [_vars.scss](css/_vars.scss) and should be used whenever possible instead of hardcoding values
 - Any styles written should be specific enough to not affect unintended areas of the application, but not overly specific such that styles are broken every time Outlook releases an update (do not use Outlook's randomly generated class names)
-- Styles should be as short as possible, and written in relation to other elements with hardcoded attributes. See [main.scss](styles/main.scss) for examples
+- Styles should be as short as possible, and written in relation to other elements with hardcoded attributes. See [main.scss](css/main.scss) for examples
 
 
 ## License
