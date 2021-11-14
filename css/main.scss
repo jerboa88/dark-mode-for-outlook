@@ -13,6 +13,37 @@
 }
 
 
+/*#region STYLES FOR LOADING/SPLASH SCREEN */
+#loadingScreen {
+	background-color: var(--dmfo-darker) !important;
+
+	>#loadingLogo {
+		display: none !important;
+	}
+
+	>#MSLogo {
+		display: none !important;
+	}
+
+	>#loadingSpinner {
+		opacity: 1 !important;
+		position: fixed !important;
+		top: calc(50% - 40px) !important;
+		left: calc(50% - 40px) !important;
+
+		>g>g>circle {
+			stroke: var(--dmfo-lightest) !important;
+		}
+	}
+}
+
+#spinnerCircle {
+	stroke: transparent !important;
+}
+
+/*#endregion*/
+
+
 /*#region MANUAL OVERRIDES FOR HARDCODED STYLES AND FOR WHEN BUILT-IN DARK MODE IS DISABLED */
 .o365cs-base {
 
@@ -197,6 +228,33 @@ div[aria-label='Message body'] {
 button[aria-label='More send options']>span>i,
 button[aria-label='View with a dark background']>span>i {
 	color: var(----dmfo-darkest) !important;
+}
+
+/*#endregion*/
+
+
+/*#region AD HIDING FOR OUTLOOK PERSONAL */
+// Hide ad at bottom of left sidebar
+// div[aria-label='Navigation pane']>div:last-child>div>div:nth-child(2):not([role='menubar']) {
+// 	display: none !important;
+// }
+
+// Hide right ad sidebar (shown when screen is wide)
+div[data-max-width='2400']+div {
+	display: none !important;
+}
+
+#app>div:first-child>div:last-child {
+
+	// Hide full page ad at bottom of message list (shown when screen is narrow)
+	>div:nth-child(2):nth-last-child(2)>div:nth-child(2):last-child {
+		display: none !important;
+	}
+
+	// Hide top banner ad. It may not exist, so account for this
+	>div:first-child>div:first-child:not(:last-child):not(:nth-last-child(2)) {
+		display: none !important;
+	}
 }
 
 /*#endregion*/
@@ -574,67 +632,6 @@ div[style*='min-width: 326px'] {
 			background-color: var(--dmfo-dark) !important;
 		}
 	}
-}
-
-/*#endregion*/
-
-
-/*#region AD HIDING FOR OUTLOOK PERSONAL */
-div[aria-label='Navigation pane'] {
-
-	// Hide right ad sidebar (shown when screen is wide)
-	+div+div+div {
-		display: none !important;
-	}
-
-	// Hide ad at bottom of left sidebar
-	>div:last-child>div>div:nth-child(2):not([role="menubar"]) {
-		display: none !important;
-	}
-}
-
-#app>div:first-child>div:last-child {
-
-	// Hide full page ad at bottom of message list (shown when screen is narrow)
-	>div:nth-child(2):nth-last-child(2)>div:nth-child(2):last-child {
-		display: none !important;
-	}
-
-	// Hide top banner ad. It may not exist, so account for this
-	>div:first-child>div:first-child:not(:last-child):not(:nth-last-child(2)) {
-		display: none !important;
-	}
-}
-
-/*#endregion*/
-
-
-/*#region STYLES FOR LOADING/SPLASH SCREEN */
-#loadingScreen {
-	background-color: var(--dmfo-darker) !important;
-
-	>#loadingLogo {
-		display: none !important;
-	}
-
-	>#MSLogo {
-		display: none !important;
-	}
-
-	>#loadingSpinner {
-		opacity: 1 !important;
-		position: fixed !important;
-		top: calc(50% - 40px) !important;
-		left: calc(50% - 40px) !important;
-
-		>g>g>circle {
-			stroke: var(--dmfo-lightest) !important;
-		}
-	}
-}
-
-#spinnerCircle {
-	stroke: transparent !important;
 }
 
 /*#endregion*/

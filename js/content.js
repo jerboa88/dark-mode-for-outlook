@@ -13,8 +13,6 @@
 	};
 
 	chrome.storage.sync.get({ composePaneStyling: true }, ({ composePaneStyling }) => {
-		log('Started content.js')
-
 		const getBottomBar = (composePane) => {
 			return composePane.querySelector('div[style="background-color: rgb(250, 249, 248);"')
 		};
