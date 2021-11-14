@@ -49,7 +49,7 @@ a:hover {
 
 // Back button color
 [class$="Btn"] {
-  color: var(--dmfo-lightest) !important;
+	color: var(--dmfo-lightest) !important;
 }
 
 // Search bar max width
@@ -61,10 +61,10 @@ a:hover {
 // Search bar background color and border radius
 #f1SearchBar {
 	background-color: #111 !important;
-  border-radius: 4px !important;
+	border-radius: 4px !important;
 }
 
-#f1SearchBar > input {
+#f1SearchBar>input {
 	background-color: transparent !important;
 }
 

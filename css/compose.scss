@@ -1,31 +1,34 @@
 // Subject field background color
-div:first-child[class=''] > div:first-child > div:last-child > div:last-child > .ms-TextField > .ms-TextField-wrapper > .ms-TextField-fieldGroup > input[aria-label='Add a subject'] {
+div:first-child[class='']>div:first-child>div:last-child>div:last-child>.ms-TextField>.ms-TextField-wrapper>.ms-TextField-fieldGroup>input[aria-label='Add a subject'] {
 	background: var(--dmfo-darker) !important;
 }
 
 // Message body background color
 div[aria-label='Message body'] {
 	background-color: var(--dmfo-darkest) !important;
+
+	>div[style] {
+		background: var(--dmfo-darkest) !important;
+		color: var(--dmfo-lightest) !important;
+	}
 }
 
-div[aria-label='Message body'] > div[style] {
-	background: var(--dmfo-darkest) !important;
-	color: var(--dmfo-lightest) !important;
-}
+#ReadingPaneContainerId>div:first-child:not([class])>div:first-child:not([class])>div:first-child[class] {
 
-// Compose pane background color (when dark theme is applied). This overrides related styles in main.scss
-#ReadingPaneContainerId > div:first-child:not([class]) > div:first-child:not([class]) > div:first-child[class] > div:first-child:not([class]) > div:nth-child(2) {
-	background: var(--dmfo-darkest) !important;
-}
+	// Compose pane background color (when dark theme is applied). This overrides related styles in main.scss
+	>div:first-child:not([class])>div:nth-child(2) {
+		background: var(--dmfo-darkest) !important;
+	}
 
-// Compose pane background color (when light theme is applied). This overrides related styles in main.scss
-#ReadingPaneContainerId > div:first-child:not([class]) > div:first-child:not([class]) > div:first-child[class] > div:first-child[class] > div:nth-child(2) {
-	background: var(--dmfo-darkest) !important;
+	// Compose pane background color (when light theme is applied). This overrides related styles in main.scss
+	>div:first-child[class]>div:nth-child(2) {
+		background: var(--dmfo-darkest) !important;
+	}
 }
-
 
 // Various text elements with black text
 @mixin blackSpanAndFontCombinations {
+
 	span[style*='color: rgb(0, 0, 0)'],
 	span[style*='color:rgb(0,0,0)'],
 	span[style*='color: rgb(0,0,0)'],
@@ -51,11 +54,14 @@ div[aria-label='Message body'] > div[style] {
 
 .wide-content-host div .allowTextSelection div {
 	@include blackSpanAndFontCombinations;
+
 	p {
 		@include blackSpanAndFontCombinations;
+
 		b {
 			@include blackSpanAndFontCombinations;
 		}
+
 		i {
 			@include blackSpanAndFontCombinations;
 		}

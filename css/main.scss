@@ -14,23 +14,26 @@
 
 
 /*#region MANUAL OVERRIDES FOR HARDCODED STYLES AND FOR WHEN BUILT-IN DARK MODE IS DISABLED */
-// Settings panel header text color (dm override)
-.o365cs-base .o365sx-neutral-dark-font,
-.o365cs-base .o365sx-neutral-dark-hover-font:hover {
-	color: var(--dmfo-lightest) !important;
-}
+.o365cs-base {
 
-// Settings panel header close button icon color (dm override)
-.o365cs-base .o365sx-neutral-secondary-font,
-.o365cs-base .o365sx-neutral-secondary-hover-font:hover {
-	color: var(--dmfo-lightest) !important;
-}
+	// Settings panel header text color (dm override)
+	.o365sx-neutral-dark-font,
+	.o365sx-neutral-dark-hover-font:hover {
+		color: var(--dmfo-lightest) !important;
+	}
 
-// Navbar settings icon (dm override)
-.o365cs-base .o365sx-activeButton,
-.o365cs-base .o365sx-activeButton:hover,
-.o365cs-base .o365sx-activeButton:focus {
-	color: var(--dmfo-lightest) !important;
+	// Settings panel header close button icon color (dm override)
+	.o365sx-neutral-secondary-font,
+	.o365sx-neutral-secondary-hover-font:hover {
+		color: var(--dmfo-lightest) !important;
+	}
+
+	// Navbar settings icon (dm override)
+	.o365sx-activeButton,
+	.o365sx-activeButton:hover,
+	.o365sx-activeButton:focus {
+		color: var(--dmfo-lightest) !important;
+	}
 }
 
 // Settings panel 'View all Outlook settings' button
@@ -47,12 +50,6 @@
 
 #CustomFlexPane_OwaSettings>div>div>div:last-child>button {
 	margin-bottom: 0 !important;
-}
-
-// Popup profile panel background
-.o365cs-base .o365sx-neutral-foreground-background,
-.o365cs-base .o365sx-neutral-foreground-hover-background:hover {
-	background-color: var(--dmfo-darker) !important;
 }
 
 // Navbar color
@@ -77,20 +74,29 @@
 	background-color: var(--dmfo-darkest) !important;
 }
 
-// Popup panel background color
-.o365cs-base .o365sx-neutral-lighterAlt-background,
-.o365cs-base .o365sx-neutral-lighterAlt-hover-background:hover {
-	background-color: var(--dmfo-darker) !important;
-}
+.o365cs-base {
 
-// Text/link colors
-.o365cs-base .o365sx-neutral-accent-font,
-.o365cs-base .o365sx-neutral-accent-hover-font:hover,
-.o365cs-base .o365sx-neutral-accent-link,
-.o365cs-base .o365sx-neutral-accent-link:hover,
-.o365cs-base .o365sx-neutral-accent-link:visited,
-.o365cs-base .o365sx-neutral-accent-hover-link:hover {
-	color: var(--dmfo-lightest) !important;
+	// Popup panel background color
+	.o365sx-neutral-lighterAlt-background,
+	.o365sx-neutral-lighterAlt-hover-background:hover {
+		background-color: var(--dmfo-darker) !important;
+	}
+
+	// Popup profile panel background
+	.o365sx-neutral-foreground-background,
+	.o365sx-neutral-foreground-hover-background:hover {
+		background-color: var(--dmfo-darker) !important;
+	}
+
+	// Text/link colors
+	.o365sx-neutral-accent-font,
+	.o365sx-neutral-accent-hover-font:hover,
+	.o365sx-neutral-accent-link,
+	.o365sx-neutral-accent-link:hover,
+	.o365sx-neutral-accent-link:visited,
+	.o365sx-neutral-accent-hover-link:hover {
+		color: var(--dmfo-lightest) !important;
+	}
 }
 
 /*#endregion*/
@@ -168,19 +174,21 @@ div[aria-label='Message body'] {
 	--richUserContentBackground: initial !important;
 }
 
-// Compose pane background color (when dark theme is applied)
-#ReadingPaneContainerId>div:first-child:not([class])>div:first-child:not([class])>div:first-child[class]>div:first-child:not([class])>div:nth-child(2) {
-	background: var(--dmfo-legacy-compose-bg) !important;
-}
+#ReadingPaneContainerId>div:first-child:not([class])>div:first-child:not([class])>div:first-child[class] {
 
-// Compose pane background color (when light theme is applied)
-#ReadingPaneContainerId>div:first-child:not([class])>div:first-child:not([class])>div:first-child[class]>div:first-child[class]>div:nth-child(2) {
-	background: var(--white) !important;
+	// Compose pane background color (when dark theme is applied)
+	>div:first-child:not([class])>div:nth-child(2) {
+		background: var(--dmfo-legacy-compose-bg) !important;
+	}
+
+	// Compose pane background color (when light theme is applied)
+	>div:first-child[class]>div:nth-child(2) {
+		background: var(--white) !important;
+	}
 }
 
 // Remove box shadow from message body container
 .wide-content-host>div:first-child>div[class]:first-child {
-	// border: 0 !important;
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 }
@@ -211,16 +219,16 @@ div[role=search],
 	@include searchBoxStyles;
 }
 
-// Change background of search box container to hide borders
 #searchBoxColumnContainerId>div {
+	// Change background of search box container to hide borders
 	background: var(--dmfo-darker) !important;
-}
 
-// Style search button to match main search box
-#searchBoxColumnContainerId>div>button {
-	@include darkInputFieldStyles;
-	border-top-left-radius: 0 !important;
-	border-bottom-left-radius: 0 !important;
+	// Style search button to match main search box
+	>button {
+		@include darkInputFieldStyles;
+		border-top-left-radius: 0 !important;
+		border-bottom-left-radius: 0 !important;
+	}
 }
 
 // Remove borders shown when search box is active
@@ -293,18 +301,16 @@ div[aria-label='Select a conversation']+div+div>div>button:hover>span>i {
 	color: var(--dmfo-accent) !important;
 }
 
-
-// Hide top border for tab bar
 div[aria-label='Message list']>div:nth-child(3),
 div[aria-label='Reading Pane']>div:nth-child(2) {
+	// Hide top border for tab bar
 	border-width: 0 !important;
-}
 
-// Hide borders for tabs and increase border radius
-div[aria-label='Message list']>div:nth-child(3)>div,
-div[aria-label='Reading Pane']>div:nth-child(2)>div {
-	border-style: none !important;
-	border-radius: var(--dmfo-border-radius) var(--dmfo-border-radius) 0 0 !important;
+	// Hide borders for tabs and increase border radius
+	>div {
+		border-style: none !important;
+		border-radius: var(--dmfo-border-radius) var(--dmfo-border-radius) 0 0 !important;
+	}
 }
 
 /*#endregion*/
@@ -330,19 +336,18 @@ div[role=menubar] {
 
 
 /*#region STYLES FOR COMPOSING/VIEWING MESSAGES */
-// Remove element below content pane
-div[aria-label='Content pane']>div:first-child>div:first-child>div:nth-child(3)>div:nth-child(3) {
-	display: none !important;
+div[aria-label='Content pane'] {
+	// Content pane background
+	background: var(--dmfo-darkest) !important;
+
+	>div:first-child>div:first-child>div:nth-child(3)>div:nth-child(3) {
+		display: none !important;
+	}
 }
 
 // Hide command toolbar bottom border
 div[aria-label='Command toolbar'] {
 	border-bottom: 0 !important;
-}
-
-// Content pane background
-div[aria-label='Content pane'] {
-	background: var(--dmfo-darkest) !important;
 }
 
 /*#endregion*/
@@ -460,72 +465,77 @@ div[aria-label='Content pane'] {
 	background-color: var(--dmfo-darker) !important;
 }
 
-// Skype pane icon color
-.swc.swc-recents.dark .swcRecentsHeader__searchInput .swcIcon_cancel,
-.swc.swc-recents.dark .swcRecentsHeader__searchInput .swcIcon_search {
-	color: var(--dmfo-lightest) !important;
+
+.swc.swc-recents.dark {
+
+	.swcRecentsHeader__searchInput {
+
+		// Skype pane icon color
+		.swcIcon_cancel,
+		.swcIcon_search {
+			color: var(--dmfo-lightest) !important;
+		}
+	}
+
+	// Skype pane new chat button color
+	.recentsContainer .swcRecentsHeader__newChatButton {
+		color: var(--dmfo-lightest) !important;
+	}
+
+	// Skype pane background
+	.swcRecentsHeader__searchInput {
+		background-color: initial !important;
+	}
 }
 
-// Skype pane new chat button color
-.swc.swc-recents.dark .recentsContainer .swcRecentsHeader__newChatButton {
-	color: var(--dmfo-lightest) !important;
-}
-
-// Skype pane background
-.swc.swc-recents.dark .swcRecentsHeader__searchInput {
-	background-color: initial !important;
-}
-
-// Skype more options pane background color
 .swc-bubble.list .swc-content {
+	// Skype more options pane background color
 	background-color: var(--dmfo-dark) !important;
+
+	// Remove Skype more options menu bottom border
+	ul {
+		border-bottom: none !important;
+
+		// Skype more options pane menu item background color and text color
+		li {
+			background-color: var(--dmfo-dark) !important;
+			color: var(--dmfo-lightest) !important;
+
+			// Skype more options pane menu item focus background color and text color
+			&:focus {
+				background-color: var(--dmfo-darker) !important;
+			}
+		}
+	}
 }
 
-// Remove Skype more options menu bottom border
-.swc-bubble.list .swc-content ul {
-	border-bottom: none !important;
-}
+.swc {
 
-// Skype more options pane menu item background color and text color
-.swc-bubble.list .swc-content ul li {
-	background-color: var(--dmfo-dark) !important;
-	color: var(--dmfo-lightest) !important;
-}
+	// Skype more options pane title color
+	.swcPageHeader__title {
+		color: var(--dmfo-lightest) !important;
+	}
 
-// Skype more options pane menu item focus background color and text color
-.swc-bubble.list .swc-content ul li:focus {
-	background-color: var(--dmfo-darker) !important;
-}
+	// Skype more options pane back button color and border radius
+	.swcPageHeader__backButton {
+		color: var(--dmfo-lightest) !important;
+		border-radius: var(--dmfo-border-radius) !important;
+	}
 
-// Skype more options pane list item hover background color and text color
-.swcMenuList__item:hover {
-	background-color: var(--dmfo-darker) !important;
-}
-
-// Skype more options pane title color
-.swc .swcPageHeader__title {
-	color: var(--dmfo-lightest) !important;
+	// Skype more options pane back button hover background color
+	.swcPageHeader__backButton:hover {
+		background-color: var(--dmfo-dark) !important;
+	}
 }
 
 // Skype more options pane text color
 .swcMenuList__item {
 	color: var(--dmfo-lightest) !important;
-}
 
-// Skype more options pane hover background color
-.swcMenuList__item:hover {
-	background-color: var(--dmfo-dark) !important;
-}
-
-// Skype more options pane back button color and border radius
-.swc .swcPageHeader__backButton {
-	color: var(--dmfo-lightest) !important;
-	border-radius: var(--dmfo-border-radius) !important;
-}
-
-// Skype more options pane back button hover background color
-.swc .swcPageHeader__backButton:hover {
-	background-color: var(--dmfo-dark) !important;
+	// Skype more options pane hover background color
+	&:hover {
+		background-color: var(--dmfo-dark) !important;
+	}
 }
 
 /*#endregion*/
@@ -558,11 +568,11 @@ div[style*='min-width: 326px'] {
 	// Message deletion tooltip undo/close button background color
 	>div:nth-child(2)>button {
 		background-color: var(--dmfo-darker) !important;
-	}
 
-	// Message deletion tooltip undo/close button background color
-	>div:nth-child(2)>button:hover {
-		background-color: var(--dmfo-dark) !important;
+		// Message deletion tooltip undo/close button background color
+		&:hover {
+			background-color: var(--dmfo-dark) !important;
+		}
 	}
 }
 
@@ -570,24 +580,30 @@ div[style*='min-width: 326px'] {
 
 
 /*#region AD HIDING FOR OUTLOOK PERSONAL */
-// Hide full page ad at bottom of message list (shown when screen is narrow)
-#app>div:first-child>div:last-child>div:first-child>div:nth-child(2):last-child {
-	display: none !important;
+div[aria-label='Navigation pane'] {
+
+	// Hide right ad sidebar (shown when screen is wide)
+	+div+div+div {
+		display: none !important;
+	}
+
+	// Hide ad at bottom of left sidebar
+	>div:last-child>div>div:nth-child(2):not([role="menubar"]) {
+		display: none !important;
+	}
 }
 
-// Hide right ad sidebar (shown when screen is wide)
-div[aria-label='Navigation pane']+div+div+div {
-	display: none !important;
-}
+#app>div:first-child>div:last-child>div:first-child {
 
-// Hide ad at bottom of left sidebar
-div[aria-label='Navigation pane']>div:last-child>div>div:nth-child(2):not([role="menubar"]) {
-	display: none !important;
-}
+	// Hide full page ad at bottom of message list (shown when screen is narrow)
+	>div:nth-child(2):last-child {
+		display: none !important;
+	}
 
-// Hide top banner ad. It may not exist, so account for this
-#app>div:first-child>div:last-child>div:first-child>div:first-child:not(:last-child):not(:nth-last-child(2)) {
-	display: none !important;
+	// Hide top banner ad. It may not exist, so account for this
+	>div:first-child:not(:last-child):not(:nth-last-child(2)) {
+		display: none !important;
+	}
 }
 
 /*#endregion*/
@@ -596,25 +612,25 @@ div[aria-label='Navigation pane']>div:last-child>div>div:nth-child(2):not([role=
 /*#region STYLES FOR LOADING/SPLASH SCREEN */
 #loadingScreen {
 	background-color: var(--dmfo-darker) !important;
-}
 
-#loadingScreen>#loadingLogo {
-	display: none !important;
-}
+	>#loadingLogo {
+		display: none !important;
+	}
 
-#loadingScreen>#MSLogo {
-	display: none !important;
-}
+	>#MSLogo {
+		display: none !important;
+	}
 
-#loadingScreen>#loadingSpinner {
-	opacity: 1 !important;
-	position: fixed !important;
-	top: calc(50% - 40px) !important;
-	left: calc(50% - 40px) !important;
-}
+	>#loadingSpinner {
+		opacity: 1 !important;
+		position: fixed !important;
+		top: calc(50% - 40px) !important;
+		left: calc(50% - 40px) !important;
 
-#loadingScreen>#loadingSpinner>g>g>circle {
-	stroke: var(--dmfo-lightest) !important;
+		>g>g>circle {
+			stroke: var(--dmfo-lightest) !important;
+		}
+	}
 }
 
 #spinnerCircle {
@@ -636,11 +652,11 @@ div[aria-label='Navigation pane']>div:last-child>div>div:nth-child(2):not([role=
 // Loading/splash screen progress bar background color
 .loader {
 	background-color: transparent !important;
-}
 
-// Loading/splash screen progress bar fill color
-.loader:before {
-	background-color: var(--dmfo-lightest) !important;
+	// Loading/splash screen progress bar fill color
+	&::before {
+		background-color: var(--dmfo-lightest) !important;
+	}
 }
 
 // Remove top ad
@@ -649,10 +665,14 @@ main>div:first-child>div:first-child>div:first-child {
 }
 
 // Header background color (email, calendar)
-#app>div:first-child>div:first-child>header,
-#app>div:first-child>header {
-	background: var(--dmfo-darker) !important;
+#app>div:first-child {
+
+	>div:first-child>header,
+	>header {
+		background: var(--dmfo-darker) !important;
+	}
 }
+
 
 // Change action bar background color and remove top border (email, calendar)
 #app>div:first-child>div:first-child>nav,
@@ -730,26 +750,29 @@ main>div:first-child>div:first-child>div {
 // Message background color
 div[role=group]>article {
 	background: var(--dmfo-darkest) !important;
-}
 
-// Message unread indicator background color
-div[role=group]>article::before {
-	background: var(--dmfo-lightest) !important;
-}
+	// Message unread indicator background color
+	&::before {
+		background: var(--dmfo-lightest) !important;
+	}
 
-// Message title text color
-div[role=group]>article>div:last-child>div:first-child>div:first-child>div:first-child {
-	color: var(--dmfo-lightest) !important;
-}
+	>div:last-child>div:first-child {
 
-// Message subject text color
-div[role=group]>article>div:last-child>div:first-child>div:nth-child(2)>h2:first-child {
-	color: var(--dmfo-lighter) !important;
-}
+		// Message title text color
+		>div:first-child>div:first-child {
+			color: var(--dmfo-lightest) !important;
+		}
 
-// Message preview text color
-div[role=group]>article>div:last-child>div:first-child>div:nth-child(3)>div:first-child {
-	color: var(--dmfo-light) !important;
+		// Message subject text color
+		>div:nth-child(2)>h2:first-child {
+			color: var(--dmfo-lighter) !important;
+		}
+
+		// Message preview text color
+		>div:nth-child(3)>div:first-child {
+			color: var(--dmfo-light) !important;
+		}
+	}
 }
 
 // Hide Edge bottom banner ad
@@ -761,16 +784,20 @@ div[aria-label='Microsoft Edge upsell'] {
 
 
 /*#region STYLES FOR CALENDAR */
-// Calendar month labels background color
-#app>div:first-child>div:nth-child(2)>div:first-child {
-	background: var(--dmfo-darker) !important;
+#app>div:first-child>div:nth-child(2) {
+
+	// Calendar month labels background color
+	>div:first-child {
+		background: var(--dmfo-darker) !important;
+	}
+
+	// Change calendar days labels background color and remove bottom border
+	>div:nth-child(2) {
+		background: var(--dmfo-darkest) !important;
+		border-bottom: 0 !important;
+	}
 }
 
-// Change calendar days labels background color and remove bottom border
-#app>div:first-child>div:nth-child(2)>div:nth-child(2) {
-	background: var(--dmfo-darkest) !important;
-	border-bottom: 0 !important;
-}
 
 // Calendar selected day background
 .ms-CalendarDay-hoverStyle {
@@ -790,11 +817,11 @@ div[class*="daySelected"] {
 // Calendar item title text color
 div[data-agendaitem]>div:first-child>div:first-child {
 	color: var(--dmfo-lightest) !important;
-}
 
-// Calendar item description text color
-div[data-agendaitem]>div:first-child>div:first-child>div:last-child {
-	color: var(--dmfo-lighter) !important;
+	// Calendar item description text color
+	>div:last-child {
+		color: var(--dmfo-lighter) !important;
+	}
 }
 
 /*#endregion*/
