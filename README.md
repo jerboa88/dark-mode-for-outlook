@@ -71,11 +71,11 @@ These permissions are requested only when they are needed:
 - **"http(s)://*/":** Access to 'any site' is required if you are using the [Custom Domains](#Custom%20Domains) feature. This is so we can apply styles to any domain you specify. Note that the extension does not have access to all sites. It will only request permissions for the specific custom domains you add
 
 ### Reporting Issues
-Translations needed! If you know another language and want to help out, please create an issue [here][issues_link] with details.
+Translations needed! If you know another language and want to help out, please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 If you encounter any problems while using the extension, please create an issue [here][issues_link] or create a pull request yourself to fix the issue (see [Contributing](#Contributing)).
 
-I try to fix the extension as soon as possible when Outlook makes breaking changes, but keep in mind it may take some time for me to fit the work into my schedule and make all the changes that need to be made. Thanks for your patience 🙂.
+I try to fix the extension as soon as possible when Outlook makes breaking changes, but keep in mind it may take some time for me to fit the work into my schedule and make all the necessary changes. Thanks for your patience 🙂.
 
 
 ## Screenshots
@@ -90,24 +90,7 @@ Mobile site | &#8291; | &#8291; | &#8291;
 
 
 ## Contributing
-Contributions, issues, and forks are welcome. Please note that any code/translations you contribute will be licensed under the same license as this project. By making any contributions, you agree to this.
-
-[SemVer](http://semver.org/) is used for versioning this project, although the patch number is left out.
-
-### Translations
-If you know another language and want to help out, please follow these steps:
-1. Create an issue [here][issues_link] with details about which language you are adding. Make sure your language is listed in the table [here](https://developer.chrome.com/docs/webstore/i18n/#choosing-locales-to-support). If not, your language is not supported unfortunately 😢
-2. Make sure your language is not already in the [_locales](_locales) folder. If it is, we may have translations for your language already, but they might be out of date.
-3. Download the [english messages file](_locales/en/messages.json) and translate each message into your language. The descriptions explain how each message is used in the extension, so these don't need to be translated.
-4. Upload your translated messages file to the issue you created
-5. Profit!
-
-### Code
-**Guidelines:**
-- SCSS is used to make writing styles easier and more maintainable. Please take advantage of its features
-- Variables are defined in [_vars.scss](css/_vars.scss) and should be used whenever possible instead of hardcoding values
-- Any styles written should be specific enough to not affect unintended areas of the application, but not overly specific such that styles are broken every time Outlook releases an update (do not use Outlook's randomly generated class names)
-- Styles should be as short as possible, and written in relation to other elements with hardcoded attributes. See [main.scss](css/main.scss) for examples
+Contributions, issues, and forks are welcome. Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
 
 ## License
