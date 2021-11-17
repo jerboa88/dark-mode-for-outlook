@@ -12,8 +12,8 @@
 
 	// Constants
 	const buildFolder = 'build';
-	const firefoxBuildFolder = join(buildFolder, 'firefox');
-	const otherBuildFolder = join(buildFolder, 'other');
+	const firefoxSubfolder = join(buildFolder, 'firefox');
+	const chromiumSubfolder = join(buildFolder, 'chromium');
 	const localeFolder = '_locales';
 	const filesToCopy = ['README.md', 'LICENSE.md', 'manifest.json', 'options.html', 'js/options.js', 'js/background.js', 'js/content.js', '_locales'];
 	const scssFiles = ['css/main.scss', 'css/help.scss', 'css/compose.scss'];
@@ -59,8 +59,8 @@
 	// Generate zip files
 	const zipBuildFolders = async () => {
 		try {
-			zip(firefoxBuildFolder).compress().save(join(buildFolder, getZipFileName('firefox')));
-			zip(otherBuildFolder).compress().save(join(buildFolder, getZipFileName('other')));
+			zip(firefoxSubfolder).compress().save(join(buildFolder, getZipFileName('firefox')));
+			zip(chromiumSubfolder).compress().save(join(buildFolder, getZipFileName('chromium')));
 
 			continueBuild('Files zipped');
 		} catch (error) {
@@ -72,21 +72,21 @@
 	// (Chrome: Remove "browser_specific_settings" section. Firefox: Make background page persistent)
 	const customizeManifest = async () => {
 		try {
-			const otherResult = await replace({
-				files: join(otherBuildFolder, 'manifest.json'),
+			const chromiumResult = await replace({
+				files: join(chromiumSubfolder, 'manifest.json'),
 				from: /\t{0,4}"browser_specific_settings": ?[\s\S]{0,128}\},\s/,
 				to: '',
 				countMatches: true
 			});
 
 			const firefoxResult = await replace({
-				files: join(firefoxBuildFolder, 'manifest.json'),
+				files: join(firefoxSubfolder, 'manifest.json'),
 				from: /"persistent": ?false/,
 				to: '"persistent": true',
 				countMatches: true
 			});
 
-			if (!otherResult || otherResult.length != 1 || !otherResult[0].hasChanged) {
+			if (!chromiumResult || chromiumResult.length != 1 || !chromiumResult[0].hasChanged) {
 				throw new Error('Section "browser_specific_settings" could not be found in manifest.json');
 			} else if (!firefoxResult || firefoxResult.length != 1 || !firefoxResult[0].hasChanged) {
 				throw new Error('Option "persistent" could not be found in manifest.json');
@@ -101,7 +101,7 @@
 	// Duplicate Firefox build folder to make other build variants
 	const duplicateBuildFolder = async () => {
 		try {
-			await fs.copy(firefoxBuildFolder, otherBuildFolder);
+			await fs.copy(firefoxSubfolder, chromiumSubfolder);
 
 			continueBuild('Duplicated build');
 		} catch (error) {
@@ -113,7 +113,7 @@
 	const compressImages = async () => {
 		try {
 			const result = await imagemin(['img/*.png'], {
-				destination: join(firefoxBuildFolder, 'img'),
+				destination: join(firefoxSubfolder, 'img'),
 				plugins: [
 					optiPng({
 						optimizationLevel: 7
@@ -142,7 +142,7 @@
 				sourceMap: false
 			}).css;
 
-			fs.outputFile(join(firefoxBuildFolder, filename.replace('.scss', '.css')), css, error => {
+			fs.outputFile(join(firefoxSubfolder, filename.replace('.scss', '.css')), css, error => {
 				if (error) {
 					scssCompilationError = error;
 				}
@@ -155,7 +155,7 @@
 	// Copy files to build folder
 	const copyFiles = async () => {
 		const copyPromises = filesToCopy.map(filename => {
-			return fs.copy(filename, join(firefoxBuildFolder, filename));
+			return fs.copy(filename, join(firefoxSubfolder, filename));
 		});
 
 		try {
@@ -171,8 +171,8 @@
 	const cleanBuildFolder = async () => {
 		try {
 			await fs.emptyDir(buildFolder);
-			await fs.emptyDir(firefoxBuildFolder);
-			await fs.emptyDir(otherBuildFolder);
+			await fs.emptyDir(firefoxSubfolder);
+			await fs.emptyDir(chromiumSubfolder);
 
 			continueBuild('Cleaned build folder');
 		} catch (error) {
