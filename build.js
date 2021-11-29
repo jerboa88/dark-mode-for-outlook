@@ -3,11 +3,10 @@
 
 	// Deps
 	const fs = require('fs-extra');
-	const imagemin = require('imagemin');
-	const optiPng = require('imagemin-optipng');
-	const replace = require('replace-in-file');
 	const { join } = require('path');
+	const replace = require('replace-in-file');
 	const { renderSync } = require('sass');
+	const sharp = require('sharp');
 	const { sync: { zip } } = require('zip-local');
 
 	// Constants
@@ -15,9 +14,13 @@
 	const firefoxSubfolder = join(buildFolder, 'firefox');
 	const chromiumSubfolder = join(buildFolder, 'chromium');
 	const localeFolder = '_locales';
-	const filesToCopy = ['README.md', 'LICENSE.md', 'manifest.json', 'options.html', 'js/options.js', 'js/background.js', 'js/content.js', '_locales'];
-	const scssFiles = ['css/main.scss', 'css/help.scss', 'css/compose.scss'];
+	const imgFolder = 'img';
+	const iconFilename = 'icon.svg';
 	const packageJson = 'package.json';
+	const messagesJson = 'messages.json';
+	const manifestJson = 'manifest.json';
+	const scssFiles = ['css/main.scss', 'css/help.scss', 'css/compose.scss'];
+	const filesToCopy = ['README.md', 'LICENSE.md', manifestJson, 'options.html', 'js/options.js', 'js/background.js', 'js/content.js', '_locales'];
 
 	// Runtime
 	let extensionName;
@@ -73,23 +76,23 @@
 	const customizeManifest = async () => {
 		try {
 			const chromiumResult = await replace({
-				files: join(chromiumSubfolder, 'manifest.json'),
+				files: join(chromiumSubfolder, manifestJson),
 				from: /\t{0,4}"browser_specific_settings": ?[\s\S]{0,128}\},\s/,
 				to: '',
 				countMatches: true
 			});
 
 			const firefoxResult = await replace({
-				files: join(firefoxSubfolder, 'manifest.json'),
+				files: join(firefoxSubfolder, manifestJson),
 				from: /"persistent": ?false/,
 				to: '"persistent": true',
 				countMatches: true
 			});
 
 			if (!chromiumResult || chromiumResult.length != 1 || !chromiumResult[0].hasChanged) {
-				throw new Error('Section "browser_specific_settings" could not be found in manifest.json');
+				throw new Error(`Section "browser_specific_settings" could not be found in ${manifestJson}`);
 			} else if (!firefoxResult || firefoxResult.length != 1 || !firefoxResult[0].hasChanged) {
-				throw new Error('Option "persistent" could not be found in manifest.json');
+				throw new Error(`Option "persistent" could not be found in ${manifestJson}`);
 			}
 
 			continueBuild('Manifest modified');
@@ -109,25 +112,27 @@
 		}
 	};
 
-	// Compress images
-	const compressImages = async () => {
+	// Generate extension icons in multiple sizes
+	const generateIcons = async () => {
 		try {
-			const result = await imagemin(['img/*.png'], {
-				destination: join(firefoxSubfolder, 'img'),
-				plugins: [
-					optiPng({
-						optimizationLevel: 7
+			const outputImgFolder = join(firefoxSubfolder, imgFolder);
+
+			await fs.ensureDir(outputImgFolder)
+
+			await Promise.all([128, 64, 48, 32, 16].map(size => {
+				return sharp(join(imgFolder, iconFilename))
+					.resize(size, size)
+					.png({
+						compressionLevel: 9,
+						adaptiveFiltering: true,
+						palette: true
 					})
-				]
-			});
+					.toFile(join(outputImgFolder, `${size}.png`))
+			}));
 
-			if (!result || result.length == 0) {
-				throw new Error('No images were found');
-			}
-
-			continueBuild('Images compressed');
+			continueBuild('Icons generated');
 		} catch (error) {
-			cancelBuild('Error while compressing images', error);
+			cancelBuild('Error while generating icons', error);
 		}
 	};
 
@@ -186,7 +191,7 @@
 
 		if (localeCodes !== null) {
 			localeCodes.forEach(localeCode => {
-				const messages = JSON.parse(fs.readFileSync(join(localeFolder, localeCode, 'messages.json')));
+				const messages = JSON.parse(fs.readFileSync(join(localeFolder, localeCode, messagesJson)));
 				const listingText = Object.keys(messages)
 					.filter(key => key.substring(0, 5) === 'store')
 					.map(key => messages[key].message)
@@ -207,7 +212,7 @@
 	await cleanBuildFolder();
 	await copyFiles();
 	await compileScss();
-	await compressImages();
+	await generateIcons();
 	await duplicateBuildFolder();
 	await customizeManifest();
 	await zipBuildFolders();
