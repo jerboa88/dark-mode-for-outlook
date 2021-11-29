@@ -235,9 +235,9 @@ button[aria-label='View with a dark background']>span>i {
 
 /*#region AD HIDING FOR OUTLOOK PERSONAL */
 // Hide ad at bottom of left sidebar
-// div[aria-label='Navigation pane']>div:last-child>div>div:nth-child(2):not([role='menubar']) {
-// 	display: none !important;
-// }
+div[aria-label='Navigation pane']>div:last-child>div>div:nth-child(2):not([role='menubar']) {
+	display: none !important;
+}
 
 // Hide right ad sidebar (shown when screen is wide)
 div[data-max-width='2400']+div {
