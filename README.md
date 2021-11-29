@@ -81,12 +81,8 @@ I try to fix the extension as soon as possible when Outlook makes breaking chang
 ## Screenshots
 Desktop site | &#8291;
 :-:|:-:
-![Screenshot 1](screenshots/desktop_mail.png) | ![Screenshot 2](screenshots/desktop_sidebar.png)
-![Screenshot 3](screenshots/desktop_viewmessage.png) | ![Screenshot 4](screenshots/desktop_newmessage.png)
-
-Mobile site | &#8291; | &#8291; | &#8291;
-:-:|:-:|:-:|:-:
-![Screenshot 1](screenshots/mobile_mail.png) | ![Screenshot 2](screenshots/mobile_sidebar.png) | ![Screenshot 3](screenshots/mobile_viewmessage.png) | ![Screenshot 4](screenshots/mobile_newmessage.png)
+![Screenshot 1](img/screenshots/screenshot_inbox.png) | ![Screenshot 2](img/screenshots/screenshot_appswitcher.png)
+![Screenshot 3](img/screenshots/screenshot_compose_dark.png) | ![Screenshot 4](img/screenshots/screenshot_compose_light.png)
 
 
 ## Contributing
