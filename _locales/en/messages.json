@@ -1,14 +1,14 @@
 {
 	"extensionName": {
-		"message": "Dark Mode for Outlook™",
+		"message": "Dark Mode for Outlook",
 		"description": "The name of the extension"
 	},
 	"extensionShortName": {
-		"message": "Dark Mode",
+		"message": "DMFO",
 		"description": "The short name of the extension"
 	},
 	"extensionDescription": {
-		"message": "A better (unofficial) dark theme for Microsoft Outlook™.",
+		"message": "A better dark theme for Microsoft Outlook.",
 		"description": "A description of the extension"
 	},
 	"storeDescriptionHeader": {
@@ -16,7 +16,7 @@
 		"description": "The title for the Description section shown on the store page"
 	},
 	"storeDescriptionText": {
-		"message": "A browser extension/add-on that applies a better (unofficial) dark mode to Microsoft Outlook and removes the ad sidebar. Available for Chrome, Firefox, Edge, and Opera, and compatible with Firefox mobile!\n\nStyles are automatically applied to known Outlook URLs. If your Outlook exchange server is running on a custom domain, please add this domain in the extension options.",
+		"message": "A browser extension/add-on that applies a better dark theme to Microsoft Outlook and removes ads. Available for Chrome, Firefox, Edge, and Opera, with partial support for Firefox mobile!.\n\nStyles are automatically applied to known Outlook URLs. If your Outlook exchange server is running on a custom domain, please add this domain in the extension options.",
 		"description": "The body text for the Description section shown on the store page"
 	},
 	"storePrivacyHeader": {

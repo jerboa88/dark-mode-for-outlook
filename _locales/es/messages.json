@@ -1,18 +1,18 @@
 {
 	"extensionName": {
-		"message": "Modo oscuro para Outlook™"
+		"message": "Modo oscuro para Outlook"
 	},
 	"extensionShortName": {
 		"message": "MOPO"
 	},
 	"extensionDescription": {
-		"message": "Un mejor tema oscuro (extraoficial) para Microsoft Outlook™"
+		"message": "Un mejor tema oscuro para Microsoft Outlook."
 	},
 	"storeDescriptionHeader": {
 		"message": "🔶 Descripción 🔶"
 	},
 	"storeDescriptionText": {
-		"message": "Una extensión del navegador que aplica un modo oscuro mejor (no es oficial) a Microsoft Outlook y elimina la barra lateral de anuncios. Disponible para Chrome, Firefox, Edge y Opera, y compatible con Firefox móvil.\n\nLos estilos se aplican automáticamente a las URL conocidas de Outlook. Si su servidor de intercambio de Outlook se ejecuta en un dominio personalizado, agregue este dominio en las opciones de extensión."
+		"message": "Una extensión del navegador que aplica un mejor tema oscuro a Microsoft Outlook y elimina los anuncios. Disponible para Chrome, Firefox, Edge y Opera, ¡con soporte parcial para Firefox móvil!\n\nLos estilos se aplican automáticamente a las URL conocidas de Outlook. Si su servidor de intercambio de Outlook se ejecuta en un dominio personalizado, agregue este dominio en las opciones de extensión."
 	},
 	"storePrivacyHeader": {
 		"message": "🔶 Privicidad 🔶"
