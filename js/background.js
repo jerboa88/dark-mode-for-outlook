@@ -12,6 +12,8 @@
 		console.debug('[' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + '.' + pad(d.getSeconds()) + '] DMFO: ' + msg);
 	}
 
+	log('Background script loaded')
+
 	chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 		// Url property is only present when we have the 'tabs' permission
 		if ('url' in tab && 'status' in changeInfo && changeInfo.status === 'loading') {

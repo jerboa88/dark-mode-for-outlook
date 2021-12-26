@@ -7,7 +7,7 @@
    viewBox="0 0 101.6 101.6"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="icon.svg"
    inkscape:export-filename="C:\Users\johny\Documents\WORKSPACE\PERSONAL\CODE\dark-mode-for-outlook\img\icon4_marquee.png"
    inkscape:export-xdpi="384"
@@ -27,13 +27,13 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="0.22627417"
-     inkscape:cx="114.90485"
-     inkscape:cy="-1688.2174"
-     inkscape:window-width="3840"
-     inkscape:window-height="2080"
-     inkscape:window-x="-11"
-     inkscape:window-y="-11"
+     inkscape:zoom="0.64"
+     inkscape:cx="-110.15625"
+     inkscape:cy="110.15625"
+     inkscape:window-width="1920"
+     inkscape:window-height="1021"
+     inkscape:window-x="-7"
+     inkscape:window-y="-7"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      inkscape:snap-bbox="true"
@@ -90,7 +90,7 @@
     <color-profile
        name="sRGB-IEC61966-2.1"
        xlink:href="../../../../../../../../WINDOWS/system32/spool/drivers/color/sRGB%20Color%20Space%20Profile.icm"
-       id="color-profile1266" />
+       id="color-profile935" />
     <linearGradient
        inkscape:collect="always"
        id="linearGradient1367">
@@ -649,7 +649,7 @@
     <g
        id="g49976"
        style="filter:url(#filter1323)"
-       transform="translate(8.0215321,8.0215496)">
+       transform="matrix(1.1,0,0,1.1,1.3378523,0.63821636)">
       <path
          style="fill:url(#linearGradient959);fill-opacity:1;stroke:url(#linearGradient961);stroke-width:6.1736;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 103.62846,61.736067 v 6.173639 c -12.347234,0 -61.73612,0 -74.08333,0 V 61.736067 L 66.586779,37.04162 Z"

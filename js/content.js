@@ -12,7 +12,11 @@
 		console.debug('[' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + '.' + pad(d.getSeconds()) + '] DMFO: ' + msg);
 	};
 
-	chrome.storage.sync.get({ composePaneStyling: true }, ({ composePaneStyling }) => {
+	log('Content script loaded')
+
+	chrome.storage.sync.get({ composePaneStyling: false }, ({ composePaneStyling }) => {
+		log('Options loaded')
+
 		const getBottomBar = (composePane) => {
 			return composePane.querySelector('div[style="background-color: rgb(250, 249, 248);"')
 		};
