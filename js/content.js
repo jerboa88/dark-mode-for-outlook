@@ -60,7 +60,7 @@
 		if (composePaneStyling) {
 			const link = document.createElement('link');
 
-			link.href = chrome.extension.getURL('compose.css');
+			link.href = chrome.extension.getURL('css/compose.css');
 			link.type = 'text/css';
 			link.rel = 'stylesheet';
 

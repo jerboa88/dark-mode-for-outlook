@@ -355,7 +355,6 @@ div[data-convid] {
 
 // Message list action icon button hover color
 div[aria-label='Select a conversation']+div+div>div>button:hover>span>i {
-	// background-color: green !important;
 	color: var(--dmfo-accent) !important;
 }
 
