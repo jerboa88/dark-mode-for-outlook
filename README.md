@@ -100,7 +100,7 @@ This project is licensed under the MIT License. See [LICENSE.md](LICENSE.md) for
 [edge_link]: https://microsoftedge.microsoft.com/addons/detail/ncmfoiokkfipenppipihehpoikhacpep
 [opera_link]: https://addons.opera.com/en/extensions/details/dark-mode-for-outlook/
 
-[chrome_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/69.0.0/chrome/chrome_32x32.png
-[firefox_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/69.0.0/archive/firefox_57-70/firefox_57-70_32x32.png
-[edge_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/69.0.0/edge/edge_32x32.png
-[opera_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/69.0.0/opera/opera_32x32.png
+[chrome_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.4.0/chrome/chrome_32x32.png
+[firefox_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.4.0/firefox/firefox_32x32.png
+[edge_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.4.0/edge/edge_32x32.png
+[opera_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.4.0/opera/opera_32x32.png
