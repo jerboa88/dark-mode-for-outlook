@@ -1,0 +1,40 @@
+🔶 Descripción 🔶
+
+Una extensión del navegador que aplica un mejor tema oscuro a Microsoft Outlook y elimina los anuncios. Disponible para Chrome, Firefox, Edge y Opera, ¡con soporte parcial para Firefox móvil!
+
+Los estilos se aplican automáticamente a las URL conocidas de Outlook. Si su servidor de intercambio de Outlook se ejecuta en un dominio personalizado, agregue este dominio en las opciones de extensión.
+
+
+🔶 Privicidad 🔶
+
+Esta extensión ninguna recopila ni transmite ninguna información personal. Consulte a continuación para obtener una explicación de requeridos permisos los por esta extensión.
+
+🔸 Permisos Requeridos 🔸
+
+Se requiere acceso a cualquier sitio en siguientes dominios los para que podamos aplicar estilos personalizados:
+▸ http(s)://outlook.live.com/
+▸ http(s)://outlook.office.com/
+▸ http(s)://outlook.office365.com/
+▸ http(s)://support.office.live.com/
+
+Se requiere acceso al almacenamiento para que podamos guardar la configuración de la extensión.
+
+🔸 Permisos Opcionales 🔸
+
+Estos permisos se solicitan solo cuando son necesarios:
+▸ tabs: Se requiere acceso a pestañas abiertas si está utilizando la función Dominios Personalizados. Esto es para que podamos verificar si alguna pestaña abierta coincide con los dominios personalizados que especificó.
+▸ http(s)://*/: Se requiere acceso a 'cualquier sitio' si está utilizando la función Personalizados Dominios. Esto es para que podamos aplicar estilos a cualquier dominio que especifique. Tenga en cuenta que la extensión no tiene acceso a todos los sitios. Solo solicitará permisos para los dominios personalizados específicos que agregue.
+
+
+🔶 Reportar Problemas 🔶
+
+¡Se necesitan traducciones! Si conoce otro idioma y desea ayudar, cree un problema con detalles aquí: https://github.com/jerboa88/dark-mode-for-outlook/issues.
+
+Si encuentra algún problema al usar la extensión, cree un problema o cree una solicitud de extracción usted mismo para solucionar el problema.
+
+Intento corregir la extensión lo antes posible cuando Outlook crea cambios importantes, pero tenga en cuenta que puede llevar algún tiempo adaptar el trabajo a mi horario y realizar todos los cambios que se deben realizar. Gracias por tu paciencia 🙂.
+
+
+🔶 Licencia 🔶
+
+Este proyecto tiene la licencia MIT. Consulte el archivo de licencia para obtener más detalles. Outlook es una marca comercial de Microsoft y este proyecto no está afiliado ni respaldado por Microsoft de ninguna manera.

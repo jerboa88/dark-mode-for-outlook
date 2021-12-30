@@ -1,0 +1,40 @@
+🔶 Description 🔶
+
+A browser extension/add-on that applies a better dark theme to Microsoft Outlook and removes ads. Available for Chrome, Firefox, Edge, and Opera, with partial support for Firefox mobile!.
+
+Styles are automatically applied to known Outlook URLs. If your Outlook exchange server is running on a custom domain, please add this domain in the extension options.
+
+
+🔶 Privacy 🔶
+
+This extension does not collect or transmit any personal information. Please see below for an explanation of the permissions required by this extension.
+
+🔸 Required Permissions 🔸
+
+Access to any site on the following domains is required so we can apply custom styles:
+▸ http(s)://outlook.live.com/
+▸ http(s)://outlook.office.com/
+▸ http(s)://outlook.office365.com/
+▸ http(s)://support.office.live.com/
+
+Access to storage is required so we can save extension settings.
+
+🔸 Optional Permissions 🔸
+
+These permissions are requested only when they are needed:
+▸ tabs: Access to open tabs is required if you are using the Custom Domains feature. This is so we can check if any open tabs match the custom domains you specified
+▸ http(s)://*/: Access to 'any site' is required if you are using the Custom Domains feature. This is so we can apply styles to any domain you specify. Note that the extension does not have access to all sites. It will only request permissions for the specific custom domains you add.
+
+
+🔶 Reporting Issues 🔶
+
+Translations needed! If you know another language and want to help out, please create an issue with details here: https://github.com/jerboa88/dark-mode-for-outlook/issues.
+
+If you encounter any problems while using the extension, please create an issue or create a pull request yourself to fix the issue.
+
+I try to fix the extension as soon as possible when Outlook makes breaking changes, but keep in mind it may take some time for me to fit the work into my schedule and make all the changes that need to be made. Thanks for your patience 🙂.
+
+
+🔶 License 🔶
+
+This project is licensed under the MIT License. See the license file for details. Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.

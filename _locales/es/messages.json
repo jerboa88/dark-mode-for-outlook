@@ -8,42 +8,6 @@
 	"extensionDescription": {
 		"message": "Un mejor tema oscuro para Microsoft Outlook."
 	},
-	"storeDescriptionHeader": {
-		"message": "🔶 Descripción 🔶"
-	},
-	"storeDescriptionText": {
-		"message": "Una extensión del navegador que aplica un mejor tema oscuro a Microsoft Outlook y elimina los anuncios. Disponible para Chrome, Firefox, Edge y Opera, ¡con soporte parcial para Firefox móvil!\n\nLos estilos se aplican automáticamente a las URL conocidas de Outlook. Si su servidor de intercambio de Outlook se ejecuta en un dominio personalizado, agregue este dominio en las opciones de extensión."
-	},
-	"storePrivacyHeader": {
-		"message": "🔶 Privicidad 🔶"
-	},
-	"storePrivacyText": {
-		"message": "Esta extensión ninguna recopila ni transmite ninguna información personal. Consulte a continuación para obtener una explicación de requeridos permisos los por esta extensión."
-	},
-	"storeRequiredPermissionsHeader": {
-		"message": "🔸 Permisos Requeridos 🔸"
-	},
-	"storeRequiredPermissionsText": {
-		"message": "Se requiere acceso a cualquier sitio en siguientes dominios los para que podamos aplicar estilos personalizados:\n▸ http(s)://outlook.live.com/\n▸ http(s)://outlook.office.com/\n▸ http(s)://outlook.office365.com/\n▸ http(s)://support.office.live.com/\nSe requiere acceso al almacenamiento para que podamos guardar la configuración de la extensión."
-	},
-	"storeOptionalPermissionsHeader": {
-		"message": "🔸 Permisos Opcionales 🔸"
-	},
-	"storeOptionalPermissionsText": {
-		"message": "Estos permisos se solicitan solo cuando son necesarios:\n▸ tabs: Se requiere acceso a pestañas abiertas si está utilizando la función Dominios Personalizados. Esto es para que podamos verificar si alguna pestaña abierta coincide con los dominios personalizados que especificó.\n▸ http(s)://*/: Se requiere acceso a 'cualquier sitio' si está utilizando la función Personalizados Dominios. Esto es para que podamos aplicar estilos a cualquier dominio que especifique. Tenga en cuenta que la extensión no tiene acceso a todos los sitios. Solo solicitará permisos para los dominios personalizados específicos que agregue."
-	},
-	"storeReportingIssuesHeader": {
-		"message": "🔶 Reportar Problemas 🔶"
-	},
-	"storeReportingIssuesText": {
-		"message": "¡Se necesitan traducciones! Si conoce otro idioma y desea ayudar, cree un problema con detalles aquí: https://github.com/jerboa88/dark-mode-for-outlook/issues.\n\nSi encuentra algún problema al usar la extensión, cree un problema o cree una solicitud de extracción usted mismo para solucionar el problema.\n\nIntento corregir la extensión lo antes posible cuando Outlook crea cambios importantes, pero tenga en cuenta que puede llevar algún tiempo adaptar el trabajo a mi horario y realizar todos los cambios que se deben realizar. Gracias por tu paciencia 🙂."
-	},
-	"storeLicenseHeader": {
-		"message": "🔶 Licencia 🔶"
-	},
-	"storeLicenseText": {
-		"message": "Este proyecto tiene la licencia MIT. Consulte el archivo de licencia para obtener más detalles. Outlook es una marca comercial de Microsoft y este proyecto no está afiliado ni respaldado por Microsoft de ninguna manera."
-	},
 	"optionsHeaderText": {
 		"message": "Opciones"
 	},

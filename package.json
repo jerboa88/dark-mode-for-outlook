@@ -4,11 +4,12 @@
 	"description": "A browser extension/add-on that applies a better dark theme to Microsoft Outlook and removes ads",
 	"main": "build.js",
 	"devDependencies": {
+		"archiver": "^5.3.0",
 		"fs-extra": "^10.0.0",
+		"nobs": "github:jerboa88/NoBS",
 		"replace-in-file": "^6.3.2",
 		"sass": "^1.43.4",
-		"sharp": "^0.29.3",
-		"zip-local": "^0.3.4"
+		"sharp": "^0.29.3"
 	},
 	"scripts": {
 		"start": "npm run --silent build",
