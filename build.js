@@ -24,7 +24,7 @@
 	const manifestJson = 'manifest.json';
 	const storeListingTxt = 'store-listing.txt';
 	const scssFiles = ['css/main.scss', 'css/help.scss', 'css/compose.scss'];
-	const filesToCopy = ['README.md', 'LICENSE.md', manifestJson, 'options.html', 'js/options.js', 'js/background.js', 'js/content.js', localeFolder];
+	const filesToCopy = ['README.md', 'LICENSE', manifestJson, 'options.html', 'js/options.js', 'js/background.js', 'js/content.js', localeFolder];
 
 
 	// Runtime vars
