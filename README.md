@@ -1,14 +1,36 @@
-# Dark Mode for Outlook [Extension]
-![](https://img.shields.io/badge/type-Extension-yellow.svg "Project type")
-[![](https://img.shields.io/chrome-web-store/v/kjfbefcenipnnpbcbbklcidpjiamlcpl.svg "View on the Chrome Web Store")][chrome_link]
-[![](https://img.shields.io/amo/v/dark-mode-for-outlook.svg "View on the Firefox Add-ons Page")][firefox_link]
-[![](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fncmfoiokkfipenppipihehpoikhacpep "View on the Edge Add-ons Page")][edge_link]
-[![](https://img.shields.io/badge/dynamic/json?label=opera%20add-on&color=blue&query=%24.tag_name&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fjerboa88%2Fdark-mode-for-outlook%2Freleases%2Flatest "View on the Opera Add-ons Page")][opera_link]
-![](https://img.shields.io/github/repo-size/jerboa88/dark-mode-for-outlook.svg "Repository size")
-[![](https://img.shields.io/github/license/jerboa88/dark-mode-for-outlook.svg "Project license")](LICENSE)
+<!-- Project Header -->
+<div align="center">
+  <img class="projectLogo" src="img/icon.svg" alt="Project logo" title="Project logo" width="256">
 
+  <h1 class="projectName">Dark Mode for Outlook</h1>
 
-A browser extension/add-on that applies a better dark theme to Microsoft Outlook and removes ads. Available for Chrome, Firefox, Edge, and Opera, with partial support for Firefox mobile!
+  <p class="projectBadges">
+    <img src="https://img.shields.io/badge/type-Extension-ffc107.svg" alt="Project type" title="Project type"/>
+    <img src="https://img.shields.io/github/languages/top/jerboa88/dark-mode-for-outlook.svg" alt="Language" title="Language"/>
+    <a href="https://chrome.google.com/webstore/detail/dark-mode-for-outlook/kjfbefcenipnnpbcbbklcidpjiamlcpl">
+      <img src="https://img.shields.io/chrome-web-store/v/kjfbefcenipnnpbcbbklcidpjiamlcpl.svg" alt="View on the Chrome Web Store" title="View on the Chrome Web Store"/>
+    </a>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/dark-mode-for-outlook/">
+      <img src="https://img.shields.io/amo/v/dark-mode-for-outlook.svg" alt="View on the Firefox Add-ons Page" title="View on the Firefox Add-ons Page"/>
+    </a>
+    <a href="https://microsoftedge.microsoft.com/addons/detail/ncmfoiokkfipenppipihehpoikhacpep">
+      <img src="https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fncmfoiokkfipenppipihehpoikhacpep" alt="View on the Edge Add-ons Page" title="View on the Edge Add-ons Page"/>
+    </a>
+    <a href="https://addons.opera.com/en/extensions/details/dark-mode-for-outlook/">
+      <img src="https://img.shields.io/badge/dynamic/json?label=opera%20add-on&color=blue&query=%24.tag_name&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fjerboa88%2Fdark-mode-for-outlook%2Freleases%2Flatest" alt="View on the Opera Add-ons Page" title="View on the Opera Add-ons Page"/>
+    </a>
+    <img src="https://img.shields.io/github/repo-size/jerboa88/dark-mode-for-outlook.svg" alt="Repository size" title="Repository size"/>
+    <a href="LICENSE">
+      <img src="https://img.shields.io/github/license/jerboa88/dark-mode-for-outlook.svg" alt="Project license" title="Project license"/>
+    </a>
+  </p>
+  
+  <p class="projectDesc">
+    A browser extension/add-on that applies a better dark theme to Microsoft Outlook and removes ads. Available for Chrome, Firefox, Edge, and Opera, with partial support for Firefox mobile!
+  </p>
+  
+  <br/>
+</div>
 
 
 ## Installation
