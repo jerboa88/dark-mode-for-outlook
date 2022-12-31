@@ -227,7 +227,7 @@ div[aria-label='Message body'] {
 // More send options button color, compose background style toggle
 button[aria-label='More send options']>span>i,
 button[aria-label='View with a dark background']>span>i {
-	color: var(----dmfo-darkest) !important;
+	color: var(--dmfo-darkest) !important;
 }
 
 /*#endregion*/
@@ -242,6 +242,11 @@ div[aria-label='Navigation pane']>div:last-child>div>div:nth-child(2):not([role=
 // Hide right ad sidebar (shown when screen is wide)
 div[data-max-width='2400']+div {
 	display: none !important;
+}
+
+// Hide the ad at the top of the message list in the inbox
+div[aria-label^='Message list']>div>div>.full:first-child {
+	display:none !important;
 }
 
 #app>div:first-child>div:last-child {
