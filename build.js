@@ -4,7 +4,7 @@
 	// Deps
 	const archiver = require('archiver');
 	const fs = require('fs-extra');
-	const { join, basename, resolve } = require('path');
+	const { join } = require('path');
 	const { performance } = require('perf_hooks');
 	const NoBS = require('NoBS');
 	const replace = require('replace-in-file');
@@ -75,14 +75,16 @@
 					files: join(chromiumSubfolder, manifestJson),
 					from: /\t{0,4}"browser_specific_settings": ?[\s\S]{0,128}\},\s/,
 					to: '',
-					countMatches: true
+					countMatches: true,
+					disableGlobs: true,
 				});
 
 				const firefoxResult = await replace({
 					files: join(firefoxSubfolder, manifestJson),
 					from: /"persistent": ?false/,
 					to: '"persistent": true',
-					countMatches: true
+					countMatches: true,
+					disableGlobs: true,
 				});
 
 				if (!chromiumResult || chromiumResult.length != 1 || !chromiumResult[0].hasChanged) {
