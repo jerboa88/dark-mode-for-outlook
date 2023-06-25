@@ -245,8 +245,8 @@ div[data-max-width='2400']+div {
 }
 
 // Hide the ad at the top of the message list in the inbox
-div[aria-label^='Message list']>div>div>.full:first-child {
-	display:none !important;
+div[aria-label^='Message list']>div>div>div>div>div:first-child>div[data-animatable='true'] {
+	display: none !important;
 }
 
 #app>div:first-child>div:last-child {
