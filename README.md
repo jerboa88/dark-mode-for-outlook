@@ -25,7 +25,7 @@
     </a>
   </p>
   
-  <p class="projectDesc">
+  <p class="projectDesc" data-commentary="Created as a personal project to improve the distracting UI of Outlook and released on both the Chrome Web Store and Firefox add-on page for others to use. The project has over 1500 daily users.">
     A browser extension/add-on that applies a better dark theme to Microsoft Outlook and removes ads. Available for Chrome, Firefox, Edge, and Opera, with partial support for Firefox mobile!
   </p>
   
