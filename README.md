@@ -33,6 +33,16 @@
 </div>
 
 
+> [!IMPORTANT]
+> Google is removing support for Manifest v2 extensions [under the guise of improving security/privacy/performance](https://www.eff.org/deeplinks/2021/12/chrome-users-beware-manifest-v3-deceitful-and-threatening) for users of their browser. Ironically, this will affect your ability to use extensions like ad-blockers and tracker blockers that enhance your experience and keep you safe online.
+> 
+> This extension should not be affected, and I will add Manifest v3 support to it at some point.
+>
+> That being said, if you are currently using Google Chrome, I **strongly** recommend switching to another browser that respects your privacy and is not run by the world's largest advertising company. I would recommend:
+> - [Firefox] or [Librewolf], if you want a powerful, free, open-source browser
+> - [Brave], if you want a similar experience to Chrome without all the negatives
+
+
 ## Installation
 ### Simple
 The extension can be installed for your browser here:
@@ -128,3 +138,7 @@ Outlook is a trademark of Microsoft and this project is not affiliated with or e
 [firefox_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.4.0/firefox/firefox_32x32.png
 [edge_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.4.0/edge/edge_32x32.png
 [opera_logo]: https://cdnjs.cloudflare.com/ajax/libs/browser-logos/70.4.0/opera/opera_32x32.png
+
+[Firefox]: https://www.mozilla.org/en-CA/firefox/
+[Librewolf]: https://librewolf.net/
+[Brave]: https://brave.com/
