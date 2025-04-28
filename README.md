@@ -5,7 +5,7 @@
   <h1 class="projectName">Dark Mode for Outlook</h1>
 
   <p class="projectBadges">
-    <img src="https://img.shields.io/badge/type-Extension-ffc107.svg" alt="Project type" title="Project type"/>
+    <img src="https://johng.io/badges/category/Extension.svg" alt="Project category" title="Project category"/>
     <img src="https://img.shields.io/github/languages/top/jerboa88/dark-mode-for-outlook.svg" alt="Language" title="Language"/>
     <a href="https://chrome.google.com/webstore/detail/dark-mode-for-outlook/kjfbefcenipnnpbcbbklcidpjiamlcpl">
       <img src="https://img.shields.io/chrome-web-store/v/kjfbefcenipnnpbcbbklcidpjiamlcpl.svg" alt="View on the Chrome Web Store" title="View on the Chrome Web Store"/>
