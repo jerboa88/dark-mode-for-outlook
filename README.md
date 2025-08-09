@@ -127,6 +127,21 @@ This project is licensed under the [MIT License](LICENSE). This project includes
 Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.
 
 
+## 💕 Funding
+
+Find this project useful? [Sponsoring me](https://johng.io/funding) will help me cover costs and **_commit_** more time to open-source.
+
+If you can't donate but still want to contribute, don't worry. There are many other ways to help out, like:
+
+- 📢 reporting (submitting feature requests & bug reports)
+- 👨‍💻 coding (implementing features & fixing bugs)
+- 📝 writing (documenting & translating)
+- 💬 spreading the word
+- ⭐ starring the project
+
+I appreciate the support!
+
+
 [issues_link]: ../../issues
 
 [chrome_link]: https://chrome.google.com/webstore/detail/dark-mode-for-outlook/kjfbefcenipnnpbcbbklcidpjiamlcpl
