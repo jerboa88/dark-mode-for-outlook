@@ -43,7 +43,16 @@
 > - [Brave], if you want a similar experience to Chrome without all the negatives
 
 
-## Installation
+## 👋 About
+
+### Screenshots
+Desktop site | &#8291;
+:-:|:-:
+![Screenshot 1](img/screenshots/screenshot_inbox.png) | ![Screenshot 2](img/screenshots/screenshot_appswitcher.png)
+![Screenshot 3](img/screenshots/screenshot_compose_dark.png) | ![Screenshot 4](img/screenshots/screenshot_compose_light.png)
+
+
+## 📦 Installation
 ### Simple
 The extension can be installed for your browser here:
 | [![Chrome logo][chrome_logo]][chrome_link] | **[Chrome][chrome_link]** |
@@ -63,7 +72,7 @@ If you wish to build yourself, you can download the repository, run `npm install
 Next, the build directory or zip file can be loaded into your browser of choice: [Chrome](https://developer.chrome.com/extensions/getstarted#manifest) / [Firefox](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) / [Edge](https://docs.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/part1-simple-extension#run-your-extension-locally-in-your-browser-while-developing-it-side-loading) / [Opera](https://dev.opera.com/extensions/testing/)
 
 
-## Usage
+## 🕹️ Usage
 Just install the extension and you should be good to go! Styles are automatically applied to any page on the following domains:
 - http(s)://outlook.live.com/
 - http(s)://outlook.office.com/
@@ -102,26 +111,16 @@ These permissions are requested only when they are needed:
 - **"tabs":** Access to open tabs is required if you are using the [Custom Domains](#Custom%20Domains) feature. This is so we can check if any open tabs match the custom domains you specified
 - **"http(s)://*/":** Access to 'any site' is required if you are using the [Custom Domains](#Custom%20Domains) feature. This is so we can apply styles to any domain you specify. Note that the extension does not have access to all sites. It will only request permissions for the specific custom domains you add
 
+## 🤝 Contributing
+Pull requests, bug reports, translations, and other kinds of contributions are greatly appreciated. Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details. By contributing code, you agree to license your contributions under the terms of the LICENSE.
+
 ### Reporting Issues
-Translations needed! If you know another language and want to help out, please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+If you encounter any problems while using the extension, please create an issue [here][issues_link] or create a pull request yourself to fix the issue.
 
-If you encounter any problems while using the extension, please create an issue [here][issues_link] or create a pull request yourself to fix the issue (see [Contributing](#Contributing)).
-
-I try to fix the extension as soon as possible when Outlook makes breaking changes, but keep in mind it may take some time for me to fit the work into my schedule and make all the necessary changes. Thanks for your patience 🙂.
+I try to fix the extension as soon as possible when Outlook makes breaking changes, but keep in mind it may take some time for me to fit the work into my schedule. Thanks for your patience 🙂.
 
 
-## Screenshots
-Desktop site | &#8291;
-:-:|:-:
-![Screenshot 1](img/screenshots/screenshot_inbox.png) | ![Screenshot 2](img/screenshots/screenshot_appswitcher.png)
-![Screenshot 3](img/screenshots/screenshot_compose_dark.png) | ![Screenshot 4](img/screenshots/screenshot_compose_light.png)
-
-
-## Contributing
-Contributions, issues, and forks are welcome. Please see [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
-
-
-## License
+## 🧾 License
 This project is licensed under the [MIT License](LICENSE). This project includes various resources which carry their own copyright notices and license terms. See [LICENSE-THIRD-PARTY.md](LICENSE-THIRD-PARTY.md) for more details.
 
 Outlook is a trademark of Microsoft and this project is not affiliated with or endorsed by Microsoft in any way.
